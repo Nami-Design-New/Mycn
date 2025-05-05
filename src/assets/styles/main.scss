@@ -1,0 +1,19 @@
+@import "./scss/config";
+@import "./scss/error-page";
+
+body {
+  position: relative;
+  direction: rtl;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  font-family: "Baloo Bhaijaan 2", sans-serif;
+
+  main {
+    min-height: calc(100dvh - 300px);
+  }
+
+  &.en {
+    font-family: "Outfit", sans-serif;
+    direction: ltr;
+  }
+}

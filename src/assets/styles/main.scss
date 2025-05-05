@@ -1,5 +1,4 @@
 @import "./scss/config";
-@import "./scss/error-page";
 
 body {
   position: relative;
@@ -7,6 +6,10 @@ body {
   overflow-x: hidden;
   scrollbar-width: none;
   font-family: "Baloo Bhaijaan 2", sans-serif;
+  
+  @import "./scss/layout";
+  @import "./scss/home";
+  @import "./scss/error-page";
 
   main {
     min-height: calc(100dvh - 300px);

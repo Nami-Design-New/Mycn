@@ -1,0 +1,14 @@
+header {
+  position: fixed;
+  top: 24px;
+  left: 0;
+
+  nav {
+    display: flex;
+    align-items: center;
+    background: #ffffffcd;
+    backdrop-filter: blur(4px);
+    border-radius: 100px;
+    padding: 8px 16px;
+  }
+}

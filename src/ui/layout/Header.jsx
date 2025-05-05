@@ -1,7 +1,9 @@
 export default function Header() {
   return (
-    <div>
-      
-    </div>
-  )
+    <header className="header">
+      <nav className="container">
+
+      </nav>
+    </header>
+  );
 }

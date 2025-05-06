@@ -9,5 +9,13 @@
         "unexpectedErrorMessage": "حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى لاحقاً.",
         "oops": "عذراً!",
         "returnToHome": "العودة إلى الصفحة الرئيسية"
+    },
+    "header": {
+        "home": "الرئيسية",
+        "about": "من نحن",
+        "myOrders": "طلباتي",
+        "shippingCalculator": "حاسبة الشحن",
+        "contact": "اتصل بنا",
+        "login": "تسجيل الدخول"
     }
 }

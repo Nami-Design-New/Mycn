@@ -189,11 +189,11 @@ button {
 }
 .rmdp-day span:hover {
   background-color: #fafafa !important;
-  color: #54a0c4 !important;
+  color: #a80200 !important;
 }
 .rmdp-day.rmdp-today span {
   background-color: #fafafa !important;
-  color: #54a0c4 !important;
+  color: #a80200 !important;
 }
 .rmdp-day.rmdp-disabled {
   color: #777 !important;
@@ -223,7 +223,7 @@ button {
   font-family: "Font Awesome 6 Pro";
   content: "\f104";
   font-size: 14px;
-  color: #54a0c4;
+  color: #a80200;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -248,12 +248,12 @@ button {
 }
 
 .rmdp-range {
-  background: #54a0c4 !important;
+  background: #a80200 !important;
   box-shadow: none !important;
   color: #fff !important;
 }
 .rmdp-range.rmdp-today span {
-  background: #54a0c4 !important;
+  background: #a80200 !important;
   color: #fff !important;
 }
 
@@ -261,11 +261,11 @@ button {
   margin-bottom: 16px;
 }
 .rmdp-week:first-child .rmdp-week-day {
-  color: #54a0c4 !important;
+  color: #a80200 !important;
 }
 
 .rmdp-header-values {
-  color: #54a0c4 !important;
+  color: #a80200 !important;
 }
 
 .rmdp-shadow {
@@ -285,7 +285,7 @@ button {
 }
 
 .rmdp-selected span {
-  background-color: #54a0c4 !important;
+  background-color: #a80200 !important;
   color: #fff !important;
 }
 
@@ -438,8 +438,10 @@ body {
 }
 body header {
   position: fixed;
+  width: 100%;
   top: 24px;
   left: 0;
+  z-index: 9;
 }
 body header nav {
   display: flex;
@@ -448,22 +450,57 @@ body header nav {
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   border-radius: 100px;
-  padding: 8px 16px;
+  padding: 18px 24px !important;
+}
+body header nav .logo {
+  flex: 1;
+}
+body header nav .logo img {
+  height: 40px;
+}
+body header nav .nav_links {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 42px;
+}
+body header nav .nav_links a {
+  font-weight: 600;
+  color: #000;
+  transition: all 0.3s ease-in-out;
+  font-size: 14px;
+}
+body header nav .nav_links a.active, body header nav .nav_links a:hover {
+  color: #d8250f;
+}
+body header nav .actions {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+}
+body header nav .actions .login {
+  padding: 8px 24px;
+  border-radius: 120px;
+  background-color: #d8250f;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
 }
 body .hero_section {
   height: 100vh;
-  padding: 16px;
 }
 body .hero_section .swiper {
   width: 100%;
   height: 100%;
-  border-radius: 24px;
   overflow: hidden;
 }
 body .hero_section .hero_slide {
   overflow: hidden;
   width: 100%;
-  border-radius: 24px;
   height: 100%;
 }
 body .hero_section .hero_slide img {
@@ -503,7 +540,7 @@ body .error-page a {
   padding: 12px 32px;
   font-size: 14px;
   color: #fff;
-  background: #54a0c4;
+  background: #a80200;
   border-radius: 120px;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);

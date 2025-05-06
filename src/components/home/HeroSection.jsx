@@ -19,19 +19,19 @@ export default function HeroSection() {
       >
         <SwiperSlide>
           <div className="hero_slide">
-            <img src="/public/images/slide-1.jpg" alt="" />
+            <img src="/images/slide-1.jpg" alt="" />
           </div>
         </SwiperSlide>
 
         <SwiperSlide>
           <div className="hero_slide">
-            <img src="/public/images/slide-2.jpg" alt="" />
+            <img src="/images/slide-2.jpg" alt="" />
           </div>
         </SwiperSlide>
 
         <SwiperSlide>
           <div className="hero_slide">
-            <img src="/public/images/slide-3.jpg" alt="" />
+            <img src="/images/slide-3.jpg" alt="" />
           </div>
         </SwiperSlide>
       </Swiper>

@@ -1,7 +1,9 @@
 header {
   position: fixed;
+  width: 100%;
   top: 24px;
   left: 0;
+  z-index: 9;
 
   nav {
     display: flex;
@@ -9,6 +11,48 @@ header {
     background: #ffffffcd;
     backdrop-filter: blur(4px);
     border-radius: 100px;
-    padding: 8px 16px;
+    padding: 18px 24px !important;
+
+    .logo {
+      flex: 1;
+      img {
+        height: 40px;
+      }
+    }
+
+    .nav_links {
+      flex: 2;
+      @include centerFlex();
+      gap: 42px;
+
+      a {
+        font-weight: 600;
+        color: $black;
+        transition: $transition;
+        font-size: 14px;
+        &.active,
+        &:hover {
+          color: $second;
+        }
+      }
+    }
+
+    .actions {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 24px;
+
+      .login {
+        padding: 8px 24px;
+        border-radius: 120px;
+        background-color: $second;
+        color: $white;
+        font-weight: 600;
+        font-size: 14px;
+        transition: $transition;
+      }
+    }
   }
 }

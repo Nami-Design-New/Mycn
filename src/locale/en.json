@@ -9,5 +9,13 @@
         "unexpectedErrorMessage": "An unexpected error occurred. Please try again later.",
         "oops": "Oops!",
         "returnToHome": "Return To Home"
+    },
+    "header": {
+        "home": "Home",
+        "about": "About Us",
+        "myOrders": "My Orders",
+        "shippingCalculator": "Shipping Calculator",
+        "contact": "Contact Us",
+        "login": "Login"
     }
 }

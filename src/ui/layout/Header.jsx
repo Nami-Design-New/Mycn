@@ -1,8 +1,23 @@
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, NavLink } from "react-router";
 
 export default function Header() {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    const header = document.querySelector(".header");
+
+    const handleScroll = () => {
+      header.classList.toggle("sticky", window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <header className="header">

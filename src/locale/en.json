@@ -17,5 +17,37 @@
         "shippingCalculator": "Shipping Calculator",
         "contact": "Contact Us",
         "login": "Login"
+    },
+    "heroSection": {
+        "slides": [
+            {
+                "smallHint": "Start your journey now",
+                "slideTitle": "Shop Anything from China with Ease",
+                "slideDescription": "Register once, get your China address, and start shopping from any website.",
+                "slideButton": "Get Started"
+            },
+            {
+                "smallHint": "All in one place",
+                "slideTitle": "All Your Packages, One Shipment",
+                "slideDescription": "We collect your parcels and send them in one box to save time and cost.",
+                "slideButton": "Learn More"
+            },
+            {
+                "smallHint": "Live tracking & estimate",
+                "slideTitle": "Real-Time Tracking & Transparent Pricing",
+                "slideDescription": "View your packages, track them in real time, and get an upfront estimate.",
+                "slideButton": "Try Now"
+            }
+        ]
+    },
+    "features": {
+        "title1": "Shop from Any Chinese Website",
+        "description1": "Register once, get your China address, and start shopping from any website with ease.",
+        "title2": "Combine Packages into One Shipment",
+        "description2": "We consolidate your parcels into one box to reduce costs and speed up delivery.",
+        "title3": "Real-Time & Accurate Tracking",
+        "description3": "Track your packages every step of the way and get an upfront price estimate before payment.",
+        "title4": "Ongoing Customer Support",
+        "description4": "Our support team is available around the clock to assist you with any inquiries."
     }
 }

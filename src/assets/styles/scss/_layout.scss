@@ -1,17 +1,21 @@
 header {
   position: fixed;
   width: 100%;
-  top: 24px;
   left: 0;
   z-index: 9;
+  background: #ffffffcd;
+  backdrop-filter: blur(4px);
+  padding: 18px 0 !important;
+
+  &.sticky {
+    background: $white;
+    box-shadow: 0px 2px 8px #0000001a;
+  }
 
   nav {
+    transition: $transition;
     display: flex;
     align-items: center;
-    background: #ffffffcd;
-    backdrop-filter: blur(4px);
-    border-radius: 100px;
-    padding: 18px 24px !important;
 
     .logo {
       flex: 1;

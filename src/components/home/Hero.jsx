@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import "swiper/css";
 import "swiper/css/effect-fade";
 
-export default function HeroSection() {
+export default function Hero() {
   const { t, i18n } = useTranslation();
   const lang = i18n.language === "ar" ? "ar" : "en";
 

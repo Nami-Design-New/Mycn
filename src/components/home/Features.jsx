@@ -7,6 +7,14 @@ export default function Features() {
     <section className="features_section">
       <div className="container">
         <div className="row">
+          <div className="col-12 p-2 mb-3">
+            <h6 className="section_hint">{t("features.subtitle")}</h6>
+            <h3 className="section_title">
+              {t("features.title")}{" "}
+              <span>{t("features.transportationBusiness")}</span>
+            </h3>
+          </div>
+
           <div className="col-lg-3 col-md-6 col-12 p-2">
             <div className="feature_card">
               <div className="icon">

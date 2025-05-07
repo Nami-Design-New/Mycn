@@ -95,7 +95,31 @@
 }
 
 .statistics_section {
-  padding: 60px 0;
+  padding: 0 32px;
+
+  .inner_container {
+    background: #00112e;
+    border-radius: 24px;
+    margin-bottom: 40px;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      mix-blend-mode: difference;
+    }
+
+    .text {
+      padding: 40px 0;
+      h6 {
+        font-size: 14px;
+        color: $white;
+      }
+      h2 {
+        color: $white;
+        font-size: 42px;
+      }
+    }
+  }
 }
 
 .features_section {
@@ -103,10 +127,11 @@
 
   .feature_card {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 16px;
-    padding: 12px;
+    padding: 24px;
     border-radius: 12px;
+    height: 100%;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
     img {
@@ -115,12 +140,13 @@
 
     .content {
       h3 {
-        font-size: 20px;
+        font-size: 18px;
       }
 
       p {
         font-size: 14px;
         margin-bottom: 0;
+        color: $gray;
       }
     }
   }

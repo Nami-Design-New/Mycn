@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap");
 @keyframes pulse {
   0% {
     background-color: #e0e0e0;
@@ -536,44 +537,13 @@ body .hero_section .hero_slide .content .small_hint {
 }
 body .hero_section .hero_slide .content .slide_title {
   color: #fff;
-  font-size: 42px;
+  font-size: 48px;
   margin-bottom: 12px;
 }
 body .hero_section .hero_slide .content .slide_description {
   margin-bottom: 24px;
   color: #fff;
   font-size: 16px;
-}
-body .hero_section .hero_slide .content .slide_button {
-  padding: 8px 8px 8px 16px;
-  min-width: 146px;
-  border-radius: 120px;
-  background-color: rgba(255, 255, 255, 0.6980392157);
-  color: #000;
-  font-weight: 600;
-  font-size: 14px;
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-  transition: all 0.3s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  gap: 16px;
-}
-body .hero_section .hero_slide .content .slide_button span {
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  transition: all 0.3s ease-in-out;
-  border-radius: 50%;
-}
-body .hero_section .hero_slide .content .slide_button:hover span {
-  background-color: #000;
-  color: #fff;
 }
 body .statistics_section {
   padding: 0 32px;
@@ -583,14 +553,22 @@ body .statistics_section .inner_container {
   border-radius: 24px;
   margin-bottom: 40px;
 }
-body .statistics_section .inner_container img {
+body .statistics_section .inner_container .img {
   width: 100%;
+  height: 100%;
+  position: relative;
+}
+body .statistics_section .inner_container .img img {
+  width: 150%;
   -o-object-fit: cover;
      object-fit: cover;
   mix-blend-mode: difference;
+  position: absolute;
+  bottom: 0;
+  left: -70px;
 }
 body .statistics_section .inner_container .text {
-  padding: 40px 0;
+  padding: 60px 0;
 }
 body .statistics_section .inner_container .text h6 {
   font-size: 14px;
@@ -598,7 +576,79 @@ body .statistics_section .inner_container .text h6 {
 }
 body .statistics_section .inner_container .text h2 {
   color: #fff;
+  margin-bottom: 32px;
   font-size: 42px;
+  font-family: "Instrument Sans", sans-serif;
+}
+body .statistics_section .inner_container .text ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+body .statistics_section .inner_container .text ul li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+body .statistics_section .inner_container .text a {
+  padding: 8px 8px 8px 16px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 120px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 16px;
+}
+body .statistics_section .inner_container .text a span {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: #000;
+  border-radius: 50%;
+}
+body .statistics_section .inner_container .states {
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  gap: 24px;
+}
+body .statistics_section .inner_container .states .state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 240px;
+}
+body .statistics_section .inner_container .states .state h2 {
+  font-size: 52px;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2392156863);
+  width: 100%;
+  padding: 0 0 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+body .statistics_section .inner_container .states .state h2 i {
+  font-size: 32px;
+  margin-top: 12px;
+}
+body .statistics_section .inner_container .states .state p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
 }
 body .features_section {
   padding: 60px 0;

@@ -1,7 +1,6 @@
 import { Autoplay, EffectFade } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router";
 import "swiper/css";
 import "swiper/css/effect-fade";
 
@@ -35,12 +34,6 @@ export default function HeroSection() {
                 <p className="small_hint">{slide.smallHint}</p>
                 <h2 className="slide_title">{slide.slideTitle}</h2>
                 <p className="slide_description">{slide.slideDescription}</p>
-                <Link to="/register" className="slide_button">
-                  {slide.slideButton}
-                  <span>
-                    <i className="fa-solid fa-arrow-up-right"></i>
-                  </span>
-                </Link>
               </div>
             </div>
           </SwiperSlide>

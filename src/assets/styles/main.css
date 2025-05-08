@@ -959,6 +959,9 @@ body .how_we_work_section .steps .step .num {
     border-radius: 30px;
   }
 }
+body .testimonials_section {
+  padding: 60px 0;
+}
 body .error-page {
   background-color: #f8f9fa;
   height: 100vh;

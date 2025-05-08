@@ -1,8 +1,15 @@
 import { Link } from "react-router";
+import { useInView } from "react-intersection-observer";
+import CountUp from "react-countup";
 
 export default function Statistics() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
   return (
-    <section className="statistics_section">
+    <section className="statistics_section" ref={ref}>
       <div className="inner_container">
         <div className="container">
           <div className="row">
@@ -10,7 +17,6 @@ export default function Statistics() {
               <div className="text">
                 <h6>Our experience</h6>
                 <h2>Leader In Supply Chain Storage & Distribution</h2>
-
                 <ul>
                   <li>
                     <i className="fa-regular fa-circle-check"></i> Secure
@@ -36,7 +42,6 @@ export default function Statistics() {
                     Cost-Effective Shipping
                   </li>
                 </ul>
-
                 <Link to="/about">
                   More About Us
                   <span>
@@ -45,16 +50,19 @@ export default function Statistics() {
                 </Link>
               </div>
             </div>
+
             <div className="col-lg-4 col-12">
               <div className="img">
                 <img src="/images/ship.png" alt="" />
               </div>
             </div>
+
             <div className="col-lg-4 col-12">
               <div className="states">
                 <div className="state">
                   <h2>
-                    <i className="fa-light fa-arrow-up-long"></i> 150K
+                    <i className="fa-light fa-arrow-up-long"></i>{" "}
+                    {inView && <CountUp end={150} duration={3} />}K
                   </h2>
                   <p>
                     Join the companies that trust create to lead their AI
@@ -63,7 +71,8 @@ export default function Statistics() {
                 </div>
                 <div className="state">
                   <h2>
-                    <i className="fa-light fa-arrow-up-long"></i> 100K
+                    <i className="fa-light fa-arrow-up-long"></i>{" "}
+                    {inView && <CountUp end={100} duration={3} />}K
                   </h2>
                   <p>
                     Successful Project Completion for all transport authorize

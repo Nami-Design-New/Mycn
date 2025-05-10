@@ -492,6 +492,9 @@ body header nav .actions .login {
   font-size: 14px;
   transition: all 0.3s ease-in-out;
 }
+body header nav .actions .login:hover {
+  background-color: #000;
+}
 body .section_hint {
   background: #d8250f;
   padding: 6px 16px;
@@ -961,6 +964,78 @@ body .how_we_work_section .steps .step .num {
 }
 body .testimonials_section {
   padding: 60px 0;
+}
+body .testimonials_section .swiper_navigation {
+  display: flex;
+  gap: 12px;
+}
+body .testimonials_section .swiper_navigation button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  position: relative !important;
+  border: 1px solid #f4f4f4;
+  left: unset !important;
+  right: unset !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 12px;
+  transition: all 0.3s ease-in-out;
+}
+body .testimonials_section .swiper_navigation button::after {
+  display: none !important;
+}
+body .testimonials_section .swiper_navigation button:hover {
+  color: #fff;
+  background: #d8250f;
+  border-color: #d8250f;
+}
+body .testimonials_section .review {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+body .testimonials_section .review .review-speech {
+  background: #fafafa;
+  border-radius: 16px;
+  padding: 16px;
+  height: 100px;
+}
+body .testimonials_section .review .review-speech p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0;
+  font-style: italic;
+}
+body .testimonials_section .review .media {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px;
+}
+body .testimonials_section .review .media .thumbnail img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+}
+body .testimonials_section .review .media .rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+body .testimonials_section .review .media .rating i {
+  font-size: 12px;
+  color: #a80200;
+}
+body .faqs_section {
+  padding: 60px 0;
+  background: #fafafa;
 }
 body .error-page {
   background-color: #f8f9fa;

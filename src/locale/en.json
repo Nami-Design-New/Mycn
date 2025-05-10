@@ -52,5 +52,9 @@
         "description3": "Track each step and know the cost in advance.",
         "title4": "Ongoing Customer Support",
         "description4": "We're here 24/7 to assist you anytime."
+    },
+    "testimonials": {
+        "title": "What our customers say",
+        "subtitle": "Testimonials"
     }
 }

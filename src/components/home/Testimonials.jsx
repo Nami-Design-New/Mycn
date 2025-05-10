@@ -14,30 +14,35 @@ export default function Testimonials() {
       description:
         "Amazing service! My packages always arrive quickly and in perfect condition. Highly recommended for international shopping.",
       image: "/images/avatar.jpg",
+      rate: 5,
     },
     {
       name: "Sarah Smith",
       description:
         "The process was smooth from start to finish. Uploading items was simple, and customer support was very responsive.",
       image: "/images/avatar.jpg",
+      rate: 4,
     },
     {
       name: "William Anderson",
       description:
         "I was surprised at how easy it was to shop from China. The team handled everything professionally. Will use again!",
       image: "/images/avatar.jpg",
+      rate: 5,
     },
     {
       name: "Emily Zhang",
       description:
         "I’ve tried many forwarding services, but this one truly stands out. Fast, reliable, and super easy to use!",
       image: "/images/avatar.jpg",
+      rate: 2,
     },
     {
       name: "Ahmed Ali",
       description:
         "Their tracking system kept me updated at every step. I received my order safely and faster than expected!",
       image: "/images/avatar.jpg",
+      rate: 3,
     },
   ];
 
@@ -90,11 +95,16 @@ export default function Testimonials() {
                       <div className="media-body">
                         <h6 className="title">{slide.name}</h6>
                         <div className="rating">
-                          <i className="fa-solid fa-star"></i>
-                          <i className="fa-solid fa-star"></i>
-                          <i className="fa-solid fa-star"></i>
-                          <i className="fa-solid fa-star"></i>
-                          <i className="fa-regular fa-star"></i>
+                          {Array(slide.rate)
+                            .fill()
+                            .map((_, index) => (
+                              <i key={index} className="fa-solid fa-star"></i>
+                            ))}
+                          {Array(5 - slide.rate)
+                            .fill()
+                            .map((_, index) => (
+                              <i key={index} className="fa-regular fa-star"></i>
+                            ))}
                         </div>
                       </div>
                     </div>

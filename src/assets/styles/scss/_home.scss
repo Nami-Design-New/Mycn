@@ -677,3 +677,99 @@
     }
   }
 }
+
+.faqs_page {
+  padding: 40px 0;
+
+  .section_title {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .section_description {
+    font-size: 16px;
+    color: $black;
+    text-align: center;
+    a {
+      color: $second;
+    }
+  }
+
+  .tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    button {
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 500;
+      gap: 8px;
+      transition: $transition;
+      border-radius: 12px;
+      img {
+        width: 20px;
+        object-fit: contain;
+      }
+
+      &:hover,
+      &.active {
+        background: $input_bg;
+      }
+    }
+  }
+
+  .accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .accordion-item {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 0;
+      backdrop-filter: blur(6px);
+      transition: 0.3s ease-in-out;
+      background: $white;
+      box-shadow: rgba(99, 99, 99, 0.074) 0px 2px 8px 0px;
+      &.active {
+        background: $second;
+        button {
+          color: $white !important;
+        }
+        &::after {
+          color: $white !important;
+        }
+      }
+      .accordion-button {
+        box-shadow: none !important;
+        background: transparent !important;
+        color: $black !important;
+        text-align: start;
+        padding: 24px;
+        &::after {
+          content: "\f00d";
+          font-family: "Font Awesome 6 Pro";
+          background: none;
+          @include centerFlex();
+          font-size: 16px;
+          font-weight: 400;
+          transform: rotate(135deg);
+          transform-origin: center;
+          margin-left: auto;
+          margin-right: 0;
+        }
+        &:not(.collapsed)::after {
+          transform: rotate(0deg);
+        }
+      }
+      .accordion-body {
+        background: transparent !important;
+        p {
+          color: $gray !important;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

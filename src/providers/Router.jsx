@@ -3,6 +3,7 @@ import RootLayout from "../layout/RootLayout";
 import Home from "../routes/Home";
 import Error from "../routes/Error";
 import Contact from "../routes/Contact";
+import Faqs from "../routes/Faqs";
 
 export const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ export const router = createBrowserRouter([
       {
         path: "contact",
         element: <Contact />,
+      },
+      {
+        path: "faqs",
+        element: <Faqs />,
       },
     ],
   },

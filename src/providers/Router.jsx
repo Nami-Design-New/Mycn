@@ -4,6 +4,7 @@ import Home from "../routes/Home";
 import Error from "../routes/Error";
 import Contact from "../routes/Contact";
 import Faqs from "../routes/Faqs";
+import ShippingCalculator from "../routes/ShippingCalculator";
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ export const router = createBrowserRouter([
       {
         path: "faqs",
         element: <Faqs />,
+      },
+      {
+        path: "shipping-calculator",
+        element: <ShippingCalculator />,
       },
     ],
   },

@@ -682,14 +682,22 @@
   padding: 40px 0;
 
   .section_title {
-    text-align: center;
     font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    &::before {
+      content: "";
+      width: 32px;
+      height: 4px;
+      transform: skew(30deg);
+      background: $second;
+    }
   }
 
   .section_description {
     font-size: 16px;
     color: $black;
-    text-align: center;
     a {
       color: $second;
     }

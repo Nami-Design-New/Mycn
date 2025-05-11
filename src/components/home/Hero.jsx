@@ -26,10 +26,12 @@ export default function Hero() {
         {slides?.map((slide, index) => (
           <SwiperSlide key={index}>
             <div className="hero_slide">
-              <img
-                src={`/images/slide-${index + 1}.jpg`}
-                alt={slide.slideTitle}
-              />
+              <div className="image_wrapper">
+                <img
+                  src={`/images/slide-${index + 1}.jpg`}
+                  alt={slide.slideTitle}
+                />
+              </div>
               <div className="content">
                 <p className="small_hint">{slide.smallHint}</p>
                 <h2 className="slide_title">{slide.slideTitle}</h2>

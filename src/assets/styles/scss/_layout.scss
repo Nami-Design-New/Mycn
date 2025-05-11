@@ -82,3 +82,123 @@ header {
     -webkit-background-clip: text;
   }
 }
+
+.footer {
+  padding: 60px 0 0;
+  background: $black;
+
+  .logo {
+    margin-bottom: 24px;
+    @include centerFlex();
+    width: fit-content;
+    img {
+      height: 52px;
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  .news_letter {
+    border-bottom: 1px solid #ffffff3f;
+    @include space-between();
+    margin-bottom: 32px;
+    padding: 0 0 32px;
+    gap: 16px;
+    h6 {
+      color: $white;
+      margin: 0;
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    form {
+      background: $white;
+      border-radius: 8px;
+      display: flex;
+      overflow: hidden;
+
+      input {
+        height: 52px;
+        padding: 12px;
+        width: 350px;
+        border: none;
+        outline: none;
+        background: none;
+      }
+
+      button {
+        background: $second;
+        color: $white;
+        height: 52px;
+        padding: 0 24px;
+      }
+    }
+  }
+
+  .description {
+    color: $white;
+    font-size: 14px;
+    max-width: 350px;
+  }
+
+  .title {
+    color: $white;
+    font-size: 18px;
+    margin-bottom: 24px;
+    &::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 2px;
+      background: $second;
+      margin-top: 12px;
+      transform: skew(-30deg);
+    }
+  }
+
+  .links_list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    li {
+      color: $white;
+      font-size: 14px;
+      a {
+        color: $white;
+        font-size: 14px;
+        transition: $transition;
+        &:hover {
+          color: $second;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    padding: 24px 0;
+    margin-top: 24px;
+    @include space-between();
+    border-top: 1px solid #ffffff3f;
+    p {
+      color: $white;
+      font-size: 14px;
+      margin: 0;
+      span {
+        color: $second;
+      }
+    }
+
+    .socials {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      a {
+        color: $white;
+        transition: $transition;
+        &:hover {
+          color: $second;
+        }
+      }
+    }
+  }
+}

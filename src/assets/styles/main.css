@@ -514,6 +514,121 @@ body .section_title span {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
+body .footer {
+  padding: 60px 0 0;
+  background: #000;
+}
+body .footer .logo {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+body .footer .logo img {
+  height: 52px;
+  filter: brightness(0) invert(1);
+}
+body .footer .news_letter {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2470588235);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  padding: 0 0 32px;
+  gap: 16px;
+}
+body .footer .news_letter h6 {
+  color: #fff;
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+}
+body .footer .news_letter form {
+  background: #fff;
+  border-radius: 8px;
+  display: flex;
+  overflow: hidden;
+}
+body .footer .news_letter form input {
+  height: 52px;
+  padding: 12px;
+  width: 350px;
+  border: none;
+  outline: none;
+  background: none;
+}
+body .footer .news_letter form button {
+  background: #d8250f;
+  color: #fff;
+  height: 52px;
+  padding: 0 24px;
+}
+body .footer .description {
+  color: #fff;
+  font-size: 14px;
+  max-width: 350px;
+}
+body .footer .title {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+body .footer .title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #d8250f;
+  margin-top: 12px;
+  transform: skew(-30deg);
+}
+body .footer .links_list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+body .footer .links_list li {
+  color: #fff;
+  font-size: 14px;
+}
+body .footer .links_list li a {
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
+body .footer .links_list li a:hover {
+  color: #d8250f;
+}
+body .footer .copyright {
+  padding: 24px 0;
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.2470588235);
+}
+body .footer .copyright p {
+  color: #fff;
+  font-size: 14px;
+  margin: 0;
+}
+body .footer .copyright p span {
+  color: #d8250f;
+}
+body .footer .copyright .socials {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+body .footer .copyright .socials a {
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+body .footer .copyright .socials a:hover {
+  color: #d8250f;
+}
 body .hero_section {
   height: 100vh;
 }

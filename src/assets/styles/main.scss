@@ -6,9 +6,11 @@ body {
   overflow-x: hidden;
   scrollbar-width: none;
   font-family: "Baloo Bhaijaan 2", sans-serif;
-
+  
   @import "./scss/layout";
+  @import "./scss/form_ui";
   @import "./scss/home";
+  @import "./scss/contact";
   @import "./scss/error-page";
 
   main {

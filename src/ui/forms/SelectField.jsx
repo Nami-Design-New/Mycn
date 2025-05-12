@@ -5,6 +5,7 @@ export default function SelectField({
   hint,
   options,
   error,
+  icon,
   defaultSelect,
   ...props
 }) {
@@ -12,7 +13,8 @@ export default function SelectField({
     <div className="input-field">
       {label && (
         <label htmlFor={props?.id}>
-          {label} {hint && <span className="hint">{hint}</span>}
+          {icon && <i className={icon}></i>} {label}{" "}
+          {hint && <span className="hint">{hint}</span>}
         </label>
       )}
 

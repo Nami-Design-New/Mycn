@@ -488,7 +488,7 @@ body header nav .actions {
 body header nav .actions .login {
   padding: 8px 24px;
   border-radius: 120px;
-  background-color: #d8250f;
+  background-color: #a80200;
   color: #fff;
   font-weight: 600;
   font-size: 14px;
@@ -645,7 +645,7 @@ body .main_section .section_title::before {
   width: 32px;
   height: 4px;
   transform: skew(30deg);
-  background: #d8250f;
+  background: linear-gradient(90deg, #a80200 0%, #d8250f 100%);
 }
 body .main_section .section_description {
   font-size: 14px;
@@ -1677,6 +1677,57 @@ body .auth_section .link {
   width: 100%;
   margin-top: 12px;
   display: block;
+}
+body .about_section {
+  padding: 40px 0;
+}
+body .about_section .image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+body .about_section .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 8px;
+  border-radius: 20px;
+}
+body .about_section .image .play_video {
+  width: 128px;
+  height: 128px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #a80200 0%, #d8250f 100%);
+}
+body .about_section .image .play_video img {
+  height: 48px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body .about_section ul {
+  margin-bottom: 12px;
+}
+body .about_section h2 {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+body .about_section h2::before {
+  content: "";
+  width: 32px;
+  height: 4px;
+  transform: skew(30deg);
+  background: linear-gradient(90deg, #a80200 0%, #d8250f 100%);
 }
 body .shipping_calculator .calculator_form {
   padding: 24px;

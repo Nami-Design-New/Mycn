@@ -52,7 +52,7 @@ header {
       .login {
         padding: 8px 24px;
         border-radius: 120px;
-        background-color: $second;
+        background-color: $main;
         color: $white;
         font-weight: 600;
         font-size: 14px;
@@ -218,7 +218,7 @@ header {
       width: 32px;
       height: 4px;
       transform: skew(30deg);
-      background: $second;
+      background: linear-gradient(90deg, #a80200 0%, #d8250f 100%);
     }
   }
 

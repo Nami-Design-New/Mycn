@@ -11,7 +11,7 @@ export default function ShippingCalculator() {
 
   return (
     <>
-      <section className="shipping_calculator">
+      <section className="shipping_calculator main_section">
         <div className="container">
           <div className="row">
             <div className="col-12 p-2">

@@ -204,3 +204,46 @@ header {
     }
   }
 }
+
+.main_section {
+  padding: 40px 0;
+
+  .section_title {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    &::before {
+      content: "";
+      width: 32px;
+      height: 4px;
+      transform: skew(30deg);
+      background: $second;
+    }
+  }
+
+  .section_description {
+    font-size: 14px;
+    color: $black;
+    a {
+      color: $second;
+    }
+  }
+}
+
+.terms {
+  h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  ul {
+    margin-bottom: 16px;
+    padding-left: 16px;
+    list-style: disc;
+    li {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+  }
+}

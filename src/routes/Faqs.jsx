@@ -69,7 +69,7 @@ export default function Faqs() {
   ];
 
   return (
-    <section className="faqs_page">
+    <section className="faqs_page main_section">
       <div className="container">
         <div className="row">
           <div className="col-12 p-2 mb-1">

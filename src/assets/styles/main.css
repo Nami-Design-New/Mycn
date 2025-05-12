@@ -631,6 +631,42 @@ body .footer .copyright .socials a {
 body .footer .copyright .socials a:hover {
   color: #d8250f;
 }
+body .main_section {
+  padding: 40px 0;
+}
+body .main_section .section_title {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+body .main_section .section_title::before {
+  content: "";
+  width: 32px;
+  height: 4px;
+  transform: skew(30deg);
+  background: #d8250f;
+}
+body .main_section .section_description {
+  font-size: 14px;
+  color: #000;
+}
+body .main_section .section_description a {
+  color: #d8250f;
+}
+body .terms h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+body .terms ul {
+  margin-bottom: 16px;
+  padding-left: 16px;
+  list-style: disc;
+}
+body .terms ul li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
 body .form_ui {
   width: 100%;
 }
@@ -1423,29 +1459,6 @@ body .faqs_section .btns a {
 body .faqs_section .btns a:last-child {
   background: #d8250f;
 }
-body .faqs_page {
-  padding: 40px 0;
-}
-body .faqs_page .section_title {
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-body .faqs_page .section_title::before {
-  content: "";
-  width: 32px;
-  height: 4px;
-  transform: skew(30deg);
-  background: #d8250f;
-}
-body .faqs_page .section_description {
-  font-size: 14px;
-  color: #000;
-}
-body .faqs_page .section_description a {
-  color: #d8250f;
-}
 body .faqs_page .tabs {
   display: flex;
   flex-direction: column;
@@ -1632,26 +1645,6 @@ body .error-page a {
 body .error-page a:hover {
   background: #000;
 }
-body .auth_section {
-  padding: 40px 0;
-}
-body .auth_section .section_title {
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-body .auth_section .section_title::before {
-  content: "";
-  width: 32px;
-  height: 4px;
-  transform: skew(30deg);
-  background: #d8250f;
-}
-body .auth_section .section_description {
-  font-size: 14px;
-  color: #000;
-}
 body .auth_section .img {
   width: 100%;
   height: 100%;
@@ -1680,26 +1673,6 @@ body .auth_section .link {
   width: 100%;
   margin-top: 12px;
   display: block;
-}
-body .shipping_calculator {
-  padding: 40px 0;
-}
-body .shipping_calculator .section_title {
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-body .shipping_calculator .section_title::before {
-  content: "";
-  width: 32px;
-  height: 4px;
-  transform: skew(30deg);
-  background: #d8250f;
-}
-body .shipping_calculator .section_description {
-  font-size: 14px;
-  color: #000;
 }
 body .shipping_calculator .calculator_form {
   padding: 24px;

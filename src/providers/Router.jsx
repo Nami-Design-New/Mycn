@@ -7,6 +7,9 @@ import Faqs from "../routes/Faqs";
 import ShippingCalculator from "../routes/ShippingCalculator";
 import Login from "../routes/Login";
 import Register from "../routes/Register";
+import About from "../routes/About";
+import Terms from "../routes/Terms";
+import Privacy from "../routes/Privacy";
 
 export const router = createBrowserRouter([
   {
@@ -37,6 +40,18 @@ export const router = createBrowserRouter([
       {
         path: "signup",
         element: <Register />,
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+      {
+        path: "terms-conditions",
+        element: <Terms />,
+      },
+      {
+        path: "privacy-policy",
+        element: <Privacy />,
       },
     ],
   },

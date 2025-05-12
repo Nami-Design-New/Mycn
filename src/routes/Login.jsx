@@ -5,7 +5,7 @@ import SubmitButton from "../ui/forms/SubmitButton";
 
 export default function Login() {
   return (
-    <section className="auth_section">
+    <section className="auth_section main_section">
       <div className="container">
         <div className="row">
           <div className="col-12 p-2 mb-2">

@@ -1,24 +1,4 @@
 .auth_section {
-  padding: 40px 0;
-
-  .section_title {
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    &::before {
-      content: "";
-      width: 32px;
-      height: 4px;
-      transform: skew(30deg);
-      background: $second;
-    }
-  }
-
-  .section_description {
-    font-size: 14px;
-    color: $black;
-  }
 
   .img {
     width: 100%;

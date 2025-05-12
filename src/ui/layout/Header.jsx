@@ -40,7 +40,7 @@ export default function Header() {
           <button>
             <i className="fa-regular fa-globe"></i> EN
           </button>
-          <button className="login">{t("header.login")}</button>
+          <Link to="/signin" className="login">{t("header.login")}</Link>
         </div>
       </nav>
     </header>

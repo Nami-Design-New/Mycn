@@ -1,6 +1,6 @@
 import ContactForm from "../components/contact/ContactForm";
 import ContactInfo from "../components/contact/ContactInfo";
-import Faqs from "../components/home/Faqs";
+import Faqs from "../ui/layout/Faqs";
 
 export default function Contact() {
   return (

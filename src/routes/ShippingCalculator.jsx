@@ -4,7 +4,7 @@ import { Link } from "react-router";
 import InputField from "../ui/forms/InputField";
 import SelectField from "./../ui/forms/SelectField";
 import SubmitButton from "./../ui/forms/SubmitButton";
-import Faqs from "./../components/home/Faqs";
+import Faqs from "../ui/layout/Faqs";
 
 export default function ShippingCalculator() {
   const [isMore, setIsMore] = useState(false);
@@ -99,7 +99,6 @@ export default function ShippingCalculator() {
 
                 <Form.Check
                   type="switch"
-                  id="custom-switch"
                   label="Is the size larger than 130cm?"
                   onChange={() => setIsMore(!isMore)}
                   checked={isMore}

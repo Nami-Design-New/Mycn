@@ -1,0 +1,53 @@
+.auth_section {
+  padding: 40px 0;
+
+  .section_title {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    &::before {
+      content: "";
+      width: 32px;
+      height: 4px;
+      transform: skew(30deg);
+      background: $second;
+    }
+  }
+
+  .section_description {
+    font-size: 14px;
+    color: $black;
+  }
+
+  .img {
+    width: 100%;
+    height: 100%;
+    padding-inline-start: 12px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+  }
+
+  .note {
+    font-size: 14px;
+    color: $black;
+    margin-top: 12px;
+    margin-bottom: 0;
+    a {
+      color: $second;
+    }
+  }
+
+  .link {
+    text-align: end;
+    font-size: 14px;
+    color: $second;
+    width: 100%;
+    margin-top: 12px;
+    display: block;
+  }
+}

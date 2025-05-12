@@ -6,13 +6,14 @@ body {
   overflow-x: hidden;
   scrollbar-width: none;
   font-family: "Baloo Bhaijaan 2", sans-serif;
-  
+
   @import "./scss/layout";
   @import "./scss/form_ui";
   @import "./scss/home";
   @import "./scss/contact";
-  @import "./scss/shipping_calculator";
   @import "./scss/error-page";
+  @import "./scss/auth_section";
+  @import "./scss/shipping_calculator";
 
   main {
     min-height: calc(100dvh - 300px);
@@ -21,5 +22,18 @@ body {
   &.en {
     font-family: "Outfit", sans-serif;
     direction: ltr;
+
+    .form_ui .input-field .pass-group {
+      input {
+        border-radius: 12px 0 0 12px !important;
+        border-right: 0 !important;
+        border-left: 1px solid $input_stroke !important;
+      }
+      .show-pass {
+        border-radius: 0 12px 12px 0 !important;
+        border-left: 0 !important;
+        border-right: 1px solid $input_stroke !important;
+      }
+    }
   }
 }

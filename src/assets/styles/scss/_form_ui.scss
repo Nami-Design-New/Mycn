@@ -156,7 +156,8 @@
   }
 }
 
-.form-switch {
+.form-switch,
+.form-check {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -168,8 +169,12 @@
     color: $black;
     font-weight: 500;
     font-size: 14px;
+
+    a {
+      color: $second;
+    }
   }
-  
+
   .form-check-input:checked {
     background-color: $main !important;
     border-color: $main !important;
@@ -179,4 +184,14 @@
     margin: 0 !important;
     cursor: pointer;
   }
+}
+
+.form-switch .form-check-input {
+  width: 32px;
+}
+
+.form-check .form-check-input {
+  width: 16px ;
+  height: 16px ;
+  box-shadow: none !important;
 }

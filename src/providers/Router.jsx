@@ -5,6 +5,8 @@ import Error from "../routes/Error";
 import Contact from "../routes/Contact";
 import Faqs from "../routes/Faqs";
 import ShippingCalculator from "../routes/ShippingCalculator";
+import Login from "../routes/Login";
+import Register from "../routes/Register";
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +29,14 @@ export const router = createBrowserRouter([
       {
         path: "shipping-calculator",
         element: <ShippingCalculator />,
+      },
+      {
+        path: "signin",
+        element: <Login />,
+      },
+      {
+        path: "signup",
+        element: <Register />,
       },
     ],
   },

@@ -654,7 +654,11 @@ body .main_section .section_description {
 body .main_section .section_description a {
   color: #d8250f;
 }
-body .terms h2 {
+body .terms h2,
+body .terms h3,
+body .terms h4,
+body .terms h5,
+body .terms h6 {
   font-size: 20px;
   margin-bottom: 16px;
 }

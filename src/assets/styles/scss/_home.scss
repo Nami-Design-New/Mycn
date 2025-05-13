@@ -515,6 +515,17 @@
       }
     }
   }
+
+  .watch_btn {
+    padding: 12px 32px;
+    background: $black;
+    color: $white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 12px;
+  }
 }
 
 .testimonials_section {
@@ -679,7 +690,6 @@
 }
 
 .faqs_page {
-
   .tabs {
     display: flex;
     flex-direction: column;

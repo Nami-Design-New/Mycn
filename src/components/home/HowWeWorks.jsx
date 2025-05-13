@@ -88,6 +88,13 @@ export default function HowWeWorks() {
               ))}
             </div>
           </div>
+
+          <div className="col-12 p-2 mt-4  d-flex justify-content-center">
+            <button className="watch_btn">
+              <i className="fa-regular fa-play"></i> Watch How My CN
+              Works
+            </button>
+          </div>
         </div>
       </div>
     </section>

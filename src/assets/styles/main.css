@@ -1744,7 +1744,16 @@ body .how_we_work_section .steps .step .num {
     border-radius: 30px;
   }
 }
-
+body .how_we_work_section .watch_btn {
+  padding: 12px 32px;
+  background: #000;
+  color: #fff;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 12px;
+}
 body .testimonials_section {
   padding: 60px 0;
 }
@@ -2285,57 +2294,29 @@ body .auth_section .link {
 body .about_section {
   padding: 40px 0;
 }
-
-body .about_section .image {
+body .about_section .img {
   width: 100%;
   height: 100%;
+  padding-inline-end: 16px;
   position: relative;
 }
+body .about_section .img img {
 
-body .about_section .image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  padding: 8px;
   border-radius: 20px;
-}
-
-body .about_section .image .play_video {
-  width: 128px;
-  height: 128px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 50%;
-  background: -webkit-gradient(linear, left top, right top, from(#a80200), to(#d8250f));
-  background: linear-gradient(90deg, #a80200 0%, #d8250f 100%);
-}
-
-body .about_section .image .play_video img {
-  height: 48px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 body .about_section ul {
   margin-bottom: 12px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 body .about_section p {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 body .about_section h2 {
@@ -2358,6 +2339,39 @@ body .about_section h2::before {
           transform: skew(30deg);
   background: -webkit-gradient(linear, left top, right top, from(#a80200), to(#d8250f));
   background: linear-gradient(90deg, #a80200 0%, #d8250f 100%);
+}
+
+body .value_section {
+  background: #fafafa;
+  padding: 40px 0;
+}
+body .value_section .value_item {
+  padding: 24px;
+  background: #fff;
+  border-radius: 20px;
+  height: 100%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+body .value_section .value_item .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+body .value_section .value_item img {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+body .value_section .value_item p {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+body .value_section h3 {
+  font-size: 24px;
+  color: #000;
+  margin-bottom: 0;
+}
+body .how_it_works {
+  padding: 40px 0;
 }
 
 body .shipping_calculator .calculator_form {

@@ -13,6 +13,8 @@ import Privacy from "../routes/Privacy";
 import Profile from "../routes/Profile";
 import MyShipments from "../routes/MyShipments";
 import Address from "../routes/Address";
+import Notifications from "../routes/Notifications";
+import MyAddresses from "../routes/MyAddresses";
 
 export const router = createBrowserRouter([
   {
@@ -74,11 +76,11 @@ export const router = createBrowserRouter([
           },
           {
             path: "notifications",
-            element: <MyShipments />,
+            element: <Notifications />,
           },
           {
             path: "my-addresses",
-            element: <MyShipments />,
+            element: <MyAddresses />,
           },
         ],
       },

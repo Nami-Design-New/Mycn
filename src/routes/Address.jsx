@@ -2,9 +2,9 @@ export default function Address() {
   return (
     <div className="address">
       <div className="row">
-        <div className="col-lg-7 col-12 p-2">
+        <div className="col-lg-6 col-12 p-2">
           <div className="content">
-            <h3>Welcome to MY CN</h3>
+            <h3>Welcome to MY CN </h3>
 
             <p>
               Your MY CN China locker address is now active! Start shopping from
@@ -21,25 +21,14 @@ export default function Address() {
               reduce size and weight — helping you save BIG on international
               shipping costs.
             </p>
-
-            <p>
-              Whether you’re purchasing fashion, electronics, household items,
-              or gifts, our <strong>expert logistics team</strong> is here to
-              support you every step of the way — from receiving and inspecting
-              your packages to preparing and shipping them to your doorstep,
-              wherever you are in the world.
-            </p>
-
-            <p>
-              Ready to start shopping smarter? Begin using your MY CN address
-              today and unlock a seamless cross-border shopping experience with
-              complete peace of mind.
-            </p>
           </div>
         </div>
-        <div className="col-lg-5 col-12 p-2">
+
+        <div className="col-lg-6 col-12 p-2">
           <div className="address_card">
-            <h4>Your China Shipping Address</h4>
+            <h4>
+              Your China Shipping Address <img src="/images/logo.svg" alt="" />
+            </h4>
 
             <ul>
               <li>

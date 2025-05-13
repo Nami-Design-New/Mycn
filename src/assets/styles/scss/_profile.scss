@@ -80,6 +80,7 @@
     p {
       margin-bottom: 0;
       font-size: 14px;
+      padding-inline-end: 8px;
     }
 
     .head {
@@ -130,6 +131,7 @@
       display: flex;
       align-items: center;
       gap: 8px;
+      margin-bottom: 24px;
       &::before {
         content: "";
         width: 32px;
@@ -147,31 +149,73 @@
 
   .address_card {
     padding: 24px;
-    background: $second;
+    background: $white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 16px;
 
     h4 {
-      font-size: 18px;
-      color: $white;
+      font-size: 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      img {
+        height: 24px;
+      }
     }
 
     ul {
       border-top: 1px solid $input_stroke;
-      margin: 12px 0;
-      padding: 12px 0;
+      margin: 16px 0;
+      padding: 16px 0;
       display: flex;
       flex-direction: column;
       gap: 8px;
-      color: $white;
       margin-bottom: 0;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 500;
       padding-bottom: 0;
 
       span {
         font-weight: normal;
         font-size: 14px;
       }
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
     }
+  }
+}
+
+.notification_card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 16px;
+  background: $input_bg;
+  border-radius: 16px;
+  border: 1px dashed $input_stroke;
+
+  .icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    color: $white;
+    @include centerFlex();
+    background: linear-gradient(90deg, #a80200 0%, #d8250f 100%);
+  }
+
+  h6 {
+    font-size: 18px;
+    color: $black;
+  }
+
+  p {
+    margin: 0;
+    color: $gray !important;
   }
 }

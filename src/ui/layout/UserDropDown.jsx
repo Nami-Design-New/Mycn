@@ -10,7 +10,7 @@ export default function UserDropDown() {
       </Dropdown.Toggle>
 
       <Dropdown.Menu className="custom-dropdown-menu text-end">
-        <Dropdown.Item as={Link} to="/profile/my-shipments">
+        <Dropdown.Item as={Link} to="/profile/notifications">
           <i className="fa-regular fa-bell"></i>
           Notifications
         </Dropdown.Item>
@@ -20,12 +20,12 @@ export default function UserDropDown() {
           My Shipments
         </Dropdown.Item>
 
-        <Dropdown.Item as={Link} to="/profile/my-shipments">
+        <Dropdown.Item as={Link} to="/profile/my-transactions">
           <i className="fa-solid fa-dollar-sign"></i>
           My Transactions
         </Dropdown.Item>
 
-        <Dropdown.Item as={Link} to="/profile/my-shipments">
+        <Dropdown.Item as={Link} to="/profile/my-addresses">
           <i className="fa-regular fa-location-dot"></i>
           My Addresses
         </Dropdown.Item>

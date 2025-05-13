@@ -40,7 +40,6 @@ export default function Restricted() {
               </div>
             </div>
           </div>
-          {/* <Faqs /> */}
         </div>
         <div className="restricted__benefits">
             <h4>{t("restricted.hazardousMaterialsTitle")}</h4>

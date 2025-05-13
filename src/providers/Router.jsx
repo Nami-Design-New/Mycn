@@ -10,6 +10,8 @@ import Register from "../routes/Register";
 import About from "../routes/About";
 import Terms from "../routes/Terms";
 import Privacy from "../routes/Privacy";
+import Profile from "../routes/Profile";
+import MyShipments from "../routes/MyShipments";
 
 export const router = createBrowserRouter([
   {
@@ -52,6 +54,16 @@ export const router = createBrowserRouter([
       {
         path: "privacy-policy",
         element: <Privacy />,
+      },
+      {
+        path: "profile",
+        element: <Profile />,
+        children: [
+          {
+            path: "my-shipments",
+            element: <MyShipments />,
+          },
+        ],
       },
     ],
   },

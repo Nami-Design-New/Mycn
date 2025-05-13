@@ -1,0 +1,70 @@
+.profile_section {
+  padding: 40px 0;
+
+  .profile_sidebar {
+    border: 1px solid $input_stroke;
+    padding: 24px;
+    position: sticky;
+    top: 150.8px;
+    border-radius: 12px;
+
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid $input_stroke;
+
+      .avatar {
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        color: $main;
+        font-size: 18px;
+        border: 1px solid $input_stroke;
+        @include centerFlex();
+        font-weight: 600;
+      }
+
+      .content {
+        h6 {
+          font-size: 18px;
+          color: $black;
+          margin-bottom: 2px;
+        }
+        span {
+          font-size: 14px;
+          color: $gray;
+        }
+      }
+    }
+
+    .nav_links {
+      display: flex;
+      flex-direction: column;
+      margin-top: 24px;
+      gap: 12px;
+
+      .nav_link {
+        padding: 12px 24px;
+        background: $input_bg;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        color: $black;
+        transition: 0.3s ease-in-out;
+        font-size: 14px;
+
+        &.danger {
+          color: #ff0000;
+        }
+
+        &.active {
+          background: $second;
+          color: $white;
+        }
+      }
+    }
+  }
+}

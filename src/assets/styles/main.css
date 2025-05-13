@@ -497,6 +497,43 @@ body header nav .actions .login {
 body header nav .actions .login:hover {
   background-color: #000;
 }
+body .user_dropdown {
+  border: 1px solid #f4f4f4;
+  background: #fff;
+  border-radius: 120px;
+  padding: 8px 20px;
+  transition: all 0.3s ease-in-out;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+}
+body .user_dropdown i {
+  font-size: 12px;
+}
+body .user_dropdown.show, body .user_dropdown:active, body .user_dropdown:hover {
+  border-color: #f4f4f4 !important;
+  color: #000 !important;
+  background: #fff !important;
+}
+body .dropdown-menu {
+  padding: 12px;
+}
+body .dropdown-menu .dropdown-item {
+  margin-bottom: 4px;
+  padding: 8px 24px 8px 16px;
+  border-radius: 4px;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 14px;
+}
+body .dropdown-menu .dropdown-item.logout:hover {
+  background: #d8250f;
+  color: #fff;
+}
 body .section_hint {
   background: #d8250f;
   padding: 6px 16px;
@@ -1651,7 +1688,7 @@ body .error-page a {
   padding: 12px 32px;
   font-size: 14px;
   color: #fff;
-  background: #a80200;
+  background: #d8250f;
   border-radius: 120px;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);
@@ -1757,6 +1794,68 @@ body .value_section h3 {
 }
 body .how_it_works {
   padding: 40px 0;
+}
+body .profile_section {
+  padding: 40px 0;
+}
+body .profile_section .profile_sidebar {
+  border: 1px solid #f4f4f4;
+  padding: 24px;
+  position: sticky;
+  top: 150.8px;
+  border-radius: 12px;
+}
+body .profile_section .profile_sidebar .user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f4f4f4;
+}
+body .profile_section .profile_sidebar .user .avatar {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  color: #a80200;
+  font-size: 18px;
+  border: 1px solid #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+body .profile_section .profile_sidebar .user .content h6 {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 2px;
+}
+body .profile_section .profile_sidebar .user .content span {
+  font-size: 14px;
+  color: #777;
+}
+body .profile_section .profile_sidebar .nav_links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  gap: 12px;
+}
+body .profile_section .profile_sidebar .nav_links .nav_link {
+  padding: 12px 24px;
+  background: #fafafa;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #000;
+  transition: 0.3s ease-in-out;
+  font-size: 14px;
+}
+body .profile_section .profile_sidebar .nav_links .nav_link.danger {
+  color: #ff0000;
+}
+body .profile_section .profile_sidebar .nav_links .nav_link.active {
+  background: #d8250f;
+  color: #fff;
 }
 body .shipping_calculator .calculator_form {
   padding: 24px;

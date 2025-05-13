@@ -62,5 +62,49 @@
         "title": "Have a question? We're here to help!",
         "viewAll": "View All FAQs",
         "signUp": "Sign Up Now, It's Free!"
-    }
+    },
+        "package": {
+          "title": "MYCN's Package Consolidation",
+          "description": "Consolidate your packages into one shipment and enjoy lower fees, faster delivery, and more convenience.",
+          "individual": "Shipping Individually",
+          "consolidated": "Shipping After Consolidation"
+        
+      },
+      "repacking": {
+        "title": "MYCN Repacking Service",
+        "description": "Combine your packages into one shipment and enjoy lower fees, faster delivery, and more convenience.",
+        "itemDescription": "For users who want to ship only one item, we can prepare the shipment as it is or with some adjustments based on your preferences. You can choose to ship with the original seller's packaging or take advantage of our repacking service for more efficiency.",
+        "exampleLabel": "Example:",
+        "exampleTitle": "iPhone",
+        "exampleDescription": "If you purchase an iPhone, we can remove the seller's shipping box and repack it into a smaller, more compact box. We can also add extra padding for protection and ensure it arrives safely.",
+        "note": "These adjustments not only save on shipping costs but also provide better protection during transit.",
+        "costTitle": "How much does repacking cost?",
+        "costSubtitle": "Costs",
+        "costDescription": "MYCN's repacking service costs $5. While there is a small fee, the savings from reducing the shipment size often outweigh the cost. If we cannot optimize the packaging, the $5 fee will be waived.",
+        "careSubtitle": "Care and Customization",
+        "careDescription": "We handle all items, especially fragile or high-value products, with the utmost care. You can choose to keep the original seller's packaging or request additional protection for your peace of mind.",
+        "shipTitle": "Ship as is",
+        "shipDescription": "If you prefer to keep the seller's original packaging, you can opt for shipping as is with no changes. However, if the shipment contains a hazardous product (hazmat), additional steps may be required to ensure compliance with shipping regulations."
+      },
+      "restricted": {
+        "title": "Restricted & Special Handling Items",
+        "description": "Some items require special care or may be restricted due to shipping regulations. Learn what can and cannot be shipped, and how we handle them.",
+        "hazmatAlt": "Hazardous Material",
+        "hazmatTitle": "Hazardous Materials (Hazmat)",
+        "hazmatDescription": "Items like perfumes, sprays, batteries, and flammable materials require special packaging and compliance with international regulations. We ensure all hazmat shipments meet safety standards.",
+        "fragileAlt": "Fragile Items",
+        "fragileTitle": "Fragile Items",
+        "fragileDescription": "We provide extra padding and protective wrapping for fragile items such as glassware, electronics, and ceramics to ensure they arrive in perfect condition.",
+        "prohibitedAlt": "Prohibited Items",
+        "prohibitedTitle": "Prohibited Items",
+        "prohibitedDescription": "Certain items are strictly prohibited from international shipping, including firearms, explosives, and illegal goods. Please check our prohibited items list before placing your order.",
+        "hazardousMaterialsTitle": "How to Handle and Ship Hazardous Materials?",
+        "hazardousMaterialsDescription": "The Mycn team carefully inspects all items before shipment. If we identify any items that require special handling (hazardous items), your shipment will require special procedures. Here's what you can expect:",
+        "hazardousStep1": "We provide specialized packaging and labeling to ensure safe delivery of hazardous materials.",
+        "hazardousStep2": "A fee of $12.50 applies for the additional handling and preparation of each hazardous material shipment.",
+        "hazardousStep3": "Shipping options for hazardous materials may be limited. We can assist you in finding the best available carrier.",
+        "contactSupport": "Contact Mycn Support via chat or email at",
+        "contactNote": "Please contact customer support if you're unsure whether your item is allowed or needs special handling."
+      }
+      
 }

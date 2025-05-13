@@ -5,7 +5,7 @@ export default function Profile() {
     <section className="profile_section">
       <div className="container">
         <div className="row">
-          <div className="col-lg-4 col-md-4 col-12 p-2">
+          <div className="col-lg-3 col-md-4 col-12 p-2">
             <div className="profile_sidebar">
               <div className="user">
                 <div className="avatar">AE</div>
@@ -16,7 +16,12 @@ export default function Profile() {
               </div>
 
               <div className="nav_links">
-                <NavLink to="my-shipments" end className="nav_link">
+                <NavLink to="" end className="nav_link">
+                  <i className="fa-regular fa-chart-line"></i>
+                  Dashboard
+                </NavLink>
+
+                <NavLink to="my-shipments" className="nav_link">
                   <i className="fa-regular fa-truck"></i>
                   My Shipment
                 </NavLink>
@@ -31,12 +36,12 @@ export default function Profile() {
                   Notifications
                 </NavLink>
 
-                <NavLink to="my-address" className="nav_link">
+                <NavLink to="my-addresses" className="nav_link">
                   <i className="fa-regular fa-location-dot"></i>
                   My Addresses
                 </NavLink>
 
-                <NavLink to="/login" className="nav_link">
+                <NavLink to="/signin" className="nav_link">
                   <i className="fa-regular fa-sign-out-alt"></i>
                   Sign Out
                 </NavLink>
@@ -44,7 +49,7 @@ export default function Profile() {
             </div>
           </div>
 
-          <div className="col-lg-8 col-md-4 col-12 p-2">
+          <div className="col-lg-9 col-md-4 col-12 p-0">
             <Outlet />
           </div>
         </div>

@@ -1800,9 +1800,9 @@ body .profile_section {
 }
 body .profile_section .profile_sidebar {
   border: 1px solid #f4f4f4;
-  padding: 24px;
+  padding: 16px;
   position: sticky;
-  top: 150.8px;
+  top: 107.8px;
   border-radius: 12px;
 }
 body .profile_section .profile_sidebar .user {
@@ -1813,8 +1813,8 @@ body .profile_section .profile_sidebar .user {
   border-bottom: 1px solid #f4f4f4;
 }
 body .profile_section .profile_sidebar .user .avatar {
-  width: 62px;
-  height: 62px;
+  min-width: 54px;
+  height: 54px;
   border-radius: 50%;
   color: #a80200;
   font-size: 18px;
@@ -1856,6 +1856,100 @@ body .profile_section .profile_sidebar .nav_links .nav_link.danger {
 body .profile_section .profile_sidebar .nav_links .nav_link.active {
   background: #d8250f;
   color: #fff;
+}
+body .profile_section .shipment {
+  border: 1px solid #f4f4f4;
+  padding: 24px;
+  border-radius: 12px;
+  display: flex;
+  gap: 12px;
+  height: 100%;
+  flex-wrap: wrap;
+}
+body .profile_section .shipment p {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+body .profile_section .shipment .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  width: 200%;
+}
+body .profile_section .shipment .head h6 {
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  background: #d8250f;
+  padding: 6px 16px;
+  margin: 0;
+  border-radius: 80px;
+}
+body .profile_section .shipment .head a {
+  color: #d8250f;
+  font-size: 14px;
+}
+body .profile_section .shipment .status {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+body .profile_section .shipment .status span {
+  font-size: 14px;
+  font-weight: 500;
+}
+body .profile_section .shipment .status .progress {
+  background: #fafafa;
+  height: 8px;
+}
+body .profile_section .shipment .status .progress-bar {
+  background-color: #d8250f !important;
+}
+body .profile_section .content h3 {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+body .profile_section .content h3::before {
+  content: "";
+  width: 32px;
+  height: 4px;
+  transform: skew(30deg);
+  background: linear-gradient(90deg, #a80200 0%, #d8250f 100%);
+}
+body .profile_section .content p {
+  font-size: 14px;
+  color: #000;
+}
+body .profile_section .address_card {
+  padding: 24px;
+  background: #d8250f;
+  border-radius: 16px;
+}
+body .profile_section .address_card h4 {
+  font-size: 18px;
+  color: #fff;
+}
+body .profile_section .address_card ul {
+  border-top: 1px solid #f4f4f4;
+  margin: 12px 0;
+  padding: 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #fff;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 600;
+  padding-bottom: 0;
+}
+body .profile_section .address_card ul span {
+  font-weight: normal;
+  font-size: 14px;
 }
 body .shipping_calculator .calculator_form {
   padding: 24px;

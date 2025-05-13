@@ -12,6 +12,7 @@ import Terms from "../routes/Terms";
 import Privacy from "../routes/Privacy";
 import Profile from "../routes/Profile";
 import MyShipments from "../routes/MyShipments";
+import Address from "../routes/Address";
 
 export const router = createBrowserRouter([
   {
@@ -60,7 +61,23 @@ export const router = createBrowserRouter([
         element: <Profile />,
         children: [
           {
+            index: true,
+            element: <Address />,
+          },
+          {
             path: "my-shipments",
+            element: <MyShipments />,
+          },
+          {
+            path: "my-transactions",
+            element: <MyShipments />,
+          },
+          {
+            path: "notifications",
+            element: <MyShipments />,
+          },
+          {
+            path: "my-addresses",
             element: <MyShipments />,
           },
         ],

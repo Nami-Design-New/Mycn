@@ -54,6 +54,17 @@
         "title4": "دعم عملاء متواصل",
         "description4": "متواجدون دائمًا لخدمتك على مدار الساعة."
     },
+    "orderStatus": {
+        "in_warehouse": "في المخزن",
+        "order_approved": "اعتمد الطلب",
+        "payment_done": "تم الدفع",
+        "left_china": "خارج من الصين",
+        "arrived_saudi_arabia": "وصل السعودية",
+        "out_for_delivery_to_customer": "خارج من المستودع إلى العميل",
+        "will_be_delivered_soon": "سوف يتم التوصيل",
+        "delivered": "استلام",
+        "completed": "تم انتهاء الطلب"
+    },
     "testimonials": {
         "title": "ما يقوله عملاؤنا",
         "subtitle": "أراء العملاء"

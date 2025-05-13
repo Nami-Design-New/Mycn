@@ -4,13 +4,13 @@ import { useTranslation } from "react-i18next";
 
 const individualPackages = [
   { id: 1, image: "../images/2.webp", description: "Amazon - Electronics", price: 297 },
-  { id: 2, image: "../images/4.webp", description: "eBay - Shoes", price: 208},
+  { id: 2, image: "../images/4.webp", description: "eBay-Shoes", price: 208},
   { id: 3, image: "../images/6.webp", description: "AliExpress - Accessories", price: 306 },
 ];
 
 const consolidatedPackage = [
   { id: 1, image: "../images/1.webp", description: "Amazon - Electronics", price: 90 },
-  { id: 2, image: "../images/3.webp", description: "eBay - Shoes", price: 93 },
+  { id: 2, image: "../images/3.webp", description: "eBay-Shoes", price: 93 },
   { id: 3, image: "../images/5.webp", description: "AliExpress - Accessories", price: 131 },
 ];
 

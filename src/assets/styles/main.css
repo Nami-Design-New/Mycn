@@ -1714,6 +1714,10 @@ body .about_section .image .play_video img {
 }
 body .about_section ul {
   margin-bottom: 12px;
+  font-size: 14px;
+}
+body .about_section p {
+  font-size: 14px;
 }
 body .about_section h2 {
   font-size: 24px;

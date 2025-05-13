@@ -54,7 +54,7 @@ export default function Footer() {
 
             <ul className="links_list">
               <li>
-                <Link to="/package-collection">Package consolidation</Link>
+                <Link to="/package-consolidation">Package consolidation</Link>
               </li>
               <li>
                 <Link to="/repacking">Repacking</Link>
@@ -63,7 +63,7 @@ export default function Footer() {
                 <Link to="/shipping-calculator">Shipping Calculator</Link>
               </li>
               <li>
-                <Link to="/restricted">
+                <Link to="/restricted-special-handling">
                   Restricted and special handling items
                 </Link>
               </li>

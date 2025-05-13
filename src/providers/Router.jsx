@@ -10,6 +10,9 @@ import Register from "../routes/Register";
 import About from "../routes/About";
 import Terms from "../routes/Terms";
 import Privacy from "../routes/Privacy";
+import PackageConsolidation from "../routes/PackageConsolidation";
+import Repacking from "../routes/Repacking";
+import Restricted from "../routes/Restricted&specialhandling";
 
 export const router = createBrowserRouter([
   {
@@ -53,6 +56,19 @@ export const router = createBrowserRouter([
         path: "privacy-policy",
         element: <Privacy />,
       },
+      {
+        path: "package-consolidation",
+        element: <PackageConsolidation />,
+      },
+      {
+        path: "repacking",
+        element: <Repacking />,
+      },
+      {
+        path: "restricted-special-handling",
+        element: <Restricted />,
+      },
+   
     ],
   },
 ]);

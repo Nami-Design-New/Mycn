@@ -2071,45 +2071,6 @@ body .profile_section .shipment_details .packages h5 {
 body .profile_section .shipment_details .packages h5 i {
   color: #d8250f;
 }
-body .profile_section .shipment_details .packages table {
-  margin-top: 16px;
-  width: 100%;
-  border-collapse: collapse;
-}
-body .profile_section .shipment_details .packages table th,
-body .profile_section .shipment_details .packages table td {
-  padding: 12px;
-  font-size: 14px;
-  border: 1px solid #f4f4f4;
-}
-body .profile_section .shipment_details .packages table th {
-  font-weight: 500;
-  background: #fafafa;
-}
-body .profile_section .shipment_details .packages table .actions {
-  text-align: center;
-  color: #009cd5;
-  cursor: pointer;
-}
-body .profile_section .new_packages .sec_title {
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 8px;
-}
-body .profile_section .new_packages .sec_title::before {
-  content: "";
-  width: 32px;
-  height: 4px;
-  transform: skew(30deg);
-  background: linear-gradient(90deg, #a80200 0%, #d8250f 100%);
-}
-body .profile_section .new_packages .sec_desc {
-  font-size: 14px;
-  color: #000;
-  margin-bottom: 0;
-}
 body .profile_section .new_packages .list {
   background: #fafafa;
   border-radius: 16px;
@@ -2187,6 +2148,14 @@ body .profile_section .new_packages .log {
   background: #d8250f;
   margin-inline-start: auto;
 }
+body .profile_section .add_btn {
+  font-size: 14px;
+  color: #fff;
+  padding: 12px 32px;
+  border-radius: 12px;
+  background: #d8250f;
+  margin-top: 12px;
+}
 body .notification_card {
   display: flex;
   align-items: center;
@@ -2213,6 +2182,45 @@ body .notification_card h6 {
 body .notification_card p {
   margin: 0;
   color: #777 !important;
+}
+body .sec_title {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+body .sec_title::before {
+  content: "";
+  width: 32px;
+  height: 4px;
+  transform: skew(30deg);
+  background: linear-gradient(90deg, #a80200 0%, #d8250f 100%);
+}
+body .sec_desc {
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 0;
+}
+body table {
+  margin-top: 16px;
+  width: 100%;
+  border-collapse: collapse;
+}
+body table th,
+body table td {
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #f4f4f4;
+}
+body table th {
+  font-weight: 500;
+  background: #fafafa;
+}
+body table .actions {
+  text-align: center;
+  color: #009cd5;
+  cursor: pointer;
 }
 body .shipping_calculator .calculator_form {
   padding: 24px;

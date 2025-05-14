@@ -293,55 +293,10 @@
           color: $second;
         }
       }
-
-      table {
-        margin-top: 16px;
-        width: 100%;
-        border-collapse: collapse;
-
-        th,
-        td {
-          padding: 12px;
-          font-size: 14px;
-          border: 1px solid $input_stroke;
-        }
-
-        th {
-          font-weight: 500;
-          background: $input_bg;
-        }
-
-        .actions {
-          text-align: center;
-          color: #009cd5;
-          cursor: pointer;
-        }
-      }
     }
   }
 
   .new_packages {
-    .sec_title {
-      font-size: 24px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 8px;
-      &::before {
-        content: "";
-        width: 32px;
-        height: 4px;
-        transform: skew(30deg);
-        background: linear-gradient(90deg, #a80200 0%, #d8250f 100%);
-      }
-    }
-
-    .sec_desc {
-      font-size: 14px;
-      color: $black;
-      margin-bottom: 0;
-    }
-
     .list {
       background: $input_bg;
       border-radius: 16px;
@@ -430,6 +385,15 @@
       margin-inline-start: auto;
     }
   }
+
+  .add_btn {
+    font-size: 14px;
+    color: $white;
+    padding: 12px 32px;
+    border-radius: 12px;
+    background: $second;
+    margin-top: 12px;
+  }
 }
 
 .notification_card {
@@ -458,5 +422,50 @@
   p {
     margin: 0;
     color: $gray !important;
+  }
+}
+
+.sec_title {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  &::before {
+    content: "";
+    width: 32px;
+    height: 4px;
+    transform: skew(30deg);
+    background: linear-gradient(90deg, #a80200 0%, #d8250f 100%);
+  }
+}
+
+.sec_desc {
+  font-size: 14px;
+  color: $black;
+  margin-bottom: 0;
+}
+
+table {
+  margin-top: 16px;
+  width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid $input_stroke;
+  }
+
+  th {
+    font-weight: 500;
+    background: $input_bg;
+  }
+
+  .actions {
+    text-align: center;
+    color: #009cd5;
+    cursor: pointer;
   }
 }

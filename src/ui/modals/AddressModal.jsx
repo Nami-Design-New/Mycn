@@ -19,7 +19,7 @@ export default function AddressModal({
       </Modal.Header>
 
       <Modal.Body>
-        <Form>
+        <Form className="form_ui">
           <Form.Group className="mb-3">
             <Form.Text className="text-muted">
               First and last name must match the government-issued ID of the

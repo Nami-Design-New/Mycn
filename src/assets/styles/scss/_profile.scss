@@ -106,8 +106,10 @@
       width: 100%;
       display: flex;
       flex-direction: column;
+      background: $input_bg;
+      padding: 16px;
+      border-radius: 8px;
       gap: 8px;
-      margin-top: 12px;
 
       span {
         font-size: 14px;
@@ -115,7 +117,7 @@
       }
 
       .progress {
-        background: $input_bg;
+        background: $white;
         height: 8px;
       }
 

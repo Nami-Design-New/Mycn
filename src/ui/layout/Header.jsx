@@ -22,12 +22,15 @@ export default function Header() {
 
   const handleToggleMenu = () => {
     const menu = document.querySelector(".nav_links");
+    const layer = document.querySelector(".layer");
     menu.classList.toggle("open");
+    layer.classList.toggle("open");
   };
 
   return (
     <header className="header">
       <nav className="container">
+        <div className="layer"></div>
         <Link to="/" className="logo">
           <img src="/images/logo.svg" alt="" />
         </Link>

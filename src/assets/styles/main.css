@@ -450,6 +450,19 @@ body header.sticky {
   background: #fff;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+body header .layer {
+  position: absolute;
+  top: 75.4px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 75.4px);
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+  display: none;
+}
+body header .layer.open {
+  display: block;
+}
 body header nav {
   transition: all 0.3s ease-in-out;
   display: flex;

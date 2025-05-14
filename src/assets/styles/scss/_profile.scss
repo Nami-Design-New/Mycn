@@ -242,6 +242,7 @@
       display: flex;
       flex-direction: column;
       gap: 12px;
+      padding: 8px;
 
       .step {
         display: flex;
@@ -249,8 +250,8 @@
         gap: 12px;
 
         .icon {
-          width: 64px;
-          height: 64px;
+          width: 54px;
+          height: 54px;
           border-radius: 50%;
           color: $white;
           font-size: 18px;
@@ -261,8 +262,9 @@
         .content {
           h6 {
             color: $black;
-            font-size: 18px;
-            margin-bottom: 4px;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 0;
           }
 
           span {
@@ -277,6 +279,42 @@
 
         .progress-bar {
           background: $second;
+        }
+      }
+    }
+
+    .packages {
+      margin-top: 24px;
+      padding: 8px;
+
+      h5 {
+        font-size: 16px;
+        i {
+          color: $second;
+        }
+      }
+
+      table {
+        margin-top: 16px;
+        width: 100%;
+        border-collapse: collapse;
+
+        th,
+        td {
+          padding: 12px;
+          font-size: 14px;
+          border: 1px solid $input_stroke;
+        }
+
+        th {
+          font-weight: 500;
+          background: $input_bg;
+        }
+
+        .actions {
+          text-align: center;
+          color: #009cd5;
+          cursor: pointer;
         }
       }
     }

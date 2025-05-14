@@ -51,7 +51,7 @@ export default function Statistics() {
               </div>
             </div>
 
-            <div className="col-lg-4 col-12">
+            <div className="col-lg-4 col-12 d-lg-block d-none">
               <div className="img">
                 <img src="/images/ship.png" alt="" />
               </div>

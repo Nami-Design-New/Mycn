@@ -45,29 +45,31 @@ export default function MyTransactions() {
         </div>
 
         <div className="col-12 p-2 mt-2">
-          <table>
-            <thead>
-              <tr>
-                <th>Transaction ID</th>
-                <th>Date</th>
-                <th>Amount</th>
-                <th>Description</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              {initialData.map((item) => (
-                <tr key={item.id}>
-                  <td>{item.id}</td>
-                  <td>{item.date}</td>
-                  <td>{item.amount}</td>
-                  <td>{item.description}</td>
-                  <td>{item.status}</td>
+          <div className="table_container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Transaction ID</th>
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th>Description</th>
+                  <th>Status</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+
+              <tbody>
+                {initialData.map((item) => (
+                  <tr key={item.id}>
+                    <td>{item.id}</td>
+                    <td>{item.date}</td>
+                    <td>{item.amount}</td>
+                    <td>{item.description}</td>
+                    <td>{item.status}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>

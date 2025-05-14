@@ -406,7 +406,7 @@
   border: 1px dashed $input_stroke;
 
   .icon {
-    width: 54px;
+    min-width: 54px;
     height: 54px;
     border-radius: 50%;
     color: $white;
@@ -446,9 +446,19 @@
   margin-bottom: 0;
 }
 
+.table_container {
+  width: 100%;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    height: 4px;
+  }
+}
+
 table {
   margin-top: 16px;
   width: 100%;
+  white-space: nowrap;
   border-collapse: collapse;
 
   th,

@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 export default function UserDropDown() {
   return (
-    <Dropdown className="d-lg-block d-none">
+    <Dropdown>
       <Dropdown.Toggle className="user_dropdown">
         <span>My Account</span>
         <i className="fa fa-chevron-down"></i>

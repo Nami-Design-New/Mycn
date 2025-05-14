@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router";
 import RootLayout from "../layout/RootLayout";
+
 import Home from "../routes/Home";
 import Error from "../routes/Error";
 import Contact from "../routes/Contact";
 import Faqs from "../routes/Faqs";
-import ShippingCalculator from "../routes/ShippingCalculator";
 import Login from "../routes/Login";
 import Register from "../routes/Register";
 import About from "../routes/About";
@@ -16,8 +16,12 @@ import Address from "../routes/Address";
 import Notifications from "../routes/Notifications";
 import MyAddresses from "../routes/MyAddresses";
 import PackageConsolidation from "../routes/PackageConsolidation";
+import ShippingCalculator from "../routes/ShippingCalculator";
 import Repacking from "../routes/Repacking";
 import Restricted from "../routes/Restricted&specialhandling";
+import MyTransactions from "../routes/MyTransactions";
+import ShipmentDetails from "../routes/ShipmentDetails";
+import NewPackages from "../routes/NewPackages";
 
 export const router = createBrowserRouter([
   {
@@ -71,11 +75,24 @@ export const router = createBrowserRouter([
           },
           {
             path: "my-shipments",
-            element: <MyShipments />,
+            children: [
+              {
+                index: true,
+                element: <MyShipments />,
+              },
+              {
+                path: ":id",
+                element: <ShipmentDetails />,
+              },
+            ],
+          },
+          {
+            path: "new-packages",
+            element: <NewPackages />,
           },
           {
             path: "my-transactions",
-            element: <MyShipments />,
+            element: <MyTransactions />,
           },
           {
             path: "notifications",

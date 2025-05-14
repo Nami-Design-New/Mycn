@@ -21,6 +21,11 @@ export default function Profile() {
                   Dashboard
                 </NavLink>
 
+                <NavLink to="new-packages" className="nav_link">
+                  <i className="fa-regular fa-box-taped"></i>
+                  New packages
+                </NavLink>
+
                 <NavLink to="my-shipments" className="nav_link">
                   <i className="fa-regular fa-truck"></i>
                   My Shipment

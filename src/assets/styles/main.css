@@ -1949,7 +1949,6 @@ body .profile_section .address_card ul {
   padding: 16px 0;
   display: flex;
   flex-direction: column;
-  gap: 8px;
   margin-bottom: 0;
   font-size: 14px;
   font-weight: 500;
@@ -1957,12 +1956,187 @@ body .profile_section .address_card ul {
 }
 body .profile_section .address_card ul span {
   font-weight: normal;
+  white-space: nowrap;
   font-size: 14px;
+}
+body .profile_section .address_card ul b {
+  font-weight: 500;
+  padding: 4px 12px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .profile_section .address_card ul b i {
+  color: #aaaaaa;
+  visibility: hidden;
+  opacity: 0;
+}
+body .profile_section .address_card ul b:hover {
+  background: #fafafa;
+}
+body .profile_section .address_card ul b:hover i {
+  visibility: visible;
+  opacity: 1;
+}
+body .profile_section .address_card ul b:hover .tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+body .profile_section .address_card ul b .tooltip {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
 }
 body .profile_section .address_card ul li {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+body .profile_section .shipment_details .order_tracking {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+body .profile_section .shipment_details .order_tracking .step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+body .profile_section .shipment_details .order_tracking .step .icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d8250f;
+}
+body .profile_section .shipment_details .order_tracking .step .content h6 {
+  color: #000;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+body .profile_section .shipment_details .order_tracking .step .content span {
+  font-size: 12px;
+  color: #777;
+}
+body .profile_section .shipment_details .order_tracking .progress {
+  height: 10px;
+}
+body .profile_section .shipment_details .order_tracking .progress .progress-bar {
+  background: #d8250f;
+}
+body .profile_section .new_packages .sec_title {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+body .profile_section .new_packages .sec_title::before {
+  content: "";
+  width: 32px;
+  height: 4px;
+  transform: skew(30deg);
+  background: linear-gradient(90deg, #a80200 0%, #d8250f 100%);
+}
+body .profile_section .new_packages .sec_desc {
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 0;
+}
+body .profile_section .new_packages .list {
+  background: #fafafa;
+  border-radius: 16px;
+  padding: 16px;
+}
+body .profile_section .new_packages .list h5 {
+  font-size: 14px;
+  color: #000;
+  background: #33b5e5;
+  padding: 12px 24px;
+  border-radius: 12px;
+  display: block;
+  color: #fff;
+  margin-bottom: 16px;
+}
+body .profile_section .new_packages .list.target h5 {
+  background: #00c851;
+}
+body .profile_section .new_packages .list .drag_here {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  border: 1px dashed #aaaaaa;
+  border-radius: 16px;
+  gap: 12px;
+}
+body .profile_section .new_packages .list .drag_here img {
+  height: 32px;
+  filter: grayscale(0.5);
+}
+body .profile_section .new_packages .list .drag_here p {
+  margin: 0;
+  text-align: center;
+  color: #777;
+}
+body .profile_section .new_packages .package_list {
+  display: flex;
+  flex-direction: column;
+}
+body .profile_section .new_packages .package_list .package_item {
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #f4f4f4;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  display: flex;
+  gap: 12px;
+}
+body .profile_section .new_packages .package_list .package_item .icon {
+  border: 1px solid #f4f4f4;
+  border-radius: 8px;
+  min-width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .profile_section .new_packages .package_list .package_item .icon img {
+  height: 32px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+body .profile_section .new_packages .package_list .package_item ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: #000;
+  font-size: 14px;
+}
+body .profile_section .new_packages .log {
+  font-size: 14px;
+  color: #fff;
+  padding: 12px 32px;
+  margin-top: 12px;
+  border-radius: 12px;
+  background: #d8250f;
+  margin-inline-start: auto;
 }
 body .notification_card {
   display: flex;

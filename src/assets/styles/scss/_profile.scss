@@ -173,7 +173,6 @@
       padding: 16px 0;
       display: flex;
       flex-direction: column;
-      gap: 8px;
       margin-bottom: 0;
       font-size: 14px;
       font-weight: 500;
@@ -181,7 +180,53 @@
 
       span {
         font-weight: normal;
+        white-space: nowrap;
         font-size: 14px;
+      }
+
+      b {
+        font-weight: 500;
+        padding: 4px 12px;
+        cursor: pointer;
+        position: relative;
+        border-radius: 8px;
+        width: 100%;
+        @include space-between();
+
+        i {
+          color: $input_hint;
+          visibility: hidden;
+          opacity: 0;
+        }
+
+        &:hover {
+          background: $input_bg;
+          i {
+            visibility: visible;
+            opacity: 1;
+          }
+
+          .tooltip {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .tooltip {
+          position: absolute;
+          top: -25px;
+          left: 0;
+          background: #000;
+          color: #fff;
+          padding: 3px 6px;
+          border-radius: 4px;
+          font-size: 12px;
+          white-space: nowrap;
+          opacity: 0;
+          transform: translateY(5px);
+          transition: opacity 0.2s ease, transform 0.2s ease;
+          pointer-events: none;
+        }
       }
 
       li {
@@ -189,6 +234,162 @@
         align-items: center;
         gap: 8px;
       }
+    }
+  }
+
+  .shipment_details {
+    .order_tracking {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .step {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .icon {
+          width: 64px;
+          height: 64px;
+          border-radius: 50%;
+          color: $white;
+          font-size: 18px;
+          @include centerFlex();
+          background: $second;
+        }
+
+        .content {
+          h6 {
+            color: $black;
+            font-size: 18px;
+            margin-bottom: 4px;
+          }
+
+          span {
+            font-size: 12px;
+            color: $gray;
+          }
+        }
+      }
+
+      .progress {
+        height: 10px;
+
+        .progress-bar {
+          background: $second;
+        }
+      }
+    }
+  }
+
+  .new_packages {
+    .sec_title {
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      &::before {
+        content: "";
+        width: 32px;
+        height: 4px;
+        transform: skew(30deg);
+        background: linear-gradient(90deg, #a80200 0%, #d8250f 100%);
+      }
+    }
+
+    .sec_desc {
+      font-size: 14px;
+      color: $black;
+      margin-bottom: 0;
+    }
+
+    .list {
+      background: $input_bg;
+      border-radius: 16px;
+      padding: 16px;
+
+      h5 {
+        font-size: 14px;
+        color: $black;
+        background: #33b5e5;
+        padding: 12px 24px;
+        border-radius: 12px;
+        display: block;
+        color: $white;
+        margin-bottom: 16px;
+      }
+
+      &.target {
+        h5 {
+          background: #00c851;
+        }
+      }
+
+      .drag_here {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        border: 1px dashed $input_hint;
+        border-radius: 16px;
+        gap: 12px;
+
+        img {
+          height: 32px;
+          filter: grayscale(0.5);
+        }
+
+        p {
+          margin: 0;
+          text-align: center;
+          color: $gray;
+        }
+      }
+    }
+
+    .package_list {
+      display: flex;
+      flex-direction: column;
+
+      .package_item {
+        padding: 16px;
+        background: $white;
+        border: 1px solid $input_stroke;
+        border-radius: 12px;
+        margin-bottom: 8px;
+        display: flex;
+        gap: 12px;
+
+        .icon {
+          border: 1px solid $input_stroke;
+          border-radius: 8px;
+          min-width: 64px;
+          height: 64px;
+          @include centerFlex();
+          img {
+            height: 32px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          }
+        }
+
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          color: $black;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .log {
+      font-size: 14px;
+      color: $white;
+      padding: 12px 32px;
+      margin-top: 12px;
+      border-radius: 12px;
+      background: $second;
+      margin-inline-start: auto;
     }
   }
 }

@@ -15,6 +15,9 @@ import MyShipments from "../routes/MyShipments";
 import Address from "../routes/Address";
 import Notifications from "../routes/Notifications";
 import MyAddresses from "../routes/MyAddresses";
+import PackageConsolidation from "../routes/PackageConsolidation";
+import Repacking from "../routes/Repacking";
+import Restricted from "../routes/Restricted&specialhandling";
 
 export const router = createBrowserRouter([
   {
@@ -83,6 +86,18 @@ export const router = createBrowserRouter([
             element: <MyAddresses />,
           },
         ],
+      },
+      {
+        path: "package-consolidation",
+        element: <PackageConsolidation />,
+      },
+      {
+        path: "repacking",
+        element: <Repacking />,
+      },
+      {
+        path: "restricted-special-handling",
+        element: <Restricted />,
       },
     ],
   },

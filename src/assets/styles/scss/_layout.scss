@@ -23,16 +23,18 @@ header {
       img {
         height: 40px;
       }
+      @media screen and (max-width: 450px) {
+        flex: unset;
+        img {
+          height: 32px;
+        }
+      }
     }
 
     .nav_links {
       flex: 2;
       @include centerFlex();
       gap: 42px;
-
-      @media screen and (max-width: 1200px) {
-        display: none;
-      }
 
       a {
         font-weight: 600;
@@ -44,6 +46,25 @@ header {
           color: $second;
         }
       }
+
+      @media screen and (max-width: 1200px) {
+        position: absolute;
+        flex-direction: column;
+        background: #fff;
+        top: 75.4px;
+        left: -100%;
+        width: 50%;
+        height: calc(100vh - 75.4px);
+        align-items: flex-start;
+        padding: 24px;
+        transition: $transition;
+        gap: 30px;
+        justify-content: flex-start;
+
+        &.open {
+          left: 0;
+        }
+      }
     }
 
     .actions {
@@ -52,7 +73,12 @@ header {
       align-items: center;
       justify-content: flex-end;
       gap: 24px;
-
+      .toggle_menu {
+        display: none;
+        @media screen and (max-width: 1200px) {
+          display: block;
+        }
+      }
       @media screen and (max-width: 1200px) {
         gap: 12px;
       }

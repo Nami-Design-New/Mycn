@@ -20,6 +20,11 @@ export default function Header() {
     };
   }, []);
 
+  const handleToggleMenu = () => {
+    const menu = document.querySelector(".nav_links");
+    menu.classList.toggle("open");
+  };
+
   return (
     <header className="header">
       <nav className="container">
@@ -43,6 +48,10 @@ export default function Header() {
           </button>
           {/* <Link to="/signin" className="login">{t("header.login")}</Link> */}
           <UserDropDown />
+
+          <button className="toggle_menu" onClick={handleToggleMenu}>
+            <i className="fa-regular fa-bars"></i>
+          </button>
         </div>
       </nav>
     </header>

@@ -45,6 +45,11 @@
       margin-top: 24px;
       gap: 12px;
 
+      @media screen and (max-width: 567px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
       .nav_link {
         padding: 12px 24px;
         background: $input_bg;
@@ -55,6 +60,12 @@
         color: $black;
         transition: 0.3s ease-in-out;
         font-size: 14px;
+
+        @media screen and (max-width: 567px) {
+          padding: 12px 16px;
+          gap: 8px;
+          flex: 1;
+        }
 
         &.danger {
           color: #ff0000;

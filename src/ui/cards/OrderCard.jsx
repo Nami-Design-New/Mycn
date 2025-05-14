@@ -7,7 +7,7 @@ export default function OrderCard({ shipment }) {
   const { t } = useTranslation();
 
   return (
-    <div className="shipment">
+    <Link to={`/profile/my-shipments/${shipment.id}`} className="shipment">
       <div className="head">
         <h6>
           <i className="fa-regular fa-cube"></i> {shipment.tracking_number}
@@ -44,6 +44,6 @@ export default function OrderCard({ shipment }) {
           }
         />
       </div>
-    </div>
+    </Link>
   );
 }

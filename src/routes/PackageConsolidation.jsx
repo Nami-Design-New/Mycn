@@ -3,15 +3,35 @@ import PackageCard from "../ui/cards/PackageCard";
 import { useTranslation } from "react-i18next";
 
 const individualPackages = [
-  { id: 1, image: "../images/2.webp", description: "Amazon - Electronics", price: 297 },
-  { id: 2, image: "../images/4.webp", description: "eBay - Shoes", price: 208},
-  { id: 3, image: "../images/6.webp", description: "AliExpress - Accessories", price: 306 },
+  {
+    id: 1,
+    image: "../images/2.webp",
+    description: "Amazon - Electronics",
+    price: 297,
+  },
+  { id: 2, image: "../images/4.webp", description: "eBay-Shoes", price: 208 },
+  {
+    id: 3,
+    image: "../images/6.webp",
+    description: "AliExpress - Accessories",
+    price: 306,
+  },
 ];
 
 const consolidatedPackage = [
-  { id: 1, image: "../images/1.webp", description: "Amazon - Electronics", price: 90 },
-  { id: 2, image: "../images/3.webp", description: "eBay - Shoes", price: 93 },
-  { id: 3, image: "../images/5.webp", description: "AliExpress - Accessories", price: 131 },
+  {
+    id: 1,
+    image: "../images/1.webp",
+    description: "Amazon - Electronics",
+    price: 90,
+  },
+  { id: 2, image: "../images/3.webp", description: "eBay-Shoes", price: 93 },
+  {
+    id: 3,
+    image: "../images/5.webp",
+    description: "AliExpress - Accessories",
+    price: 131,
+  },
 ];
 
 export default function PackageConsolidation() {
@@ -31,7 +51,8 @@ export default function PackageConsolidation() {
               <div className="col-12 col-lg-6">
                 <div className="package-section">
                   <h5 className="section-title red">
-                    <i className="fas fa-box-open"></i> {t("package.individual")}
+                    <i className="fas fa-box-open"></i>{" "}
+                    {t("package.individual")}
                   </h5>
                   <PackageCard data={individualPackages[index]} />
                 </div>

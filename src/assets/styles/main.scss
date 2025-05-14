@@ -18,10 +18,9 @@ body {
   @import "./scss/shipping_calculator";
   @import "./scss/services";
 
-
-  // main {
-  //   min-height: calc(100dvh - 300px);
-  // }
+  main {
+    min-height: calc(100dvh - 300px);
+  }
 
   &.en {
     font-family: "Outfit", sans-serif;

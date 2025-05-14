@@ -85,38 +85,40 @@ export default function ShipmentDetails() {
               <i className="fa-regular fa-boxes"></i> Packages
             </h5>
 
-            <table className="mt-3">
-              <thead>
-                <tr>
-                  <th>Tracking Number</th>
-                  <th>Weight</th>
-                  <th>Dimensions</th>
-                  <th>Quantity</th>
-                  <th>Source</th>
-                  <th>Receipt Date</th>
-                  <th>Actions</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                {initialPackages.map((item, index) => (
-                  <tr key={index}>
-                    <td>{item.tracking_number}</td>
-                    <td>{item.weight}</td>
-                    <td>{item.dimensions}</td>
-                    <td>{item.quantity}</td>
-                    <td>{item.source}</td>
-                    <td>{item.receipt_date}</td>
-                    <td className="actions">
-                      <i
-                        className="fa-regular fa-eye cursor-pointer"
-                        onClick={() => handleView(item)}
-                      ></i>
-                    </td>
+            <div className="table_container">
+              <table className="mt-3">
+                <thead>
+                  <tr>
+                    <th>Tracking Number</th>
+                    <th>Weight</th>
+                    <th>Dimensions</th>
+                    <th>Quantity</th>
+                    <th>Source</th>
+                    <th>Receipt Date</th>
+                    <th>Actions</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+
+                <tbody>
+                  {initialPackages.map((item, index) => (
+                    <tr key={index}>
+                      <td>{item.tracking_number}</td>
+                      <td>{item.weight}</td>
+                      <td>{item.dimensions}</td>
+                      <td>{item.quantity}</td>
+                      <td>{item.source}</td>
+                      <td>{item.receipt_date}</td>
+                      <td className="actions">
+                        <i
+                          className="fa-regular fa-eye cursor-pointer"
+                          onClick={() => handleView(item)}
+                        ></i>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>

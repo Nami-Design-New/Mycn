@@ -1,5 +1,8 @@
 .hero_section {
   height: calc(100vh - 76.8px);
+  @media screen and (max-width: 1200px) {
+    height: unset;
+  }
 
   .swiper {
     width: 100%;
@@ -34,6 +37,10 @@
       align-items: center;
       justify-content: center;
 
+      @media screen and (max-width: 567px) {
+        padding: 62px 0 28px;
+      }
+
       .small_hint {
         padding: 4px 16px;
         border: 1px solid $white;
@@ -47,12 +54,22 @@
         color: #fff;
         font-size: 48px;
         margin-bottom: 12px;
+        text-align: center;
+
+        @media screen and (max-width: 567px) {
+          font-size: 20px;
+        }
       }
 
       .slide_description {
         margin-bottom: 24px;
         color: #fff;
+        text-align: center;
         font-size: 16px;
+
+        @media screen and (max-width: 567px) {
+          font-size: 12px;
+        }
       }
     }
   }
@@ -60,6 +77,10 @@
 
 .statistics_section {
   padding: 0 32px;
+
+  @media screen and (max-width: 567px) {
+    padding: 0 16px;
+  }
 
   .inner_container {
     background: #00112e;
@@ -92,6 +113,9 @@
         margin-bottom: 32px;
         font-size: 42px;
         font-family: "Instrument Sans", sans-serif;
+        @media screen and (max-width: 567px) {
+          font-size: 32px;
+        }
       }
 
       ul {
@@ -140,6 +164,12 @@
       justify-content: center;
       gap: 24px;
 
+      @media screen and (max-width: 567px) {
+        padding: 0;
+        padding-bottom: 48px;
+        flex-direction: row;
+      }
+
       .state {
         display: flex;
         flex-direction: column;
@@ -157,9 +187,18 @@
           gap: 16px;
           margin-bottom: 12px;
 
+          @media screen and (max-width: 567px) {
+            font-size: 36px;
+          }
+
           i {
             font-size: 32px;
             margin-top: 12px;
+
+            @media screen and (max-width: 567px) {
+              font-size: 24px;
+              margin: 0;
+            }
           }
         }
 
@@ -214,12 +253,23 @@
     width: 100%;
     will-change: contents;
 
+    @media screen and (max-width: 567px) {
+      flex-direction: column;
+    }
+
     .step {
       flex: 1;
       transition: 0.7s;
       position: relative;
       overflow: hidden;
       height: 65vh;
+
+      @media screen and (max-width: 567px) {
+        .wrapper {
+          flex-direction: column;
+          background: $white !important;
+        }
+      }
 
       &:first-child {
         margin-left: 0;
@@ -291,6 +341,10 @@
         background-size: cover;
         border-radius: 20px;
 
+        @media screen and (max-width: 567px) {
+          width: 100% !important;
+        }
+
         .title {
           position: absolute;
           left: 28%;
@@ -332,6 +386,11 @@
         opacity: 0;
         visibility: hidden;
         transition-delay: 0s;
+
+        @media screen and (max-width: 450px) {
+          width: 100% !important;
+          height: inherit !important;
+        }
 
         .num {
           text-align: right;
@@ -685,6 +744,9 @@
       &:last-child {
         background: $second;
       }
+      @media screen and (max-width: 567px) {
+        padding: 12px;
+      }
     }
   }
 }
@@ -694,6 +756,12 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+
+    @media screen and (max-width: 567px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
     button {
       padding: 16px;
       display: flex;

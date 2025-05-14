@@ -13,6 +13,20 @@ header {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
 
+  .layer {
+    position: absolute;
+    top: 75.4px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 75.4px);
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+    display: none;
+    &.open {
+      display: block;
+    }
+  }
+
   nav {
     transition: $transition;
     display: flex;
@@ -22,6 +36,12 @@ header {
       flex: 1;
       img {
         height: 40px;
+      }
+      @media screen and (max-width: 450px) {
+        flex: unset;
+        img {
+          height: 32px;
+        }
       }
     }
 
@@ -40,6 +60,25 @@ header {
           color: $second;
         }
       }
+
+      @media screen and (max-width: 1200px) {
+        position: absolute;
+        flex-direction: column;
+        background: #fff;
+        top: 75.4px;
+        left: -100%;
+        width: 50%;
+        height: calc(100vh - 75.4px);
+        align-items: flex-start;
+        padding: 24px;
+        transition: $transition;
+        gap: 30px;
+        justify-content: flex-start;
+
+        &.open {
+          left: 0;
+        }
+      }
     }
 
     .actions {
@@ -48,6 +87,15 @@ header {
       align-items: center;
       justify-content: flex-end;
       gap: 24px;
+      .toggle_menu {
+        display: none;
+        @media screen and (max-width: 1200px) {
+          display: block;
+        }
+      }
+      @media screen and (max-width: 1200px) {
+        gap: 12px;
+      }
 
       .login {
         padding: 8px 24px;
@@ -149,11 +197,21 @@ header {
     margin-bottom: 32px;
     padding: 0 0 32px;
     gap: 16px;
+
+    @media screen and (max-width: 450px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
     h6 {
       color: $white;
       margin: 0;
       font-size: 24px;
       font-weight: 400;
+
+      @media screen and (max-width: 450px) {
+        font-size: 18px;
+      }
     }
 
     form {
@@ -169,6 +227,9 @@ header {
         border: none;
         outline: none;
         background: none;
+        @media screen and (max-width: 450px) {
+          width: 270px;
+        }
       }
 
       button {
@@ -225,6 +286,12 @@ header {
     margin-top: 24px;
     @include space-between();
     border-top: 1px solid #ffffff3f;
+
+    @media screen and (max-width: 450px) {
+      flex-direction: column-reverse;
+      gap: 24px;
+    }
+
     p {
       color: $white;
       font-size: 14px;
@@ -246,6 +313,11 @@ header {
         }
       }
     }
+  }
+
+  @media screen and (max-width: 450px) {
+    flex-direction: column-reverse;
+    gap: 16px;
   }
 }
 

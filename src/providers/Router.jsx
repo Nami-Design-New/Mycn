@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router";
 import RootLayout from "../layout/RootLayout";
-
 import Home from "../routes/Home";
 import Error from "../routes/Error";
 import Contact from "../routes/Contact";

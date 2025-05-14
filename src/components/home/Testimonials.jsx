@@ -77,6 +77,14 @@ export default function Testimonials() {
                 delay: 8000,
                 disableOnInteraction: false,
               }}
+              breakpoints={{
+                0: {
+                  slidesPerView: 1,
+                },
+                768: {
+                  slidesPerView: 2,
+                },
+              }}
               navigation={{
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",

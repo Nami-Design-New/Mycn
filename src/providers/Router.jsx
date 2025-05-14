@@ -10,6 +10,11 @@ import Register from "../routes/Register";
 import About from "../routes/About";
 import Terms from "../routes/Terms";
 import Privacy from "../routes/Privacy";
+import Profile from "../routes/Profile";
+import MyShipments from "../routes/MyShipments";
+import Address from "../routes/Address";
+import Notifications from "../routes/Notifications";
+import MyAddresses from "../routes/MyAddresses";
 import PackageConsolidation from "../routes/PackageConsolidation";
 import Repacking from "../routes/Repacking";
 import Restricted from "../routes/Restricted&specialhandling";
@@ -57,6 +62,32 @@ export const router = createBrowserRouter([
         element: <Privacy />,
       },
       {
+        path: "profile",
+        element: <Profile />,
+        children: [
+          {
+            index: true,
+            element: <Address />,
+          },
+          {
+            path: "my-shipments",
+            element: <MyShipments />,
+          },
+          {
+            path: "my-transactions",
+            element: <MyShipments />,
+          },
+          {
+            path: "notifications",
+            element: <Notifications />,
+          },
+          {
+            path: "my-addresses",
+            element: <MyAddresses />,
+          },
+        ],
+      },
+      {
         path: "package-consolidation",
         element: <PackageConsolidation />,
       },
@@ -68,7 +99,6 @@ export const router = createBrowserRouter([
         path: "restricted-special-handling",
         element: <Restricted />,
       },
-   
     ],
   },
 ]);

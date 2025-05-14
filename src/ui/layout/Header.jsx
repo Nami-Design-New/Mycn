@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, NavLink } from "react-router";
+import UserDropDown from "./UserDropDown";
 
 export default function Header() {
   const { t } = useTranslation();
@@ -32,7 +33,7 @@ export default function Header() {
           <NavLink to="/shipping-calculator">
             {t("header.shippingCalculator")}
           </NavLink>
-          <NavLink to="/my-orders">{t("header.myOrders")}</NavLink>
+          <NavLink to="/faqs">{t("header.faqs")}</NavLink>
           <NavLink to="/contact">{t("header.contact")}</NavLink>
         </div>
 
@@ -40,7 +41,8 @@ export default function Header() {
           <button>
             <i className="fa-regular fa-globe"></i> EN
           </button>
-          <Link to="/signin" className="login">{t("header.login")}</Link>
+          {/* <Link to="/signin" className="login">{t("header.login")}</Link> */}
+          <UserDropDown />
         </div>
       </nav>
     </header>

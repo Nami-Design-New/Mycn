@@ -626,6 +626,43 @@ body header nav .actions .login:hover {
   background-color: #000;
 }
 
+body .user_dropdown {
+  border: 1px solid #f4f4f4;
+  background: #fff;
+  border-radius: 120px;
+  padding: 8px 20px;
+  transition: all 0.3s ease-in-out;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+}
+body .user_dropdown i {
+  font-size: 12px;
+}
+body .user_dropdown.show, body .user_dropdown:active, body .user_dropdown:hover {
+  border-color: #f4f4f4 !important;
+  color: #000 !important;
+  background: #fff !important;
+}
+body .dropdown-menu {
+  padding: 12px;
+}
+body .dropdown-menu .dropdown-item {
+  margin-bottom: 4px;
+  padding: 8px 24px 8px 16px;
+  border-radius: 4px;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 14px;
+}
+body .dropdown-menu .dropdown-item.logout:hover {
+  background: #d8250f;
+  color: #fff;
+}
 body .section_hint {
   background: #d8250f;
   padding: 6px 16px;
@@ -2244,7 +2281,7 @@ body .error-page a {
   padding: 12px 32px;
   font-size: 14px;
   color: #fff;
-  background: #a80200;
+  background: #d8250f;
   border-radius: 120px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -2374,6 +2411,203 @@ body .how_it_works {
   padding: 40px 0;
 }
 
+body .profile_section {
+  padding: 40px 0;
+}
+body .profile_section .profile_sidebar {
+  border: 1px solid #f4f4f4;
+  padding: 16px;
+  position: sticky;
+  top: 107.8px;
+  border-radius: 12px;
+}
+body .profile_section .profile_sidebar .user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f4f4f4;
+}
+body .profile_section .profile_sidebar .user .avatar {
+  min-width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  color: #a80200;
+  font-size: 18px;
+  border: 1px solid #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+body .profile_section .profile_sidebar .user .content h6 {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 2px;
+}
+body .profile_section .profile_sidebar .user .content span {
+  font-size: 14px;
+  color: #777;
+}
+body .profile_section .profile_sidebar .nav_links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  gap: 12px;
+}
+body .profile_section .profile_sidebar .nav_links .nav_link {
+  padding: 12px 24px;
+  background: #fafafa;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #000;
+  transition: 0.3s ease-in-out;
+  font-size: 14px;
+}
+body .profile_section .profile_sidebar .nav_links .nav_link.danger {
+  color: #ff0000;
+}
+body .profile_section .profile_sidebar .nav_links .nav_link.active {
+  background: #d8250f;
+  color: #fff;
+}
+body .profile_section .shipment {
+  border: 1px solid #f4f4f4;
+  padding: 24px;
+  border-radius: 12px;
+  display: flex;
+  gap: 12px;
+  height: 100%;
+  flex-wrap: wrap;
+}
+body .profile_section .shipment p {
+  margin-bottom: 0;
+  font-size: 14px;
+  padding-inline-end: 8px;
+}
+body .profile_section .shipment .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  width: 200%;
+}
+body .profile_section .shipment .head h6 {
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  background: #d8250f;
+  padding: 6px 16px;
+  margin: 0;
+  border-radius: 80px;
+}
+body .profile_section .shipment .head a {
+  color: #d8250f;
+  font-size: 14px;
+}
+body .profile_section .shipment .status {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #fafafa;
+  padding: 16px;
+  border-radius: 8px;
+  gap: 8px;
+}
+body .profile_section .shipment .status span {
+  font-size: 14px;
+  font-weight: 500;
+}
+body .profile_section .shipment .status .progress {
+  background: #fff;
+  height: 8px;
+}
+body .profile_section .shipment .status .progress-bar {
+  background-color: #d8250f !important;
+}
+body .profile_section .content h3 {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+body .profile_section .content h3::before {
+  content: "";
+  width: 32px;
+  height: 4px;
+  transform: skew(30deg);
+  background: linear-gradient(90deg, #a80200 0%, #d8250f 100%);
+}
+body .profile_section .content p {
+  font-size: 14px;
+  color: #000;
+}
+body .profile_section .address_card {
+  padding: 24px;
+  background: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 16px;
+}
+body .profile_section .address_card h4 {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .profile_section .address_card h4 img {
+  height: 24px;
+}
+body .profile_section .address_card ul {
+  border-top: 1px solid #f4f4f4;
+  margin: 16px 0;
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 500;
+  padding-bottom: 0;
+}
+body .profile_section .address_card ul span {
+  font-weight: normal;
+  font-size: 14px;
+}
+body .profile_section .address_card ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+body .notification_card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 16px;
+  background: #fafafa;
+  border-radius: 16px;
+  border: 1px dashed #f4f4f4;
+}
+body .notification_card .icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #a80200 0%, #d8250f 100%);
+}
+body .notification_card h6 {
+  font-size: 18px;
+  color: #000;
+}
+body .notification_card p {
+  margin: 0;
+  color: #777 !important;
+}
 body .shipping_calculator .calculator_form {
   padding: 24px;
   border-radius: 16px;

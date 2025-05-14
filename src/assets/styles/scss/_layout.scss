@@ -65,6 +65,50 @@ header {
   }
 }
 
+.user_dropdown {
+  border: 1px solid $input_stroke;
+  background: $white;
+  border-radius: 120px;
+  padding: 8px 20px;
+  transition: $transition;
+  color: $black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  i {
+    font-size: 12px;
+  }
+
+  &.show,
+  &:active,
+  &:hover {
+    border-color: $input_stroke !important;
+    color: $black !important;
+    background: $white !important;
+  }
+}
+
+.dropdown-menu {
+  padding: 12px;
+  .dropdown-item {
+    margin-bottom: 4px;
+    padding: 8px 24px 8px 16px;
+    border-radius: 4px;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font-size: 14px;
+    &.logout {
+      &:hover {
+        background: $second;
+        color: $white;
+      }
+    }
+  }
+}
+
 .section_hint {
   background: $second;
   padding: 6px 16px;

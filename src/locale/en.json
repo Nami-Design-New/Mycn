@@ -16,6 +16,7 @@
         "myOrders": "My Orders",
         "shippingCalculator": "Shipping Calculator",
         "contact": "Contact Us",
+        "faqs": "FAQs",
         "login": "Login"
     },
     "heroSection": {
@@ -52,6 +53,17 @@
         "description3": "Track each step and know the cost in advance.",
         "title4": "Ongoing Customer Support",
         "description4": "We're here 24/7 to assist you anytime."
+    },
+    "orderStatus": {
+        "in_warehouse": "In Warehouse",
+        "order_approved": "Order Approved",
+        "payment_done": "Payment Completed",
+        "left_china": "Left China",
+        "arrived_saudi_arabia": "Arrived in Saudi Arabia",
+        "out_for_delivery_to_customer": "Out for Delivery to Customer",
+        "will_be_delivered_soon": "Will Be Delivered Soon",
+        "delivered": "Delivered",
+        "completed": "Order Completed"
     },
     "testimonials": {
         "title": "What our customers say",

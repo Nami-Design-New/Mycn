@@ -756,6 +756,12 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+
+    @media screen and (max-width: 567px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
     button {
       padding: 16px;
       display: flex;

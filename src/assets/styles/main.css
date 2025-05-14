@@ -450,6 +450,19 @@ body header.sticky {
   background: #fff;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+body header .layer {
+  position: absolute;
+  top: 75.4px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 75.4px);
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+  display: none;
+}
+body header .layer.open {
+  display: block;
+}
 body header nav {
   transition: all 0.3s ease-in-out;
   display: flex;
@@ -461,17 +474,20 @@ body header nav .logo {
 body header nav .logo img {
   height: 40px;
 }
+@media screen and (max-width: 450px) {
+  body header nav .logo {
+    flex: unset;
+  }
+  body header nav .logo img {
+    height: 32px;
+  }
+}
 body header nav .nav_links {
   flex: 2;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 42px;
-}
-@media screen and (max-width: 1200px) {
-  body header nav .nav_links {
-    display: none;
-  }
 }
 body header nav .nav_links a {
   font-weight: 600;
@@ -482,12 +498,39 @@ body header nav .nav_links a {
 body header nav .nav_links a.active, body header nav .nav_links a:hover {
   color: #d8250f;
 }
+@media screen and (max-width: 1200px) {
+  body header nav .nav_links {
+    position: absolute;
+    flex-direction: column;
+    background: #fff;
+    top: 75.4px;
+    left: -100%;
+    width: 50%;
+    height: calc(100vh - 75.4px);
+    align-items: flex-start;
+    padding: 24px;
+    transition: all 0.3s ease-in-out;
+    gap: 30px;
+    justify-content: flex-start;
+  }
+  body header nav .nav_links.open {
+    left: 0;
+  }
+}
 body header nav .actions {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 24px;
+}
+body header nav .actions .toggle_menu {
+  display: none;
+}
+@media screen and (max-width: 1200px) {
+  body header nav .actions .toggle_menu {
+    display: block;
+  }
 }
 @media screen and (max-width: 1200px) {
   body header nav .actions {
@@ -1646,6 +1689,12 @@ body .faqs_page .tabs {
   flex-direction: column;
   gap: 8px;
 }
+@media screen and (max-width: 567px) {
+  body .faqs_page .tabs {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 body .faqs_page .tabs button {
   padding: 16px;
   display: flex;
@@ -1976,6 +2025,12 @@ body .profile_section .profile_sidebar .nav_links {
   margin-top: 24px;
   gap: 12px;
 }
+@media screen and (max-width: 567px) {
+  body .profile_section .profile_sidebar .nav_links {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 body .profile_section .profile_sidebar .nav_links .nav_link {
   padding: 12px 24px;
   background: #fafafa;
@@ -1986,6 +2041,13 @@ body .profile_section .profile_sidebar .nav_links .nav_link {
   color: #000;
   transition: 0.3s ease-in-out;
   font-size: 14px;
+}
+@media screen and (max-width: 567px) {
+  body .profile_section .profile_sidebar .nav_links .nav_link {
+    padding: 12px 16px;
+    gap: 8px;
+    flex: 1;
+  }
 }
 body .profile_section .profile_sidebar .nav_links .nav_link.danger {
   color: #ff0000;

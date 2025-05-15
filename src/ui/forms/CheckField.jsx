@@ -1,15 +1,16 @@
-export default function CheckField({ id, name, text, checked, onChange }) {
+export default function CheckField({ id, label, checked, onChange }) {
   return (
-    <label htmlFor={id} className="check_field">
+    <div className="form-check custom_check_field">
       <input
-        type="radio"
+        className="form-check-input"
+        type="checkbox"
         id={id}
-        name={name}
-        value={id}
         checked={checked}
         onChange={onChange}
       />
-      <span>{text}</span>
-    </label>
+      <label className="form-check-label" htmlFor={id}>
+        {label}
+      </label>
+    </div>
   );
 }

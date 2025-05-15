@@ -1,4 +1,7 @@
 import { Modal, Button, Form } from "react-bootstrap";
+import InputField from "./../../ui/forms/InputField";
+import CheckField from "./../../ui/forms/CheckField";
+import SelectField from "./../../ui/forms/SelectField";
 
 export default function AddressModal({
   show,
@@ -20,118 +23,99 @@ export default function AddressModal({
 
       <Modal.Body>
         <Form className="form_ui">
-          <Form.Group className="mb-3">
-            <Form.Text className="text-muted">
-              First and last name must match the government-issued ID of the
-              person receiving the shipment.
-            </Form.Text>
+          <Form.Text className="text-muted mb-3 d-block">
+            First and last name must match the government-issued ID of the
+            person receiving the shipment.
+          </Form.Text>
 
-            <div className="row mt-2">
-              <div className="col-md-6 mb-3">
-                <Form.Label>First Name*</Form.Label>
-                <Form.Control
-                  type="text"
-                  value={editData.firstName}
-                  onChange={(e) =>
-                    setEditData({ ...editData, firstName: e.target.value })
-                  }
-                />
-              </div>
-              <div className="col-md-6 mb-3">
-                <Form.Label>Last Name*</Form.Label>
-                <Form.Control
-                  type="text"
-                  value={editData.lastName}
-                  onChange={(e) =>
-                    setEditData({ ...editData, lastName: e.target.value })
-                  }
-                />
-              </div>
+          <div className="row">
+            <div className="col-md-6">
+              <InputField
+                label="First Name*"
+                value={editData.firstName}
+                onChange={(e) =>
+                  setEditData({ ...editData, firstName: e.target.value })
+                }
+                placeholder="Enter first name"
+              />
             </div>
+            <div className="col-md-6">
+              <InputField
+                label="Last Name*"
+                value={editData.lastName}
+                onChange={(e) =>
+                  setEditData({ ...editData, lastName: e.target.value })
+                }
+                placeholder="Enter last name"
+              />
+            </div>
+          </div>
 
-            <Form.Check
-              type="checkbox"
-              label="This is a business address"
-              checked={editData.isBusiness || false}
-              onChange={(e) =>
-                setEditData({ ...editData, isBusiness: e.target.checked })
-              }
-            />
-          </Form.Group>
+          <CheckField
+            id="business-address"
+            label="This is a business address"
+            checked={editData.isBusiness || false}
+            onChange={(e) =>
+              setEditData({ ...editData, isBusiness: e.target.checked })
+            }
+          />
+          <InputField
+            label="Phone*"
+            value={editData.phone}
+            onChange={(e) =>
+              setEditData({ ...editData, phone: e.target.value })
+            }
+            placeholder="Enter phone number"
+          />
 
-          <Form.Group className="mb-3">
-            <Form.Label>Phone*</Form.Label>
-            <Form.Control
-              type="text"
-              value={editData.phone}
-              onChange={(e) =>
-                setEditData({ ...editData, phone: e.target.value })
-              }
-            />
-          </Form.Group>
+          <InputField
+            label="Address Line 1*"
+            value={editData.addressLine1}
+            onChange={(e) =>
+              setEditData({ ...editData, addressLine1: e.target.value })
+            }
+            placeholder="Enter address line 1"
+          />
 
-          <Form.Group className="mb-3">
-            <Form.Label>Address Line 1*</Form.Label>
-            <Form.Control
-              type="text"
-              value={editData.addressLine1}
-              onChange={(e) =>
-                setEditData({ ...editData, addressLine1: e.target.value })
-              }
-            />
-          </Form.Group>
+          <InputField
+            label="Address Line 2"
+            value={editData.addressLine2}
+            onChange={(e) =>
+              setEditData({ ...editData, addressLine2: e.target.value })
+            }
+            placeholder="Enter address line 2"
+          />
 
-          <Form.Group className="mb-3">
-            <Form.Label>Address Line 2*</Form.Label>
-            <Form.Control
-              type="text"
-              value={editData.addressLine2}
-              onChange={(e) =>
-                setEditData({ ...editData, addressLine2: e.target.value })
-              }
-            />
-          </Form.Group>
+          <InputField
+            label="City*"
+            value={editData.city}
+            onChange={(e) => setEditData({ ...editData, city: e.target.value })}
+            placeholder="Enter city"
+          />
 
-          <Form.Group className="mb-3">
-            <Form.Label>City*</Form.Label>
-            <Form.Control
-              type="text"
-              value={editData.city}
-              onChange={(e) =>
-                setEditData({ ...editData, city: e.target.value })
-              }
-            />
-          </Form.Group>
-
-          <Form.Group className="mb-3">
-            <Form.Label>Country*</Form.Label>
-            <Form.Select
-              value={editData.country}
-              onChange={(e) =>
-                setEditData({ ...editData, country: e.target.value })
-              }
-            >
-              <option value="">Select a country</option>
-              <option value="Saudi Arabia">Saudi Arabia</option>
-              <option value="Egypt">Egypt</option>
-              <option value="United Arab Emirates">United Arab Emirates</option>
-              <option value="Kuwait">Kuwait</option>
-              <option value="Qatar">Qatar</option>
-            </Form.Select>
-          </Form.Group>
-
-          <Form.Group className="mb-3">
-            <Form.Label>
-              Add a nickname so you can better manage your addresses*
-            </Form.Label>
-            <Form.Control
-              type="text"
-              value={editData.nickName}
-              onChange={(e) =>
-                setEditData({ ...editData, nickName: e.target.value })
-              }
-            />
-          </Form.Group>
+          <SelectField
+            label="Country*"
+            value={editData.country}
+            defaultSelect="Select a country"
+            onChange={(e) =>
+              setEditData({ ...editData, country: e.target.value })
+            }
+            options={[
+              { value: "Saudi Arabia", name: "Saudi Arabia" },
+              { value: "Egypt", name: "Egypt" },
+              { value: "United Arab Emirates", name: "United Arab Emirates" },
+              { value: "Kuwait", name: "Kuwait" },
+              { value: "Qatar", name: "Qatar" },
+            ]}
+          />
+          <InputField
+            label="Add a nickname so you can better manage your addresses*"
+            value={editData.nickName}
+            onChange={(e) =>
+              setEditData({ ...editData, nickName: e.target.value })
+            }
+            placeholder="Enter nickname"
+          />
         </Form>
       </Modal.Body>
 

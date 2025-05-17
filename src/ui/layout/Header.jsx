@@ -1,48 +1,77 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useNavigate } from "react-router";
 import UserDropDown from "./UserDropDown";
 
 export default function Header() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+  const [openMenu, setOpenMenu] = useState(false);
 
   useEffect(() => {
     const header = document.querySelector(".header");
-
     const handleScroll = () => {
       header.classList.toggle("sticky", window.scrollY > 0);
     };
-
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
+  useEffect(() => {
+    const handleOutsideClick = (e) => {
+      const menu = document.querySelector(".nav_links");
+      const toggleMenu = document.querySelector(".toggle_menu");
+      if (
+        !menu.contains(e.target) &&
+        !toggleMenu.contains(e.target) &&
+        !e.target.closest(".nav_links a")
+      ) {
+        setOpenMenu(false);
+      }
+    };
+
+    window.addEventListener("click", handleOutsideClick);
+
+    return () => {
+      window.removeEventListener("click", handleOutsideClick);
+    };
+  }, []);
+
   const handleToggleMenu = () => {
-    const menu = document.querySelector(".nav_links");
-    const layer = document.querySelector(".layer");
-    menu.classList.toggle("open");
-    layer.classList.toggle("open");
+    setOpenMenu(!openMenu);
+  };
+
+  const handleNavLinkClick = (e) => {
+    setOpenMenu(false);
+    navigate(e.target.getAttribute("to"));
   };
 
   return (
     <header className="header">
       <nav className="container">
-        <div className="layer"></div>
+        <div className={`layer ${openMenu ? "open" : ""}`}></div>
         <Link to="/" className="logo">
           <img src="/images/logo.svg" alt="" />
         </Link>
 
-        <div className="nav_links">
-          <NavLink to="/">{t("header.home")}</NavLink>
-          <NavLink to="/about">{t("header.about")}</NavLink>
-          <NavLink to="/shipping-calculator">
+        <div className={`nav_links ${openMenu ? "open" : ""}`}>
+          <NavLink to="/" onClick={handleNavLinkClick}>
+            {t("header.home")}
+          </NavLink>
+          <NavLink to="/about" onClick={handleNavLinkClick}>
+            {t("header.about")}
+          </NavLink>
+          <NavLink to="/shipping-calculator" onClick={handleNavLinkClick}>
             {t("header.shippingCalculator")}
           </NavLink>
-          <NavLink to="/faqs">{t("header.faqs")}</NavLink>
-          <NavLink to="/contact">{t("header.contact")}</NavLink>
+          <NavLink to="/faqs" onClick={handleNavLinkClick}>
+            {t("header.faqs")}
+          </NavLink>
+          <NavLink to="/contact" onClick={handleNavLinkClick}>
+            {t("header.contact")}
+          </NavLink>
         </div>
 
         <div className="actions">

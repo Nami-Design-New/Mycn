@@ -438,7 +438,6 @@ body {
 }
 body header {
   position: sticky;
-  overflow-x: hidden;
   width: 100%;
   left: 0;
   top: 0;
@@ -664,7 +663,7 @@ body .footer .news_letter form input {
 }
 @media screen and (max-width: 450px) {
   body .footer .news_letter form input {
-    width: 270px;
+    width: 230px;
   }
 }
 body .footer .news_letter form button {
@@ -2338,6 +2337,11 @@ body .profile_section .my_addresses .header_row {
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 567px) {
+  body .profile_section .my_addresses .header_row {
+    flex-direction: column;
+  }
+}
 body .profile_section .my_addresses .sec_title {
   font-size: 20px;
   font-weight: 600;
@@ -2411,6 +2415,11 @@ body .profile_section .add_btn {
   border-radius: 12px;
   background: #d8250f;
   margin-top: 12px;
+}
+@media screen and (max-width: 567px) {
+  body .profile_section .add_btn {
+    align-self: flex-end;
+  }
 }
 body .notification_card {
   display: flex;

@@ -1,27 +1,23 @@
 header {
-  position: sticky;
-  width: 100%;
-  left: 0;
+  position: fixed;
   top: 0;
-  z-index: 9;
-  background: $white;
-  padding: 18px 0 !important;
-  border-bottom: 1px solid $input_stroke;
-
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 16px 0;
   &.sticky {
-    background: $white;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 16px 0px;
   }
-
   .layer {
     position: absolute;
-    top: 75.4px;
+    top: 0;
     left: 0;
     width: 100%;
     height: calc(100vh - 75.4px);
     background: rgba(0, 0, 0, 0.4);
     z-index: -1;
     display: none;
+    
     &.open {
       display: block;
     }
@@ -30,8 +26,15 @@ header {
   nav {
     transition: $transition;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-
+    padding: 1rem 1rem ;
+    background: $white;
+    border-radius: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   @media screen and (max-width: 450px) {
+    padding: 0.4rem  0rem ;
+    }
     .logo {
       flex: 1;
       img {
@@ -40,7 +43,7 @@ header {
       @media screen and (max-width: 450px) {
         flex: unset;
         img {
-          height: 32px;
+          height: 28px;
         }
       }
     }
@@ -65,11 +68,11 @@ header {
         position: absolute;
         flex-direction: column;
         background: #fff;
-        top: 75.4px;
+        top: 0;
         left: -100%;
         width: 50%;
-        height: calc(100vh - 75.4px);
-        align-items: flex-start;
+         height: 100vh;
+         align-items: flex-start;
         padding: 24px;
         transition: $transition;
         gap: 30px;
@@ -112,7 +115,6 @@ header {
     }
   }
 }
-
 .user_dropdown {
   border: 1px solid $input_stroke;
   background: $white;

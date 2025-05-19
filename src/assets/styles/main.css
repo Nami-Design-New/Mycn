@@ -2343,6 +2343,10 @@ body .faqs_section .btns a:last-child {
   }
 }
 
+body .faqs_page {
+  margin-top: 60px;
+}
+
 body .faqs_page .tabs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2632,6 +2636,7 @@ body .experience-section .experience-box:hover .icon {
 
 body .contact_section {
   padding: 40px 0;
+  margin-top: 60px;
 }
 
 body .contact_section .contact_info {
@@ -2832,7 +2837,7 @@ body .auth_section .link {
 
 body .about_section {
   padding: 60px 0;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 body .about_section .img {
@@ -2933,6 +2938,7 @@ body .how_it_works {
 
 body .profile_section {
   padding: 40px 0;
+  margin-top: 60px;
 }
 
 body .profile_section .profile_sidebar {
@@ -3690,7 +3696,7 @@ body table .actions {
 }
 
 body .shipping_calculator {
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 body .shipping_calculator .calculator_form {
@@ -3925,7 +3931,7 @@ body .package-card .text-content p {
 
 body .repacking {
   padding: 3rem 0;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 body .repacking__examples {
@@ -4083,7 +4089,7 @@ body .repacking__ship p {
 
 body .restricted {
   padding: 4rem 0;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 body .restricted__items {

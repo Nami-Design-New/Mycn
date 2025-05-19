@@ -1,7 +1,6 @@
 .hero_section {
   height: 100vh;
   position: relative;
-
   @media screen and (max-width: 1200px) {
     height: unset;
   }
@@ -785,6 +784,7 @@
 }
 
 .faqs_page {
+  margin-top: 60px;
   .tabs {
     display: flex;
     flex-direction: column;

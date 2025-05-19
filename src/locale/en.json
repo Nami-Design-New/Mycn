@@ -19,28 +19,30 @@
         "faqs": "FAQs",
         "login": "Login"
     },
+   
     "heroSection": {
-        "slides": [
-            {
-                "smallHint": "Start your journey now",
-                "slideTitle": "Shop Anything from China with Ease",
-                "slideDescription": "Register once, get your China address, and start shopping from any website.",
-                "slideButton": "Get Started"
-            },
-            {
-                "smallHint": "All in one place",
-                "slideTitle": "All Your Packages, One Shipment",
-                "slideDescription": "We collect your parcels and send them in one box to save time and cost.",
-                "slideButton": "Learn More"
-            },
-            {
-                "smallHint": "Live tracking & estimate",
-                "slideTitle": "Real-Time Tracking & Transparent Pricing",
-                "slideDescription": "View your packages, track them in real time, and get an upfront estimate.",
-                "slideButton": "Try Now"
-            }
-        ]
+  "slides": [
+    {
+      "smallHint": "Start your business with ease",
+      "slideTitle": "Import Your Goods from China Hassle-Free",
+      "slideDescription": "Register now, get your personal shipping address in China, and start importing products directly.",
+      "slideButton": "Get Started"
     },
+    {
+      "smallHint": "Save More, Grow Faster",
+      "slideTitle": "Affordable Shipping & Consolidation for Traders",
+      "slideDescription": "We collect your orders from different suppliers and ship them together to reduce costs and speed up delivery.",
+      "slideButton": "Learn More"
+    },
+    {
+      "smallHint": "Real-Time Tracking & Clear Pricing",
+      "slideTitle": "Track Your Shipments Every Step of the Way",
+      "slideDescription": "Monitor your shipment from pickup in China to delivery, with instant cost estimates and no hidden fees.",
+      "slideButton": "Try Now"
+    }
+  ]
+},
+
     "features": {
         "subtitle": "Why choose us",
         "title": "Why we are considered the best in",

@@ -1389,7 +1389,7 @@ body .hero_section .floating_image {
   position: absolute;
   bottom: -12px;
   right: 20px;
-  width: 400px;
+  width: 350px;
   z-index: 5;
   -webkit-animation: floatUpDown 3s ease-in-out infinite;
           animation: floatUpDown 3s ease-in-out infinite;

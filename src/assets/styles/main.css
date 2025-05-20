@@ -542,6 +542,12 @@ body header.sticky {
 }
 
 @media screen and (max-width: 768px) {
+  body header.sticky {
+    padding: 14px 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
   body header {
     padding: 14px 5px;
   }
@@ -2582,6 +2588,12 @@ body .experience-section .experience-box {
   border-radius: 10px;
   position: relative;
   margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  body .experience-section .experience-box {
+    margin-top: 30px;
+  }
 }
 
 body .experience-section .experience-box .step-number {

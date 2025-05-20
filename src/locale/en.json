@@ -25,7 +25,7 @@
     {
       "smallHint": "Start your business with ease",
       "slideTitle": "Import Your Goods from China Hassle-Free",
-      "slideDescription": "Register now, get your personal shipping address in China, and start importing products directly.",
+      "slideDescription": "Seamless shipping, secure storage, and smooth customs — your goods delivered hassle-free to your doorstep.",
       "slideButton": "Get Started"
     },
     {
@@ -119,6 +119,28 @@
         "hazardousStep3": "Shipping options for hazardous materials may be limited. We can assist you in finding the best available carrier.",
         "contactSupport": "Contact Mycn Support via chat or email at",
         "contactNote": "Please contact customer support if you're unsure whether your item is allowed or needs special handling."
-      }
+      },
+  "steps": {
+    "hint": "Easy import process",
+    "title": "Three steps to more efficient shopping",
+    "step1": {
+      "alt": "Sign up",
+      "title": "Create your address",
+      "link": "Get your personal shipping address in China",
+      "description": "And start importing your products with ease"
+    },
+    "step2": {
+      "alt": "Make purchases",
+      "title": "Shop your items",
+      "description": "Order from any Chinese store and ship to your new address — or let us purchase for you"
+    },
+    "step3": {
+      "alt": "Get orders",
+      "title": "Receive your shipment",
+      "description": "We’ll consolidate your items, pack them, and ship straight to your warehouse safely"
+    }
+  
+}
+
       
 }

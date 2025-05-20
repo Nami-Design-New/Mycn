@@ -2,23 +2,24 @@ import Faqs from "../ui/layout/Faqs";
 import Features from "../components/home/Features";
 import Hero from "../components/home/Hero";
 import HowWeWorks from "../components/home/HowWeWorks";
-import Statistics from "../components/home/Statistics";
+// import Statistics from "../components/home/Statistics";
 import Testimonials from "../components/home/Testimonials";
 import Clients from "../components/home/clients";
 import ExperienceSection from "../components/home/Experiences";
+import Steps from "../components/home/Steps";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <Features />
-        <ExperienceSection/>
+      <ExperienceSection />
       {/* <Statistics /> */}
       <HowWeWorks />
-       <Clients/>
+      <Steps />
+      <Clients />
       <Testimonials />
       <Faqs />
-    
     </>
   );
 }

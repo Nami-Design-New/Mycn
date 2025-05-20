@@ -30,7 +30,7 @@ const ExperienceSection = () => {
 
       <div className="container">
         <div className="section-header">
-          <p className='section_hint'>OUR EXPERIENCE</p>
+          <p className='section_hint'>Our experience</p>
           <h2>Trusted by clients for <br /> decades of success</h2>
         </div>
         <div className="row">

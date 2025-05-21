@@ -38,9 +38,13 @@ header {
     background: $white;
     border-radius: 100px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      &.scrolled {
+    background: rgba(255, 255, 255, 0.3); 
+  }
    @media screen and (max-width: 450px) {
     padding: 0.3rem  0rem ;
     }
+   
     .logo {
       flex: 1;
       img {

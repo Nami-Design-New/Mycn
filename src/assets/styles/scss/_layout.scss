@@ -5,6 +5,8 @@ header {
   width: 100%;
   z-index: 1000;
   padding: 16px 0;
+    backdrop-filter: blur(24px);
+
   &.sticky {
     padding: 16px 0px;
     @media screen and (max-width: 768px) {
@@ -38,9 +40,9 @@ header {
     background: $white;
     border-radius: 100px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      &.scrolled {
-    background: rgba(255, 255, 255, 0.3); 
-  }
+  //     &.scrolled {
+  //   background: rgba(255, 255, 255, 0.3); 
+  // }
    @media screen and (max-width: 450px) {
     padding: 0.3rem  0rem ;
     }

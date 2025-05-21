@@ -4,17 +4,24 @@ import { Autoplay } from "swiper/modules";
 
 import "swiper/css";
 
-export default function Clients() {
+export default function Transportation() {
   const initialImages = Array.from(
-    { length: 10 },
-    (_, i) => `/images/client${i + 1}.png`
+    { length: 7 },
+    (_, i) => `/images/c${i + 1}.png`
   );
   const [images] = useState(initialImages);
 
   return (
-    <section className="clients_section">
+    <section className="transportation_section">
       <div className="container">
         <div className="row">
+          <div className="col-12 p-2 mb-3">
+            <h6 className="section_hint">Our Delivery Vehicles</h6>
+            <h3 className="section_title">
+              A variety of trusted transportation methods for every shipment
+            </h3>
+          </div>
+
           <div className="col-12 p-2">
             <Swiper
               modules={[Autoplay]}
@@ -37,7 +44,7 @@ export default function Clients() {
               {images.map((src, index) => (
                 <SwiperSlide key={index}>
                   <div className="logo">
-                    <img src={src} alt={`Client ${index + 1}`} loading="lazy" />
+                    <img src={src} alt={`c ${index + 1}`} loading="lazy" />
                   </div>
                 </SwiperSlide>
               ))}

@@ -23,7 +23,7 @@ export default function Hero() {
           disableOnInteraction: false,
         }}
       >
-        <img src="/images/bottom-bg.png" alt="wave" className="wave_bottom" />
+        {/* <img src="/images/bottom-bg.png" alt="wave" className="wave_bottom" /> */}
 
         {slides?.map((slide, index) => (
           <SwiperSlide key={index}>
@@ -31,7 +31,7 @@ export default function Hero() {
               <div className="image_wrapper">
                 <img
                   // src={`/images/slide-${index + 1}.jpg`}
-                   src={`/images/hero.jpg`}
+                   src={`/images/hero0.jpg`}
                   alt={slide.slideTitle}
                 />
               </div>
@@ -44,7 +44,7 @@ export default function Hero() {
           </SwiperSlide>
         ))}
       </Swiper>
-        <img src="/images/floating.png" alt="floating" className="floating_image" />
+        {/* <img src="/images/floating.png" alt="floating" className="floating_image" /> */}
 
     </section>
   );

@@ -10,39 +10,39 @@
     height: 100%;
     overflow: hidden;
   }
-  .wave_bottom {
-    position: absolute;
-    bottom: -40px;
-    left: 0;
-    width: 100%;
-    z-index: 2;
-    @media screen and (max-width: 1200px) {
-      display: none;
-    }
-  }
-  .floating_image {
-    position: absolute;
-    bottom: -12px;
-    right: 20px;
-    width: 350px;
-    z-index: 5;
-    animation: floatUpDown 3s ease-in-out infinite;
-    @media screen and (max-width: 1200px) {
-      display: none;
-    }
-  }
+  // .wave_bottom {
+  //   position: absolute;
+  //   bottom: -40px;
+  //   left: 0;
+  //   width: 100%;
+  //   z-index: 2;
+  //   @media screen and (max-width: 1200px) {
+  //     display: none;
+  //   }
+  // }
+  // .floating_image {
+  //   position: absolute;
+  //   bottom: -12px;
+  //   right: 20px;
+  //   width: 350px;
+  //   z-index: 5;
+  //   animation: floatUpDown 3s ease-in-out infinite;
+  //   @media screen and (max-width: 1200px) {
+  //     display: none;
+  //   }
+  // }
 
-  @keyframes floatUpDown {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
+  // @keyframes floatUpDown {
+  //   0% {
+  //     transform: translateY(0);
+  //   }
+  //   50% {
+  //     transform: translateY(-10px);
+  //   }
+  //   100% {
+  //     transform: translateY(0);
+  //   }
+  // }
   .hero_slide {
     overflow: hidden;
     width: 100%;
@@ -52,7 +52,7 @@
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
     }
 
     .content {
@@ -937,10 +937,9 @@
     }
   }
 }
-.clients_section {
+.transportation_section {
   padding: 60px 0;
   position: relative;
-  background: $black;
 
   .logo {
     padding: 15px;
@@ -957,7 +956,6 @@
     height: 100%;
     width: 100%;
     object-fit: contain;
-    filter: brightness(0) invert(1);
     transition: filter 0.3s ease;
   }
 
@@ -1082,6 +1080,7 @@
 }
 .steps-section {
   padding: 60px 0;
+  margin-top: 60px;
   .step-item {
     padding: 10px;
     height: 100%;

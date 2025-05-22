@@ -7,22 +7,21 @@ export default function Header() {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [openMenu, setOpenMenu] = useState(false);
-useEffect(() => {
-  const header = document.querySelector(".header");
-  const nav = header?.querySelector("nav");
+  useEffect(() => {
+    const header = document.querySelector(".header");
+    const nav = header?.querySelector("nav");
 
-  const handleScroll = () => {
-    const isSticky = window.scrollY > 0;
-    header.classList.toggle("sticky", isSticky);
-    nav?.classList.toggle("scrolled", isSticky);
-  };
+    const handleScroll = () => {
+      const isSticky = window.scrollY > 0;
+      header.classList.toggle("sticky", isSticky);
+      nav?.classList.toggle("scrolled", isSticky);
+    };
 
-  window.addEventListener("scroll", handleScroll);
-  return () => {
-    window.removeEventListener("scroll", handleScroll);
-  };
-}, []);
-
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     const handleOutsideClick = (e) => {
@@ -62,6 +61,9 @@ useEffect(() => {
         </Link>
 
         <div className={`nav_links ${openMenu ? "open" : ""}`}>
+          <Link to="/" className="logo">
+            <img src="/images/logo.svg" alt="" />
+          </Link>
           <NavLink to="/" onClick={handleNavLinkClick}>
             {t("header.home")}
           </NavLink>
@@ -74,7 +76,7 @@ useEffect(() => {
           <NavLink to="/faqs" onClick={handleNavLinkClick}>
             {t("header.faqs")}
           </NavLink>
-           <NavLink to="How_Work" onClick={handleNavLinkClick}>
+          <NavLink to="How_Work" onClick={handleNavLinkClick}>
             {t("header.howWeWork")}
           </NavLink>
           <NavLink to="/contact" onClick={handleNavLinkClick}>

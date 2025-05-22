@@ -75,7 +75,7 @@ export default function MyAddresses() {
   };
 
   return (
-    <div className="my_addresses mt-80">
+    <div className="my_addresses">
       <div className="row">
         <div className="col-12 header_row">
           <div>

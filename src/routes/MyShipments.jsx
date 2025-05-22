@@ -67,7 +67,7 @@ export default function MyShipments() {
   ];
 
   return (
-    <div className="my_shipments_section mt-80">
+    <div className="my_shipments_section">
       <div className="row">
         {shipments.map((shipment) => (
           <div className="col-lg-6 col-12 p-2" key={shipment.id}>

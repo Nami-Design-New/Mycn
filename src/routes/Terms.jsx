@@ -1,6 +1,6 @@
 export default function Terms() {
   return (
-    <section className="main_section terms">
+    <section className="main_section terms mt-80">
       <div className="container">
         <div className="row">
           <div className="col-12 p-2 mb-3">

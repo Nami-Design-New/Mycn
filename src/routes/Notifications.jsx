@@ -60,7 +60,7 @@ export default function Notifications() {
   ];
 
   return (
-    <div className="notifications">
+    <div className="notifications mt-80">
       <div className="row">
         {notifications.map((notification) => (
           <div className="col-12 p-2" key={notification.id}>

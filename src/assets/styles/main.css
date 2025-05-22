@@ -738,6 +738,12 @@ body .user_dropdown {
   font-size: 14px;
 }
 
+@media screen and (max-width: 991px) {
+  body .user_dropdown {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 450px) {
   body .user_dropdown {
     padding: 5px 10px;
@@ -775,6 +781,83 @@ body .dropdown-menu .dropdown-item {
 
 body .dropdown-menu .dropdown-item.logout:hover {
   background: #d8250f;
+  color: #fff;
+}
+
+body .small_menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background: #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+@media screen and (max-width: 991px) {
+  body .small_menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+body .small_menu .menu_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 12px;
+  gap: 8px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+body .small_menu .menu_item i {
+  font-size: 16px;
+  color: #777;
+}
+
+body .small_menu .menu_item.active i {
+  color: #a80200;
+}
+
+body .small_menu .menu_item .center {
+  width: 42px;
+  height: 42px;
+  background: #a80200;
+  font-size: 24px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+}
+
+body .small_menu .menu_item .center i {
   color: #fff;
 }
 
@@ -1050,10 +1133,6 @@ body .main_section .section_description a {
   color: #d8250f;
 }
 
-body .terms {
-  margin-top: 60px;
-}
-
 body .terms h2,
 body .terms h3,
 body .terms h4,
@@ -1093,6 +1172,10 @@ body .package_contents p {
 
 body .package_contents p strong {
   font-size: 14px;
+}
+
+body .mt-80 {
+  margin-top: 80px;
 }
 
 body .form_ui {
@@ -1367,9 +1450,9 @@ body .hero_section {
   position: relative;
 }
 
-@media screen and (max-width: 1200px) {
+@media (max-width: 567px) {
   body .hero_section {
-    height: unset;
+    height: 60vh;
   }
 }
 
@@ -1386,11 +1469,23 @@ body .hero_section .hero_slide {
   position: relative;
 }
 
-body .hero_section .hero_slide img {
+body .hero_section .hero_slide .image_wrapper {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+}
+
+body .hero_section .hero_slide .image_wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  body .hero_section .hero_slide .image_wrapper img {
+    -o-object-fit: unset;
+       object-fit: unset;
+  }
 }
 
 body .hero_section .hero_slide .content {
@@ -1401,7 +1496,7 @@ body .hero_section .hero_slide .content {
           transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  padding-top: 40px;
+  padding: 40px;
   background: rgba(0, 0, 0, 0.7);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1416,48 +1511,61 @@ body .hero_section .hero_slide .content {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-@media screen and (max-width: 567px) {
-  body .hero_section .hero_slide .content {
-    padding: 7rem 0 38px;
-  }
+  text-align: center;
 }
 
 body .hero_section .hero_slide .content .small_hint {
-  padding: 4px 16px;
+  padding: 6px 20px;
   border: 1px solid #fff;
   border-radius: 50px;
   color: #fff;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 12px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 567px) {
+  body .hero_section .hero_slide .content .small_hint {
+    font-size: 12px;
+    padding: 4px 14px;
+  }
 }
 
 body .hero_section .hero_slide .content .slide_title {
   color: #fff;
-  font-size: 48px;
-  margin-bottom: 12px;
-  text-align: center;
+  font-size: 56px;
+  margin-bottom: 16px;
 }
 
-@media screen and (max-width: 567px) {
+@media (max-width: 992px) {
   body .hero_section .hero_slide .content .slide_title {
-    font-size: 20px;
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 567px) {
+  body .hero_section .hero_slide .content .slide_title {
+    font-size: 22px;
   }
 }
 
 body .hero_section .hero_slide .content .slide_description {
-  margin-bottom: 24px;
   color: #fff;
-  text-align: center;
-  font-size: 16px;
+  font-size: 18px;
+  margin-bottom: 24px;
+  max-width: 700px;
 }
 
-@media screen and (max-width: 567px) {
+@media (max-width: 992px) {
   body .hero_section .hero_slide .content .slide_description {
-    font-size: 12px;
+    font-size: 16px;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 567px) {
+  body .hero_section .hero_slide .content .slide_description {
+    font-size: 14px;
+    max-width: 90%;
   }
 }
 
@@ -2420,10 +2528,6 @@ body .faqs_section .btns a:last-child {
   }
 }
 
-body .faqs_page {
-  margin-top: 60px;
-}
-
 body .faqs_page .tabs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2725,7 +2829,6 @@ body .experience-section .experience-box:hover .icon {
 
 body .steps-section {
   padding: 60px 0;
-  margin-top: 60px;
 }
 
 body .steps-section .step-item {
@@ -2757,7 +2860,6 @@ body .steps-section .step-item p {
 
 body .contact_section {
   padding: 40px 0;
-  margin-top: 60px;
 }
 
 body .contact_section .contact_info {
@@ -2921,10 +3023,6 @@ body .error-page a:hover {
   background: #000;
 }
 
-body .auth_section {
-  margin-top: 60px;
-}
-
 body .auth_section .img {
   width: 100%;
   height: 100%;
@@ -2962,7 +3060,6 @@ body .auth_section .link {
 
 body .about_section {
   padding: 60px 0;
-  margin-top: 60px;
 }
 
 body .about_section .img {
@@ -3063,7 +3160,6 @@ body .how_it_works {
 
 body .profile_section {
   padding: 40px 0;
-  margin-top: 60px;
 }
 
 body .profile_section .profile_sidebar {
@@ -3820,10 +3916,6 @@ body table .actions {
   cursor: pointer;
 }
 
-body .shipping_calculator {
-  margin-top: 60px;
-}
-
 body .shipping_calculator .calculator_form {
   padding: 24px;
   border-radius: 16px;
@@ -4056,7 +4148,6 @@ body .package-card .text-content p {
 
 body .repacking {
   padding: 3rem 0;
-  margin-top: 60px;
 }
 
 body .repacking__examples {
@@ -4214,7 +4305,6 @@ body .repacking__ship p {
 
 body .restricted {
   padding: 4rem 0;
-  margin-top: 60px;
 }
 
 body .restricted__items {

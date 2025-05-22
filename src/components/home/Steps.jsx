@@ -6,7 +6,7 @@ export default function Steps() {
   const { t } = useTranslation();
 
   return (
-    <section className="steps-section">
+    <section className="steps-section mt-80">
       <div className="container">
         <div className="col-12 p-2 mb-3">
           <h6 className="section_hint">{t("steps.hint")}</h6>

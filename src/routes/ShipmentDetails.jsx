@@ -63,7 +63,7 @@ export default function ShipmentDetails() {
   };
 
   return (
-    <div className="shipment_details">
+    <div className="shipment_details mt-80">
       <div className="row">
         <div className="col-12 p-2">
           <div className="order_tracking">

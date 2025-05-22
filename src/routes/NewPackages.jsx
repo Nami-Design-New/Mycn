@@ -102,7 +102,7 @@ export default function NewPackages() {
   };
 
   return (
-    <div className="new_packages">
+    <div className="new_packages mt-80">
       <div className="row">
         <div className="col-12 p-2">
           <h6 className="sec_title">Smart Shipping Starts Here</h6>

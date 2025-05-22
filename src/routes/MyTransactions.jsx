@@ -37,7 +37,7 @@ export default function MyTransactions() {
     },
   ];
   return (
-    <div className="transactions_history">
+    <div className="transactions_history mt-80">
       <div className="row">
         <div className="col-12 p-2">
           <h3 className="sec_title">My Transactions</h3>

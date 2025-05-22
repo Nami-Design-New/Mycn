@@ -2,6 +2,7 @@ import { Outlet, useLocation } from "react-router";
 import { useEffect } from "react";
 import Header from "../ui/layout/Header";
 import Footer from "../ui/layout/Footer";
+import ResponsiveNav from "../ui/layout/ResponsiveNav";
 
 export default function RootLayout() {
   const location = useLocation();
@@ -16,6 +17,8 @@ export default function RootLayout() {
         <Outlet />
       </main>
       <Footer />
+      <ResponsiveNav />
+
     </>
   );
 }

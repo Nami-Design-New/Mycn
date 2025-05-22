@@ -5,7 +5,7 @@ export default function Restricted() {
 
   return (
     <>
-      <section className="restricted main_section">
+      <section className="restricted main_section mt-80">
         <div className="container">
           <div className="restricted__header">
             <h3 className="section_title">{t("restricted.title")}</h3>

@@ -4,7 +4,7 @@ import Testimonials from "../components/home/Testimonials";
 export default function About() {
   return (
     <>
-      <section className="about_section">
+      <section className="about_section mt-80">
         <div className="container">
           <div className="row">
             <div className="col-lg-5 col-12 p-2">

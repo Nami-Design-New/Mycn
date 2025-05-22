@@ -40,9 +40,7 @@ header {
     background: $white;
     border-radius: 100px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  //     &.scrolled {
-  //   background: rgba(255, 255, 255, 0.3); 
-  // }
+ 
    @media screen and (max-width: 450px) {
     padding: 0.3rem  0rem ;
     }
@@ -139,6 +137,9 @@ header {
   align-items: center;
   gap: 4px;
   font-size: 14px;
+    @media screen and (max-width: 991px) {
+    display: none;
+    }
      @media screen and (max-width: 450px) {
     padding: 5px 10px;
       font-size: 12px;
@@ -169,6 +170,55 @@ header {
     &.logout {
       &:hover {
         background: $second;
+        color: $white;
+      }
+    }
+  }
+}
+.small_menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background: $white;
+  align-items: center;
+  box-shadow: $shadow;
+  display: none;
+
+  @media screen and (max-width: 991px) {
+    display: flex;
+  }
+
+  .menu_item {
+    @include centerFlex();
+    flex-direction: column;
+    flex: 1;
+    padding: 12px;
+    gap: 8px;
+    // color: ;
+    font-size: 14px;
+    text-decoration: none;
+
+    i {
+      font-size: 16px;
+      color: $gray;
+    }
+
+    &.active i {
+      color: $main;
+    }
+
+    .center {
+      width: 42px;
+      height: 42px;
+      background: $main;
+      font-size: 24px;
+      color: $white;
+      @include centerFlex();
+      border-radius: 50%;
+
+      i {
         color: $white;
       }
     }
@@ -366,7 +416,6 @@ header {
 }
 
 .terms {
-    margin-top: 60px;
 
   h2,
   h3,
@@ -387,7 +436,6 @@ header {
     }
   }
 }
-
 .package_contents {
   .img {
     height: 100%;
@@ -407,4 +455,7 @@ header {
       font-size: 14px;
     }
   }
+}
+.mt-80{
+  margin-top: 80px;
 }

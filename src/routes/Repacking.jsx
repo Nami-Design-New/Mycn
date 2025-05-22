@@ -4,7 +4,7 @@ export default function Repacking() {
   const { t } = useTranslation();
 
   return (
-    <section className="repacking main_section">
+    <section className="repacking main_section mt-80">
       <div className="container">
         <div className="col-12 p-2">
           <h3 className="section_title">{t("repacking.title")}</h3>

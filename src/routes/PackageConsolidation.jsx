@@ -38,7 +38,7 @@ export default function PackageConsolidation() {
   const { t } = useTranslation();
 
   return (
-    <section className="package main_section">
+    <section className="package main_section mt-80">
       <div className="container">
         <div className="col-12 p-2">
           <h3 className="section_title">{t("package.title")}</h3>

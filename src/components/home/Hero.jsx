@@ -31,7 +31,7 @@ export default function Hero() {
               <div className="image_wrapper">
                 <img
                   // src={`/images/slide-${index + 1}.jpg`}
-                   src={`/images/hero0.jpg`}
+                   src={`/images/Hero.png`}
                   alt={slide.slideTitle}
                 />
               </div>

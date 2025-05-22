@@ -74,6 +74,9 @@ useEffect(() => {
           <NavLink to="/faqs" onClick={handleNavLinkClick}>
             {t("header.faqs")}
           </NavLink>
+           <NavLink to="How_Work" onClick={handleNavLinkClick}>
+            {t("header.howWeWork")}
+          </NavLink>
           <NavLink to="/contact" onClick={handleNavLinkClick}>
             {t("header.contact")}
           </NavLink>

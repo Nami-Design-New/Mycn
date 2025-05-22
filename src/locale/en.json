@@ -17,7 +17,8 @@
         "shippingCalculator": "Shipping Calculator",
         "contact": "Contact Us",
         "faqs": "FAQs",
-        "login": "Login"
+        "login": "Login",
+        "howWeWork":"How It Works"
     },
    
     "heroSection": {

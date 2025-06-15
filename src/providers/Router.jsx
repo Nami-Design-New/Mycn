@@ -21,8 +21,6 @@ import Restricted from "../routes/Restricted&specialhandling";
 import MyTransactions from "../routes/MyTransactions";
 import ShipmentDetails from "../routes/ShipmentDetails";
 import NewPackages from "../routes/NewPackages";
-import HowWeWorks from "../components/home/HowWeWorks";
-import Howworks from "../routes/HowWorks";
 import HowWorks from "../routes/HowWorks";
 
 export const router = createBrowserRouter([
@@ -118,8 +116,8 @@ export const router = createBrowserRouter([
         path: "restricted-special-handling",
         element: <Restricted />,
       },
-       {
-        path: "How_Work",
+      {
+        path: "how-it-works",
         element: <HowWorks />,
       },
     ],

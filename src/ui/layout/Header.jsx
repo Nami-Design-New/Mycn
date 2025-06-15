@@ -76,7 +76,7 @@ export default function Header() {
           <NavLink to="/faqs" onClick={handleNavLinkClick}>
             {t("header.faqs")}
           </NavLink>
-          <NavLink to="How_Work" onClick={handleNavLinkClick}>
+          <NavLink to="how-it-works" onClick={handleNavLinkClick}>
             {t("header.howWeWork")}
           </NavLink>
           <NavLink to="/contact" onClick={handleNavLinkClick}>

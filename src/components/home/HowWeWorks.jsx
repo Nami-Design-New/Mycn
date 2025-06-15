@@ -91,7 +91,7 @@ export default function HowWeWorks() {
           </div>
 
           <div className="col-12 p-2 mt-4  d-flex justify-content-center">
-            <Link to="How_Work">
+            <Link to="how-it-works">
               <button className="watch_btn">Show How My CN Works</button>{" "}
             </Link>
           </div>

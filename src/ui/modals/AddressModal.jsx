@@ -81,9 +81,10 @@ export default function AddressModal({
             </div>
 
             <div className="col-12 p-2">
-              <SubmitButton text={isAdding ? "Add Address" : "Update Address"} className="mt-2">
-                {isAdding ? "Add Address" : "Update Address"}
-              </SubmitButton>
+              <SubmitButton
+                text={isAdding ? "Add Address" : "Update Address"}
+                className="mt-2"
+              />
             </div>
           </div>
         </Form>

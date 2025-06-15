@@ -54,6 +54,9 @@ export default function Footer() {
 
             <ul className="links_list">
               <li>
+                <Link to="/how-it-works">How it works</Link>
+              </li>
+              <li>
                 <Link to="/package-consolidation">Package consolidation</Link>
               </li>
               <li>

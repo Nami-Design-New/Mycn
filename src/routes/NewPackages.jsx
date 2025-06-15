@@ -1,6 +1,7 @@
 import { DragDropContext, Draggable, Droppable } from "@hello-pangea/dnd";
 import { useState } from "react";
 import { toast } from "sonner";
+import OrderShipment from "../ui/modals/OrderShipment";
 
 const initialPackages = [
   {
@@ -64,6 +65,7 @@ const initialPackages = [
 export default function NewPackages() {
   const [newPackages, setNewPackages] = useState(initialPackages);
   const [consolidated, setConsolidated] = useState([]);
+  const [showModal, setShowModal] = useState(false);
 
   const handleDragEnd = (result) => {
     const { source, destination } = result;
@@ -230,12 +232,16 @@ export default function NewPackages() {
                 )}
               </Droppable>
               {consolidated.length > 0 && (
-                <button className="log">Start Shipment</button>
+                <button onClick={() => setShowModal(true)} className="log">
+                  Start Shipment
+                </button>
               )}
             </div>
           </div>
         </DragDropContext>
       </div>
+
+      <OrderShipment show={showModal} setShow={setShowModal} />
     </div>
   );
 }

@@ -429,6 +429,21 @@ button {
   color: #000;
 }
 
+.select_destination {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+.select_destination button {
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+  white-space: nowrap !important;
+  padding: 0 18px !important;
+  font-size: 14px !important;
+  background: #237ff0 !important;
+  border: 0 !important;
+}
+
 body {
   position: relative;
   direction: rtl;

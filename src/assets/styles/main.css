@@ -444,6 +444,16 @@ button {
   border: 0 !important;
 }
 
+.shp_info h6 {
+  color: #000;
+  font-weight: 600;
+  font-size: 14px;
+}
+.shp_info h6 span {
+  font-size: 16px;
+  color: #a80200;
+}
+
 body {
   position: relative;
   direction: rtl;

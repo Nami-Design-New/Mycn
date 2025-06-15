@@ -117,6 +117,23 @@ export default function OrderShipment({ show, setShow }) {
             )}
 
             <div className="col-12 p-2">
+              <div className="shp_info">
+                <div className="d-flex align-items-center gap-5">
+                  <h6>
+                    Total Weight: <span>1.5kg</span>
+                  </h6>
+                  <h6>
+                    Final Dimensions: <span>30 x 20 x 10 cm <sup>3</sup></span>
+                  </h6>
+                </div>
+
+                <h6>
+                  Total Price <span>100$</span>
+                </h6>
+              </div>
+            </div>
+
+            <div className="col-12 p-2">
               <SubmitButton text={"Confirm Shipment"} className="mt-2" />
             </div>
           </div>

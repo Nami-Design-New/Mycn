@@ -153,6 +153,7 @@ header {
   display: flex;
   align-items: center;
   gap: 4px;
+  font-weight: 600;
   font-size: 14px;
   @media screen and (max-width: 991px) {
     display: none;

@@ -1,8 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import axiosInstance from "../../utils/axiosInstance";
 
-export default function useGetProfile() {
-
+export default function useGetProfile(enabeled = true) {
   const { isLoading, data, error } = useQuery({
     queryKey: ["profile"],
     queryFn: async () => {
@@ -16,6 +15,7 @@ export default function useGetProfile() {
         throw error;
       }
     },
+    enabled: enabeled,
   });
   return { isLoading, data, error };
 }

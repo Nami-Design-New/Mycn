@@ -97,5 +97,29 @@
     "description3": "Track each step and know the cost in advance.",
     "title4": "Ongoing Customer Support",
     "description4": "We're here 24/7 to assist you anytime."
+  },
+  "footer": {
+    "text": "At My CN, we are a premier logistics provider committed to delivering efficient and dependable shipping solutions tailored to our customers' needs. Leveraging cutting-edge technology and a customer-centric approach, we ensure seamless and timely delivery experiences across the globe.",
+    "quickLinks": "Quick Links",
+    "ourServices": "Our Services",
+    "getInTouch": "Get In Touch",
+    "about": "About MYCN",
+    "contactUs": "Contact Us",
+    "privacyPolicy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "faqs": "FAQs",
+    "howItWorks": "How It Works",
+    "packageConsolidation": "Package Consolidation",
+    "repacking": "Repacking",
+    "shippingCalculator": "Shipping Calculator",
+    "restrictedItems": "Restricted and special handling items",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "businessHours": "Business Hours",
+    "copyright": "Copyright",
+    "allRightsReserved": "All Rights Reserved to",
+    "subscribeToNewsletter": "Subscribe for latest updates & insights",
+    "subscribe": "Subscribe"
   }
 }

@@ -2,9 +2,9 @@ import { useQueryClient } from "@tanstack/react-query";
 import { useCookies } from "react-cookie";
 import { useDispatch } from "react-redux";
 import { setClientData } from "../../redux/slices/clientData";
+import { useNavigate } from "react-router";
 import { toast } from "sonner";
 import axiosInstance from "../../utils/axiosInstance";
-import { useNavigate } from "react-router";
 
 export default function useLogout(t) {
   const dispatch = useDispatch();
@@ -22,7 +22,7 @@ export default function useLogout(t) {
         delete axiosInstance.defaults.headers.common["Authorization"];
         queryClient.invalidateQueries();
         queryClient.removeQueries();
-        navigate("/login");
+        navigate("/signIn");
         toast.success(t("auth.logout_success"));
       }
     } catch (error) {

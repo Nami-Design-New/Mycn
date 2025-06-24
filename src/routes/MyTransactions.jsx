@@ -1,47 +1,16 @@
+import { useTranslation } from "react-i18next";
+import useGetTransactions from "../hooks/profile/useGetTransactions";
+
 export default function MyTransactions() {
-  const initialData = [
-    {
-      id: 1,
-      date: "2022-10-24",
-      amount: "$100",
-      description: "Order #123",
-      status: "Pending",
-    },
-    {
-      id: 2,
-      date: "2022-10-24",
-      amount: "$100",
-      description: "Order #123",
-      status: "Pending",
-    },
-    {
-      id: 3,
-      date: "2022-10-24",
-      amount: "$100",
-      description: "Order #123",
-      status: "Pending",
-    },
-    {
-      id: 4,
-      date: "2022-10-24",
-      amount: "$100",
-      description: "Order #123",
-      status: "Pending",
-    },
-    {
-      id: 5,
-      date: "2022-10-24",
-      amount: "$100",
-      description: "Order #123",
-      status: "Pending",
-    },
-  ];
+  const { t } = useTranslation();
+  const { data: transactions } = useGetTransactions();
+
   return (
     <div className="transactions_history">
       <div className="row">
         <div className="col-12 p-2">
-          <h3 className="sec_title">My Transactions</h3>
-          <p className="sec_desc">View and manage your transactions history</p>
+          <h3 className="sec_title">{t("profile.transactionsTitle")}</h3>
+          <p className="sec_desc">{t("profile.transactionsSubTitle")}</p>
         </div>
 
         <div className="col-12 p-2 mt-2">
@@ -49,19 +18,19 @@ export default function MyTransactions() {
             <table>
               <thead>
                 <tr>
-                  <th>Transaction ID</th>
-                  <th>Date</th>
-                  <th>Amount</th>
-                  <th>Description</th>
-                  <th>Status</th>
+                  <th>{t("common.transactionId")}</th>
+                  <th>{t("common.date")}</th>
+                  <th>{t("common.amount")}</th>
+                  <th>{t("common.desccription")}</th>
+                  <th>{t("common.status")}</th>
                 </tr>
               </thead>
 
               <tbody>
-                {initialData.map((item) => (
+                {transactions?.map((item) => (
                   <tr key={item.id}>
                     <td>{item.id}</td>
-                    <td>{item.date}</td>
+                    <td>{item.created_at || "12-01-2025"}</td>
                     <td>{item.amount}</td>
                     <td>{item.description}</td>
                     <td>{item.status}</td>

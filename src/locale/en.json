@@ -150,7 +150,9 @@
     "consolidated": "Consolidated Packages",
     "dragDrop": "Drag and drop your packages here",
     "maxPackagesError": "You can't have more than {{maxPackages}} packages",
-    "noNewPackages": "No new packages at the moment"
+    "noNewPackages": "No new packages at the moment",
+    "transactionsTitle": "My Transactions",
+    "transactionsSubTitle": "View and manage your transactions history"
   },
   "addressFields": {
     "recipient": "Recipient Name",
@@ -172,6 +174,11 @@
     "weight": "Weight",
     "size": "Size",
     "source": "Source",
-    "reciept_date": "Receipt Date"
+    "reciept_date": "Receipt Date",
+    "transactionId": "Transaction ID",
+    "date": "Date",
+    "amount": "Amount",
+    "desccription": "Description",
+    "status": "Status"
   }
 }

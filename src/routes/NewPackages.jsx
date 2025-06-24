@@ -72,7 +72,7 @@ export default function NewPackages() {
                     {...provided.droppableProps}
                     ref={provided.innerRef}
                   >
-                    {newPackages.map((pkg, index) => (
+                    {newPackages?.map((pkg, index) => (
                       <Draggable
                         key={pkg.id}
                         draggableId={pkg.id}
@@ -137,7 +137,7 @@ export default function NewPackages() {
                     {...provided.droppableProps}
                     ref={provided.innerRef}
                   >
-                    {consolidated.map((pkg, index) => (
+                    {consolidated?.map((pkg, index) => (
                       <Draggable
                         key={pkg.id}
                         draggableId={pkg.id}

@@ -2812,7 +2812,18 @@ body .notification_card {
   padding: 16px;
   background: #fafafa;
   border-radius: 16px;
+  position: relative;
   border: 1px dashed #f4f4f4;
+}
+body .notification_card span {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  color: #777;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 body .notification_card .icon {
   min-width: 54px;
@@ -3281,4 +3292,8 @@ body.en .form_ui .input-field .pass-group .show-pass {
 body.en .profile_section .address_card ul b .tooltip {
   left: initial;
   right: 0;
+}
+body.en .notification_card span {
+  left: initial;
+  right: 16px;
 }/*# sourceMappingURL=main.css.map */

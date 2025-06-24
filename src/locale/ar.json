@@ -150,7 +150,9 @@
     "consolidated": "طرود مجمعة",
     "dragDrop": "قم بسحب الطرود وإفلاتها هنا",
     "maxPackagesError": "لا يمكنك إضافة أكثر من {{maxPackages}} طرود",
-    "noNewPackages": "لا توجد طرود جديدة الآن"
+    "noNewPackages": "لا توجد طرود جديدة الآن",
+    "transactionsTitle": "معاملاتي",
+    "transactionsSubTitle": "عرض وإدارة سجل المعاملات الخاص بك"
   },
   "addressFields": {
     "recipient": "اسم المستلم",
@@ -172,6 +174,11 @@
     "weight": "الوزن",
     "size": "الحجم",
     "source": "المصدر",
-    "reciept_date": "تاريخ الاستلام"
+    "reciept_date": "تاريخ الاستلام",
+    "transactionId": "معرّف المعاملة",
+    "date": "التاريخ",
+    "amount": "المبلغ",
+    "desccription": "الوصف",
+    "status": "الحالة"
   }
 }

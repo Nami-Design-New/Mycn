@@ -510,7 +510,19 @@
   padding: 16px;
   background: $input_bg;
   border-radius: 16px;
+  position: relative;
   border: 1px dashed $input_stroke;
+
+  span {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    color: #777;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
 
   .icon {
     min-width: 54px;

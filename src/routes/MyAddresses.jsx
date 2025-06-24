@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import AddressModal from "../ui/modals/AddressModal";
 
 export default function MyAddresses() {
+  const { t } = useTranslation();
   const [addresses, setAddresses] = useState([
     {
       id: 1,
@@ -79,13 +81,11 @@ export default function MyAddresses() {
       <div className="row">
         <div className="col-12 header_row">
           <div>
-            <h3 className="sec_title">My Addresses</h3>
-            <p className="sec_desc">
-              Manage your shipping addresses and track your shipments.
-            </p>
+            <h3 className="sec_title">{t("profile.addressesTitle")}</h3>
+            <p className="sec_desc">{t("profile.addressesSubTitle")}</p>
           </div>
           <button className="add_btn" onClick={handleAddNew}>
-            <i className="fa-regular fa-plus"></i> Add New Address
+            <i className="fa-regular fa-plus"></i> {t("profile.addAddress")}
           </button>
         </div>
 

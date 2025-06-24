@@ -152,7 +152,10 @@
     "maxPackagesError": "You can't have more than {{maxPackages}} packages",
     "noNewPackages": "No new packages at the moment",
     "transactionsTitle": "My Transactions",
-    "transactionsSubTitle": "View and manage your transactions history"
+    "transactionsSubTitle": "View and manage your transactions history",
+    "addressesTitle": "My Addresses",
+    "addressesSubTitle": "Manage your shipping addresses and track your shipments.",
+    "addAddress": "Add address"
   },
   "addressFields": {
     "recipient": "Recipient Name",

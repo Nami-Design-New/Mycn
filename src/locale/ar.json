@@ -152,7 +152,10 @@
     "maxPackagesError": "لا يمكنك إضافة أكثر من {{maxPackages}} طرود",
     "noNewPackages": "لا توجد طرود جديدة الآن",
     "transactionsTitle": "معاملاتي",
-    "transactionsSubTitle": "عرض وإدارة سجل المعاملات الخاص بك"
+    "transactionsSubTitle": "عرض وإدارة سجل المعاملات الخاص بك",
+    "addressesTitle": "عناويني",
+    "addressesSubTitle": "قم بإدارة عناوين الشحن وتتبع شحناتك.",
+    "addAddress": "اضافة عنوان"
   },
   "addressFields": {
     "recipient": "اسم المستلم",

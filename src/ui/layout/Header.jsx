@@ -26,7 +26,6 @@ export default function Header({ auth }) {
     i18next.changeLanguage(newLang);
 
     queryClient.invalidateQueries();
-    queryClient.removeQueries();
     const bodyElement = document.querySelector("body");
 
     if (bodyElement) {

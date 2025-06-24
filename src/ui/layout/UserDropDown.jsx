@@ -2,17 +2,17 @@ import { Dropdown } from "react-bootstrap";
 import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
 import useLogout from "../../hooks/auth/useLogout";
-import useGetProfile from "../../hooks/auth/useGetProfile";
+import { useSelector } from "react-redux";
 
 export default function UserDropDown() {
   const { t } = useTranslation();
   const { logout } = useLogout(t);
-  const { data: profile } = useGetProfile();
+  const { client } = useSelector((state) => state.clientData);
 
   return (
     <Dropdown>
       <Dropdown.Toggle className="user_dropdown">
-        <span>{profile?.first_name + " " + profile?.last_name}</span>
+        <span>{client?.first_name + " " + client?.last_name}</span>
         <i className="fa fa-chevron-down"></i>
       </Dropdown.Toggle>
 

@@ -10,9 +10,11 @@
     "howWeWork": "How It Works",
     "notifications": "Notifications",
     "myShipments": "My Shipments",
-    "logout": "Logout",
+    "logout": "Sing Out",
     "myTransactions": "My Transactions",
-    "myAddresses": "My Addresses"
+    "myAddresses": "My Addresses",
+    "dashboard": "Dashboard",
+    "newPackages": "New Packages"
   },
   "errorPage": {
     "pageNotFoundTitle": "Page Not Found",
@@ -121,5 +123,55 @@
     "allRightsReserved": "All Rights Reserved to",
     "subscribeToNewsletter": "Subscribe for latest updates & insights",
     "subscribe": "Subscribe"
+  },
+  "profile": {
+    "welcomeText": "Welcome to MY CN - Your Gateway to Chinese Shopping",
+    "address": {
+      "title": "Your Dedicated MY CN China Shipping Hub",
+      "sections": [
+        "Your exclusive MY CN China locker address is now ready for use! Shop effortlessly from any Chinese online store.",
+        "Simply enter your unique MY CN address during checkout to have purchases delivered directly to your secure personal locker."
+      ],
+      "benefits": {
+        "heading": "Key Benefits:",
+        "items": [
+          "45 days of COMPLIMENTARY storage with complete transparency",
+          "Package consolidation - Combine multiple orders",
+          "Custom repacking - Optimize package dimensions",
+          "Real-time tracking - Monitor every shipment"
+        ],
+        "footer": "Our smart solutions maximize your savings on global shipping costs."
+      }
+    },
+    "newPackagesTitle": "Smart Shipping Starts Here",
+    "newPackagesSubtitle": "Drag, drop, and dominate your deliveries. Organize up to 6 packages into one smart shipment to save time, space, and international shipping costs. Your package control center just got an upgrade.",
+    "orderShipment": "Order Shipment",
+    "newPackages": "New Packages",
+    "consolidated": "Consolidated Packages",
+    "dragDrop": "Drag and drop your packages here",
+    "maxPackagesError": "You can't have more than {{maxPackages}} packages",
+    "noNewPackages": "No new packages at the moment"
+  },
+  "addressFields": {
+    "recipient": "Recipient Name",
+    "street": "Address Line 1",
+    "district": "District",
+    "city": "City",
+    "province": "Province",
+    "country": "Country",
+    "zipCode": "Zip Code",
+    "phone": "Phone",
+    "email": "Email",
+    "addressLine2": "Address Line 2"
+  },
+  "common": {
+    "copy": "Copy",
+    "copied": "Copied!",
+    "max": "Maximum",
+    "trackingNumber": "Tracking Number",
+    "weight": "Weight",
+    "size": "Size",
+    "source": "Source",
+    "reciept_date": "Receipt Date"
   }
 }

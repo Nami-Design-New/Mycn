@@ -56,6 +56,7 @@
         border-radius: 8px;
         display: flex;
         align-items: center;
+        cursor: pointer;
         gap: 16px;
         color: $black;
         transition: 0.3s ease-in-out;
@@ -140,23 +141,27 @@
 
   .content {
     h3 {
-      font-size: 24px;
+      font-size: 20px;
       display: flex;
       align-items: center;
       gap: 8px;
       margin-bottom: 24px;
-      &::before {
-        content: "";
-        width: 32px;
-        height: 4px;
-        transform: skew(30deg);
-        background: linear-gradient(90deg, #a80200 0%, #d8250f 100%);
-      }
+      margin-top: 16px;
     }
 
-    p {
+    h4 {
+      font-size: 18px;
+      color: $black;
+      margin-bottom: 16px;
+    }
+
+    p,
+    ul {
       font-size: 14px;
       color: $black;
+    }
+    li {
+      margin-bottom: 8px;
     }
   }
 
@@ -167,7 +172,7 @@
     border-radius: 16px;
 
     h4 {
-      font-size: 20px;
+      font-size: 16px;
 
       display: flex;
       align-items: center;
@@ -379,7 +384,6 @@
         ul {
           display: flex;
           flex-wrap: wrap;
-          gap: 8px;
           color: $black;
           font-size: 14px;
         }

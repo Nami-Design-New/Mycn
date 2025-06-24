@@ -1,69 +1,19 @@
 import { DragDropContext, Draggable, Droppable } from "@hello-pangea/dnd";
 import { useState } from "react";
 import { toast } from "sonner";
+import { useTranslation } from "react-i18next";
 import OrderShipment from "../ui/modals/OrderShipment";
-
-const initialPackages = [
-  {
-    id: "1",
-    weight: "5 lb",
-    source: "Apple Store",
-    receipt_date: "2023-01-01",
-    tracking_number: "#8498",
-    size: "10 x 10 x 10 cm",
-  },
-  {
-    id: "2",
-    weight: "3 lb",
-    source: "Amazon",
-    receipt_date: "2023-02-15",
-    tracking_number: "#5678",
-    size: "15 x 15 x 15 cm",
-  },
-  {
-    id: "3",
-    weight: "4 lb",
-    source: "Best Buy",
-    receipt_date: "2023-03-10",
-    tracking_number: "#1234",
-    size: "20 x 20 x 20 cm",
-  },
-  {
-    id: "4",
-    weight: "2 lb",
-    source: "eBay",
-    receipt_date: "2023-04-05",
-    tracking_number: "#4321",
-    size: "25 x 25 x 25 cm",
-  },
-  {
-    id: "5",
-    weight: "6 lb",
-    source: "Walmart",
-    receipt_date: "2023-05-21",
-    tracking_number: "#8765",
-    size: "30 x 30 x 30 cm",
-  },
-  {
-    id: "6",
-    weight: "1 lb",
-    source: "Target",
-    receipt_date: "2023-06-18",
-    tracking_number: "#6789",
-    size: "12 x 12 x 12 cm",
-  },
-  {
-    id: "7",
-    weight: "7 lb",
-    source: "AliExpress",
-    receipt_date: "2023-07-25",
-    tracking_number: "#9876",
-    size: "35 x 35 x 35 cm",
-  },
-];
+import useGetSettings from "./../hooks/settings/useGetSettings";
+import useGetNewPackages from "./../hooks/profile/useGetNewPackages";
 
 export default function NewPackages() {
-  const [newPackages, setNewPackages] = useState(initialPackages);
+  const { t } = useTranslation();
+  const { data: settings } = useGetSettings();
+  const { data: newPackagesData } = useGetNewPackages();
+
+  const maxPackages = settings?.max_orders_count || 6;
+
+  const [newPackages, setNewPackages] = useState(newPackagesData);
   const [consolidated, setConsolidated] = useState([]);
   const [showModal, setShowModal] = useState(false);
 
@@ -75,9 +25,9 @@ export default function NewPackages() {
 
     if (
       destination.droppableId === "consolidated" &&
-      consolidated.length >= 6
+      consolidated.length >= maxPackages
     ) {
-      toast.error("You can't have more than 6 packages");
+      toast.error(t("profile.maxPackagesError", { maxPackages: maxPackages }));
       return;
     }
 
@@ -107,18 +57,14 @@ export default function NewPackages() {
     <div className="new_packages">
       <div className="row">
         <div className="col-12 p-2">
-          <h6 className="sec_title">Smart Shipping Starts Here</h6>
-          <p className="sec_desc">
-            Drag, drop, and dominate your deliveries. Organize up to 6 packages
-            into one smart shipment to save time, space, and international
-            shipping costs. Your package control center just got an upgrade.
-          </p>
+          <h6 className="sec_title">{t("profile.newPackagesTitle")}</h6>
+          <p className="sec_desc">{t("profile.newPackagesSubtitle")}</p>
         </div>
 
         <DragDropContext onDragEnd={handleDragEnd}>
           <div className="col-md-6 col-12 p-2">
             <div className="list">
-              <h5>New Packages</h5>
+              <h5>{t("profile.newPackages")}</h5>
               <Droppable droppableId="newPackages">
                 {(provided) => (
                   <div
@@ -145,19 +91,21 @@ export default function NewPackages() {
                             <div className="content">
                               <ul>
                                 <li className="w-100">
-                                  Tracking Number: <b>{pkg.tracking_number}</b>
+                                  {t("common.trackingNumber")}:{" "}
+                                  <b># {pkg.tracking_id}</b>
                                 </li>
                                 <li className="w-50">
-                                  Weight: <b>{pkg.weight}</b>
+                                  {t("common.weight")}: <b>{pkg.weight}</b>
+                                </li>
+                                <li className="w-50">
+                                  {t("common.size")}: <b>{pkg.size}</b>
                                 </li>
                                 <li>
-                                  Size: <b>{pkg.size}</b>
+                                  {t("common.source")}: <b>{pkg.source}</b>
                                 </li>
-                                <li>
-                                  Source: <b>{pkg.source}</b>
-                                </li>
-                                <li>
-                                  Reciept Date: <b>{pkg.reciept_date}</b>
+                                <li className="pe-4">
+                                  {t("common.reciept_date")}:{" "}
+                                  <b>{pkg.receipt_date}</b>
                                 </li>
                               </ul>
                             </div>
@@ -165,6 +113,11 @@ export default function NewPackages() {
                         )}
                       </Draggable>
                     ))}
+
+                    {newPackages?.length === 0 && (
+                      <p>{t("profile.noNewPackages")}</p>
+                    )}
+
                     {provided.placeholder}
                   </div>
                 )}
@@ -174,7 +127,9 @@ export default function NewPackages() {
 
           <div className="col-md-6 col-12 p-2">
             <div className="list target">
-              <h5>Consolidated Packages (max 6)</h5>
+              <h5>
+                {t("profile.consolidated")} ( {t("common.max")} {maxPackages} )
+              </h5>
               <Droppable droppableId="consolidated">
                 {(provided) => (
                   <div
@@ -201,19 +156,21 @@ export default function NewPackages() {
                             <div className="content">
                               <ul>
                                 <li className="w-100">
-                                  Tracking Number: <b>{pkg.tracking_number}</b>
+                                  {t("common.trackingNumber")}:{" "}
+                                  <b># {pkg.tracking_id}</b>
                                 </li>
                                 <li className="w-50">
-                                  Weight: <b>{pkg.weight}</b>
+                                  {t("common.weight")}: <b>{pkg.weight}</b>
+                                </li>
+                                <li className="w-50">
+                                  {t("common.size")}: <b>{pkg.size}</b>
                                 </li>
                                 <li>
-                                  Size: <b>{pkg.size}</b>
+                                  {t("common.source")}: <b>{pkg.source}</b>
                                 </li>
-                                <li>
-                                  Source: <b>{pkg.source}</b>
-                                </li>
-                                <li>
-                                  Reciept Date: <b>{pkg.reciept_date}</b>
+                                <li className="pe-4">
+                                  {t("common.reciept_date")}:{" "}
+                                  <b>{pkg.receipt_date}</b>
                                 </li>
                               </ul>
                             </div>
@@ -225,15 +182,16 @@ export default function NewPackages() {
                     {consolidated?.length === 0 && (
                       <div className="drag_here">
                         <img src="/icons/drag.svg" alt="empty" />
-                        <p>Drag and drop your packages here</p>
+                        <p>{t("profile.dragDrop")}</p>
                       </div>
                     )}
                   </div>
                 )}
               </Droppable>
+
               {consolidated.length > 0 && (
                 <button onClick={() => setShowModal(true)} className="log">
-                  Start Shipment
+                  {t("profile.orderShipment")}
                 </button>
               )}
             </div>

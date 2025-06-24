@@ -38,5 +38,10 @@ body {
         border-right: 1px solid $input_stroke !important;
       }
     }
+
+    .profile_section .address_card ul b .tooltip {
+      left: initial;
+      right: 0;
+    }
   }
 }

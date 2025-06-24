@@ -2418,6 +2418,7 @@ body .profile_section .profile_sidebar .nav_links .nav_link {
   border-radius: 8px;
   display: flex;
   align-items: center;
+  cursor: pointer;
   gap: 16px;
   color: #000;
   transition: 0.3s ease-in-out;
@@ -2492,22 +2493,25 @@ body .profile_section .shipment .status .progress-bar {
   background-color: #d8250f !important;
 }
 body .profile_section .content h3 {
-  font-size: 24px;
+  font-size: 20px;
   display: flex;
   align-items: center;
   gap: 8px;
   margin-bottom: 24px;
+  margin-top: 16px;
 }
-body .profile_section .content h3::before {
-  content: "";
-  width: 32px;
-  height: 4px;
-  transform: skew(30deg);
-  background: linear-gradient(90deg, #a80200 0%, #d8250f 100%);
+body .profile_section .content h4 {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 16px;
 }
-body .profile_section .content p {
+body .profile_section .content p,
+body .profile_section .content ul {
   font-size: 14px;
   color: #000;
+}
+body .profile_section .content li {
+  margin-bottom: 8px;
 }
 body .profile_section .address_card {
   padding: 24px;
@@ -2516,7 +2520,7 @@ body .profile_section .address_card {
   border-radius: 16px;
 }
 body .profile_section .address_card h4 {
-  font-size: 20px;
+  font-size: 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2699,7 +2703,6 @@ body .profile_section .new_packages .package_list .package_item .icon img {
 body .profile_section .new_packages .package_list .package_item ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
   color: #000;
   font-size: 14px;
 }
@@ -3274,4 +3277,8 @@ body.en .form_ui .input-field .pass-group .show-pass {
   border-radius: 0 12px 12px 0 !important;
   border-left: 0 !important;
   border-right: 1px solid #f4f4f4 !important;
+}
+body.en .profile_section .address_card ul b .tooltip {
+  left: initial;
+  right: 0;
 }/*# sourceMappingURL=main.css.map */

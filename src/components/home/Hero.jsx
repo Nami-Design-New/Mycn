@@ -23,15 +23,11 @@ export default function Hero() {
           disableOnInteraction: false,
         }}
       >
-
         {slides?.map((slide, index) => (
           <SwiperSlide key={index}>
             <div className="hero_slide">
               <div className="image_wrapper">
-                <img
-                   src={`/images/Hero.png`}
-                  alt={slide.slideTitle}
-                />
+                <img src={`/images/Hero.png`} alt={slide.slideTitle} />
               </div>
               <div className="content">
                 <p className="small_hint">{slide.smallHint}</p>
@@ -42,7 +38,6 @@ export default function Hero() {
           </SwiperSlide>
         ))}
       </Swiper>
-
     </section>
   );
 }

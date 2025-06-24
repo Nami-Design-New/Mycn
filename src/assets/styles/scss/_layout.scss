@@ -40,7 +40,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1rem;
+    padding: 1rem 1.5rem !important;
     background: $white;
     border-radius: 100px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -109,7 +109,8 @@ header {
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      gap: 24px;
+      gap: 16px;
+
       .toggle_menu {
         display: none;
         @media screen and (max-width: 1200px) {
@@ -184,6 +185,7 @@ header {
     gap: 8px !important;
     font-size: 14px;
     &.logout {
+      cursor: pointer;
       &:hover {
         background: $second;
         color: $white;

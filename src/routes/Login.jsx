@@ -1,43 +1,57 @@
 import { Link } from "react-router";
+import { useTranslation } from "react-i18next";
 import InputField from "../ui/forms/InputField";
 import PasswordField from "../ui/forms/PasswordField";
 import SubmitButton from "../ui/forms/SubmitButton";
+import useLogin from "../hooks/auth/useLogin";
 
 export default function Login() {
+  const { t } = useTranslation();
+  const { register, handleSubmit, errors, isLoading } = useLogin(t);
+
   return (
     <section className="auth_section main_section mt-80">
       <div className="container">
         <div className="row">
-          <div className="col-12 p-2 mb-2">
-            <h3 className="section_title">Welcome Back to My CN</h3>
-            <p className="section_description">
-              Log in to access your dashboard, track shipments, manage packages,
-              and enjoy seamless international shipping services.
-            </p>
-          </div>
+          <div className="col-12 p-2 mb-2"></div>
 
-          <div className="col-lg-6 col-12 p-2 d-flex align-items-center">
-            <form className="form_ui">
+          <div className="col-lg-6 col-12 p-2 d-flex  flex-column">
+            <h3 className="section_title">{t("auth.loginTitle")}</h3>
+            <p className="section_description">{t("auth.loginSubtitle")}</p>
+
+            <form className="form_ui mt-3" onSubmit={handleSubmit}>
               <div className="form_group">
                 <InputField
-                  label="Email Address"
+                  label={t("auth.email")}
                   type="email"
-                  placeholder="Enter your email"
+                  placeholder={t("auth.enterEmail")}
+                  {...register("email")}
+                  error={errors.email?.message}
                 />
               </div>
 
               <div className="form_group">
-                <PasswordField label="Password" placeholder="Password" />
+                <PasswordField
+                  label={t("auth.password")}
+                  placeholder={t("auth.enterPassword")}
+                  {...register("password")}
+                  error={errors.password?.message}
+                />
               </div>
 
               <Link to="/reset-password" className="link">
-                Forget your password?
+                {t("auth.forgotPassword")}
               </Link>
 
-              <SubmitButton text="Sign In" className="mt-3" />
+              <SubmitButton
+                text={t("auth.signIn")}
+                loading={isLoading}
+                className="mt-3"
+              />
 
               <p className="note">
-                Don&apos;t have an account? <Link to="/signup">Sign Up</Link>
+                {t("auth.dontHaveAnAccount")}{" "}
+                <Link to="/signup">{t("auth.signUp")}</Link>
               </p>
             </form>
           </div>

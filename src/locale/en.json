@@ -1,147 +1,96 @@
 {
-    "errorPage": {
-        "pageNotFoundTitle": "Page Not Found",
-        "pageNotFoundMessage": "We couldn't find the page you're looking for. The page might have been moved, deleted, or never existed.",
-        "errorTitle": "Error",
-        "applicationErrorTitle": "Application Error",
-        "applicationErrorMessage": "An unexpected error occurred. Please try again later.",
-        "unexpectedErrorTitle": "Unexpected Error",
-        "unexpectedErrorMessage": "An unexpected error occurred. Please try again later.",
-        "oops": "Oops!",
-        "returnToHome": "Return To Home"
-    },
-    "header": {
-        "home": "Home",
-        "about": "About Us",
-        "myOrders": "My Orders",
-        "shippingCalculator": "Shipping Calculator",
-        "contact": "Contact Us",
-        "faqs": "FAQs",
-        "login": "Login",
-        "howWeWork":"How It Works"
-    },
-   
-    "heroSection": {
-  "slides": [
-    {
-      "smallHint": "Start your business with ease",
-      "slideTitle": "Import Your Goods from China Hassle-Free",
-      "slideDescription": "Seamless shipping, secure storage, and smooth customs — your goods delivered hassle-free to your doorstep.",
-      "slideButton": "Get Started"
-    },
-    {
-      "smallHint": "Save More, Grow Faster",
-      "slideTitle": "Affordable Shipping & Consolidation for Traders",
-      "slideDescription": "We collect your orders from different suppliers and ship them together to reduce costs and speed up delivery.",
-      "slideButton": "Learn More"
-    },
-    {
-      "smallHint": "Real-Time Tracking & Clear Pricing",
-      "slideTitle": "Track Your Shipments Every Step of the Way",
-      "slideDescription": "Monitor your shipment from pickup in China to delivery, with instant cost estimates and no hidden fees.",
-      "slideButton": "Try Now"
-    }
-  ]
-},
-
-    "features": {
-        "subtitle": "Why choose us",
-        "title": "Why we are considered the best in",
-        "transportationBusiness": "transportation business",
-        "title1": "Your Shortcut to Chinese Deals",
-        "description1": "Get your China address and start shopping easily.",
-        "title2": "One Shipment, Less Cost",
-        "description2": "Group items in one box to save time and cost.",
-        "title3": "Real-Time & Accurate Tracking",
-        "description3": "Track each step and know the cost in advance.",
-        "title4": "Ongoing Customer Support",
-        "description4": "We're here 24/7 to assist you anytime."
-    },
-    "orderStatus": {
-        "in_warehouse": "In Warehouse",
-        "order_approved": "Order Approved",
-        "payment_done": "Payment Completed",
-        "left_china": "Left China",
-        "arrived_saudi_arabia": "Arrived in Saudi Arabia",
-        "out_for_delivery_to_customer": "Out for Delivery to Customer",
-        "will_be_delivered_soon": "Will Be Delivered Soon",
-        "delivered": "Delivered",
-        "completed": "Order Completed"
-    },
-    "testimonials": {
-        "title": "What our customers say",
-        "subtitle": "Testimonials"
-    },
-    "faq": {
-        "subtitle": "FAQs",
-        "title": "Have a question? We're here to help!",
-        "viewAll": "View All FAQs",
-        "signUp": "Sign Up Now, It's Free!"
-    },
-        "package": {
-          "title": "MYCN's Package Consolidation",
-          "description": "Consolidate your packages into one shipment and enjoy lower fees, faster delivery, and more convenience.",
-          "individual": "Shipping Individually",
-          "consolidated": "Shipping After Consolidation"
-        
+  "header": {
+    "home": "Home",
+    "about": "About Us",
+    "myOrders": "My Orders",
+    "shippingCalculator": "Shipping Calculator",
+    "contact": "Contact Us",
+    "faqs": "FAQs",
+    "login": "Login",
+    "howWeWork": "How It Works"
+  },
+  "errorPage": {
+    "pageNotFoundTitle": "Page Not Found",
+    "pageNotFoundMessage": "We couldn't find the page you're looking for. The page might have been moved, deleted, or never existed.",
+    "errorTitle": "Error",
+    "applicationErrorTitle": "Application Error",
+    "applicationErrorMessage": "An unexpected error occurred. Please try again later.",
+    "unexpectedErrorTitle": "Unexpected Error",
+    "unexpectedErrorMessage": "An unexpected error occurred. Please try again later.",
+    "oops": "Oops!",
+    "returnToHome": "Return To Home"
+  },
+  "auth": {
+    "loginTitle": "Welcome Back to My CN",
+    "loginSubtitle": "Log in to access your dashboard, track shipments, manage packages, and enjoy seamless international shipping services.",
+    "email": "Email Address",
+    "password": "Password",
+    "enterPassword": "Enter your password",
+    "enterEmail": "Enter your email",
+    "forgotPassword": "Forgot your password?",
+    "signIn": "Sign In",
+    "dontHaveAnAccount": "Don't have an account?",
+    "signUp": "Sign Up",
+    "loginSuccess": "Login successful",
+    "registerSuccess": "Registration successful",
+    "logout_success": "Logout successful",
+    "loginFailed": "Login failed, please check your credentials",
+    "registerTitle": "Create Your My CN Account",
+    "registerSubtitle": "Sign up to start managing your shipments, tracking packages, and accessing exclusive shipping solutions tailored to your needs",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "whatsapp": "WhatsApp Number",
+    "enterWhatsapp": "Enter your WhatsApp number",
+    "country": "Country",
+    "confirmPassword": "Confirm Password",
+    "acceptTerms": "I accept the",
+    "termsAndConditions": "Terms and Conditions",
+    "alreadyHaveAnAccount": "Already have an account?",
+    "selectCountry": "Select your country",
+    "enterPhoneNumber": "Enter your phone number",
+    "somethingWentWrong": "Something went wrong, please try again later"
+  },
+  "validation": {
+    "required": "This field is required",
+    "email": "Please enter a valid email address",
+    "passwordComplexity": "Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character",
+    "min": "Password must be at least {{min}} characters",
+    "passwordMatch": "Passwords do not match",
+    "terms": "You must accept the terms and conditions"
+  },
+  "heroSection": {
+    "slides": [
+      {
+        "smallHint": "Start your business with ease",
+        "slideTitle": "Import Your Goods from China Hassle-Free",
+        "slideDescription": "Seamless shipping, secure storage, and smooth customs — your goods delivered hassle-free to your doorstep.",
+        "slideButton": "Get Started"
       },
-      "repacking": {
-        "title": "MYCN Repacking Service",
-        "description": "Combine your packages into one shipment and enjoy lower fees, faster delivery, and more convenience.",
-        "itemDescription": "For users who want to ship only one item, we can prepare the shipment as it is or with some adjustments based on your preferences. You can choose to ship with the original seller's packaging or take advantage of our repacking service for more efficiency.",
-        "exampleLabel": "Example:",
-        "exampleTitle": "iPhone",
-        "exampleDescription": "If you purchase an iPhone, we can remove the seller's shipping box and repack it into a smaller, more compact box. We can also add extra padding for protection and ensure it arrives safely.",
-        "note": "These adjustments not only save on shipping costs but also provide better protection during transit.",
-        "costTitle": "How much does repacking cost?",
-        "costSubtitle": "Costs",
-        "costDescription": "MYCN's repacking service costs $5. While there is a small fee, the savings from reducing the shipment size often outweigh the cost. If we cannot optimize the packaging, the $5 fee will be waived.",
-        "careSubtitle": "Care and Customization",
-        "careDescription": "We handle all items, especially fragile or high-value products, with the utmost care. You can choose to keep the original seller's packaging or request additional protection for your peace of mind.",
-        "shipTitle": "Ship as is",
-        "shipDescription": "If you prefer to keep the seller's original packaging, you can opt for shipping as is with no changes. However, if the shipment contains a hazardous product (hazmat), additional steps may be required to ensure compliance with shipping regulations."
+      {
+        "smallHint": "Save More, Grow Faster",
+        "slideTitle": "Affordable Shipping & Consolidation for Traders",
+        "slideDescription": "We collect your orders from different suppliers and ship them together to reduce costs and speed up delivery.",
+        "slideButton": "Learn More"
       },
-      "restricted": {
-        "title": "Restricted & Special Handling Items",
-        "description": "Some items require special care or may be restricted due to shipping regulations. Learn what can and cannot be shipped, and how we handle them.",
-        "hazmatAlt": "Hazardous Material",
-        "hazmatTitle": "Hazardous Materials (Hazmat)",
-        "hazmatDescription": "Items like perfumes, sprays, batteries, and flammable materials require special packaging and compliance with international regulations. We ensure all hazmat shipments meet safety standards.",
-        "fragileAlt": "Fragile Items",
-        "fragileTitle": "Fragile Items",
-        "fragileDescription": "We provide extra padding and protective wrapping for fragile items such as glassware, electronics, and ceramics to ensure they arrive in perfect condition.",
-        "prohibitedAlt": "Prohibited Items",
-        "prohibitedTitle": "Prohibited Items",
-        "prohibitedDescription": "Certain items are strictly prohibited from international shipping, including firearms, explosives, and illegal goods. Please check our prohibited items list before placing your order.",
-        "hazardousMaterialsTitle": "How to Handle and Ship Hazardous Materials?",
-        "hazardousMaterialsDescription": "The Mycn team carefully inspects all items before shipment. If we identify any items that require special handling (hazardous items), your shipment will require special procedures. Here's what you can expect:",
-        "hazardousStep1": "We provide specialized packaging and labeling to ensure safe delivery of hazardous materials.",
-        "hazardousStep2": "A fee of $12.50 applies for the additional handling and preparation of each hazardous material shipment.",
-        "hazardousStep3": "Shipping options for hazardous materials may be limited. We can assist you in finding the best available carrier.",
-        "contactSupport": "Contact Mycn Support via chat or email at",
-        "contactNote": "Please contact customer support if you're unsure whether your item is allowed or needs special handling."
-      },
-  "steps": {
-    "hint": "Easy import process",
-    "title": "Three steps to more efficient shopping",
-    "step1": {
-      "alt": "Sign up",
-      "title": "Create your address",
-      "link": "Get your personal shipping address in China",
-      "description": "And start importing your products with ease"
-    },
-    "step2": {
-      "alt": "Make purchases",
-      "title": "Shop your items",
-      "description": "Order from any Chinese store and ship to your new address — or let us purchase for you"
-    },
-    "step3": {
-      "alt": "Get orders",
-      "title": "Receive your shipment",
-      "description": "We’ll consolidate your items, pack them, and ship straight to your warehouse safely"
-    }
-  
-}
-
-      
+      {
+        "smallHint": "Real-Time Tracking & Clear Pricing",
+        "slideTitle": "Track Your Shipments Every Step of the Way",
+        "slideDescription": "Monitor your shipment from pickup in China to delivery, with instant cost estimates and no hidden fees.",
+        "slideButton": "Try Now"
+      }
+    ]
+  },
+  "features": {
+    "subtitle": "Why choose us",
+    "title": "Why we are considered the best in",
+    "transportationBusiness": "transportation business",
+    "title1": "Your Shortcut to Chinese Deals",
+    "description1": "Get your China address and start shopping easily.",
+    "title2": "One Shipment, Less Cost",
+    "description2": "Group items in one box to save time and cost.",
+    "title3": "Real-Time & Accurate Tracking",
+    "description3": "Track each step and know the cost in advance.",
+    "title4": "Ongoing Customer Support",
+    "description4": "We're here 24/7 to assist you anytime."
+  }
 }

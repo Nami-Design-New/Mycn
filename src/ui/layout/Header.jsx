@@ -1,12 +1,39 @@
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import { Link, NavLink, useNavigate } from "react-router";
+import { setLanguage } from "../../redux/slices/settings";
+import { useQueryClient } from "@tanstack/react-query";
+import i18next from "i18next";
 import UserDropDown from "./UserDropDown";
 
-export default function Header() {
-  const { t } = useTranslation();
+export default function Header({ auth }) {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const queryClient = useQueryClient();
+
+  const { t } = useTranslation();
+  const { isAuthed } = auth;
+  const { lang } = useSelector((state) => state.settings);
+
   const [openMenu, setOpenMenu] = useState(false);
+
+  const handleLanguageChange = () => {
+    const newLang = lang === "ar" ? "en" : "ar";
+
+    dispatch(setLanguage(newLang));
+    localStorage.setItem("lang", newLang);
+    i18next.changeLanguage(newLang);
+
+    queryClient.invalidateQueries();
+    queryClient.removeQueries();
+    const bodyElement = document.querySelector("body");
+
+    if (bodyElement) {
+      bodyElement.classList.toggle("en", newLang === "en");
+    }
+  };
+
   useEffect(() => {
     const header = document.querySelector(".header");
     const nav = header?.querySelector("nav");
@@ -85,11 +112,18 @@ export default function Header() {
         </div>
 
         <div className="actions">
-          <button>
-            <i className="fa-regular fa-globe"></i> EN
+          <button onClick={() => handleLanguageChange()}>
+            <i className="fa-regular fa-globe"></i>{" "}
+            {lang === "ar" ? "EN" : "AR"}
           </button>
-          {/* <Link to="/signin" className="login">{t("header.login")}</Link> */}
-          <UserDropDown />
+
+          {isAuthed ? (
+            <UserDropDown />
+          ) : (
+            <Link to="/signin" className="login">
+              {t("header.login")}
+            </Link>
+          )}
 
           <button className="toggle_menu" onClick={handleToggleMenu}>
             <i className="fa-regular fa-bars"></i>

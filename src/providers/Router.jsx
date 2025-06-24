@@ -1,4 +1,6 @@
 import { createBrowserRouter } from "react-router";
+import ProtectionProvider from "./ProtectionProvider";
+
 import RootLayout from "../layout/RootLayout";
 import Home from "../routes/Home";
 import Error from "../routes/Error";
@@ -67,7 +69,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "profile",
-        element: <Profile />,
+        element: (
+          <ProtectionProvider>
+            <Profile />
+          </ProtectionProvider>
+        ),
         children: [
           {
             index: true,

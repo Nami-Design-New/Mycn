@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import Header from "../ui/layout/Header";
 import Footer from "../ui/layout/Footer";
 import ResponsiveNav from "../ui/layout/ResponsiveNav";
+import useAuth from "../hooks/useAuth";
 
 export default function RootLayout() {
   const location = useLocation();
@@ -10,15 +11,18 @@ export default function RootLayout() {
     window.scrollTo(0, 0);
   }, [location]);
 
+  const auth = useAuth();
+
+  if (auth.loading) return null;
+
   return (
     <>
-      <Header />
+      <Header auth={auth} />
       <main>
         <Outlet />
       </main>
       <Footer />
       <ResponsiveNav />
-
     </>
   );
 }

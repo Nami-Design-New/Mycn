@@ -155,7 +155,9 @@
     "transactionsSubTitle": "View and manage your transactions history",
     "addressesTitle": "My Addresses",
     "addressesSubTitle": "Manage your shipping addresses and track your shipments.",
-    "addAddress": "Add address"
+    "addAddress": "Add address",
+    "editAddress": "Edit address",
+    "deleteAddress": "Remove address"
   },
   "addressFields": {
     "recipient": "Recipient Name",
@@ -182,6 +184,32 @@
     "date": "Date",
     "amount": "Amount",
     "desccription": "Description",
-    "status": "Status"
+    "status": "Status",
+    "confirm": "Confirm",
+    "cancel": "Cancel"
+  },
+  "address_modal": {
+    "addNew": "Add New Address",
+    "text": "First and last name must match the government-issued ID of the person receiving the shipment.",
+    "nickName": "Add a nickname so you can better manage your addresses*",
+    "enterNickName": "Enter nickname",
+    "phone": "Phone*",
+    "enterPhone": "Enter phone number",
+    "addressLine1": "Address Line 1*",
+    "enterAddressLine1": "Enter address line 1",
+    "addressLine2": "Address Line 2",
+    "enterAddressLine2": "Enter address line 2",
+    "fullName": "Full Name*",
+    "enterFullName": "Enter full name",
+    "country": "Country*",
+    "selectCountry": "Select country",
+    "city": "City*",
+    "selectCity": "Select city",
+    "add": "Add Address",
+    "edit": "Edit Address",
+    "addressAdded": "Address added successfully",
+    "addressUpdated": "Address updated successfully",
+    "addressDeleted": "Address deleted successfully",
+    "deleteAddressConfirm": "Are you sure you want to delete this address?"
   }
 }

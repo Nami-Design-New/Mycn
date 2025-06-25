@@ -155,7 +155,9 @@
     "transactionsSubTitle": "عرض وإدارة سجل المعاملات الخاص بك",
     "addressesTitle": "عناويني",
     "addressesSubTitle": "قم بإدارة عناوين الشحن وتتبع شحناتك.",
-    "addAddress": "اضافة عنوان"
+    "addAddress": "اضافة عنوان",
+    "editAddress": "تعديل العنوان",
+    "deleteAddress": "حذف العنوان"
   },
   "addressFields": {
     "recipient": "اسم المستلم",
@@ -182,6 +184,32 @@
     "date": "التاريخ",
     "amount": "المبلغ",
     "desccription": "الوصف",
-    "status": "الحالة"
+    "status": "الحالة",
+    "confirm": "تاكيد",
+    "cancel": "الغاء"
+  },
+  "address_modal": {
+    "addNew": "إضافة عنوان جديد",
+    "text": "يجب أن يتطابق الاسم الأول واسم العائلة مع بطاقة الهوية الصادرة من جهة حكومية للشخص المستلم للشحنة.",
+    "nickName": "أضف اسمًا مستعارًا لتتمكن من إدارة عناوينك بشكل أفضل*",
+    "enterNickName": "أدخل الاسم المستعار",
+    "phone": "رقم الهاتف*",
+    "enterPhone": "أدخل رقم الهاتف",
+    "addressLine1": "العنوان - السطر الأول*",
+    "enterAddressLine1": "أدخل السطر الأول من العنوان",
+    "addressLine2": "العنوان - السطر الثاني",
+    "enterAddressLine2": "أدخل السطر الثاني من العنوان",
+    "fullName": "الاسم الكامل*",
+    "enterFullName": "أدخل الاسم الكامل",
+    "country": "الدولة*",
+    "selectCountry": "اختر الدولة",
+    "city": "المدينة*",
+    "selectCity": "اختر المدينة",
+    "add": "إضافة العنوان",
+    "edit": "تعديل العنوان",
+    "addressAdded": "تمت اضافة العنوان بنجاح",
+    "addressUpdated": "تم تحديث العنوان بنجاح",
+    "addressDeleted": "تم حذف العنوان بنجاح",
+    "deleteAddressConfirm": "هل تريد حذف هذا العنوان؟"
   }
 }

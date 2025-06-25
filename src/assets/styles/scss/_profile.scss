@@ -251,6 +251,16 @@
         gap: 8px;
       }
     }
+
+    .dropdown-toggle {
+      background: transparent;
+      border: 0;
+      color: #000;
+    }
+
+    .dropdown-menu {
+      margin: 0;
+    }
   }
 
   .shipment_details {

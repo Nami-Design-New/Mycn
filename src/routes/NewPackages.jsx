@@ -205,7 +205,11 @@ export default function NewPackages() {
         </DragDropContext>
       </div>
 
-      <OrderShipment show={showModal} setShow={setShowModal} />
+      <OrderShipment
+        show={showModal}
+        setShow={setShowModal}
+        consolidated={consolidated}
+      />
     </div>
   );
 }

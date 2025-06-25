@@ -1,51 +1,71 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Form, Modal } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 import SubmitButton from "../forms/SubmitButton";
 import SelectField from "../forms/SelectField";
 import InputField from "../forms/InputField";
+import useGetAddresses from "./../../hooks/profile/useGetAddresses";
+import useCreateOrder from "../../hooks/profile/useCreateOrder";
 
-export default function OrderShipment({ show, setShow }) {
+export default function OrderShipment({ show, setShow, consolidated }) {
+  const { t } = useTranslation();
+  const { data: addresses } = useGetAddresses();
+
   const [showAddressForm, setShowAddressForm] = useState(false);
+  const [payload, setPayload] = useState({
+    address_id: "",
+    packages_id: [],
+  });
+
+  useEffect(() => {
+    if (consolidated) {
+      setPayload((prev) => ({
+        ...prev,
+        packages_id: consolidated.map((p) => Number(p.id)),
+      }));
+    }
+  }, [consolidated]);
+
+  const { createOrder, isPending } = useCreateOrder(t, setShow, payload);
+
   return (
-    <Modal show={show} onHide={() => setShow(false)} centered size="lg">
+    <Modal show={show} onHide={() => setShow(false)} centered>
       <Modal.Header closeButton className="pb-0">
         <Modal.Title>
-          <h6>You&apos;re almost ready to ship!</h6>
+          <h6>{t("orderModel.title")}</h6>
         </Modal.Title>
       </Modal.Header>
 
       <Modal.Body>
-        <Form className="form_ui">
+        <Form
+          className="form_ui"
+          onSubmit={(e) => {
+            e.preventDefault();
+            createOrder();
+          }}
+        >
           <div className="row">
             <div className="col-12 p-2">
-              <p>
-                Simply select your desired destination, choose the shipment type
-                that best suits your needs, and confirm your payment. Once
-                completed, sit back and track your package as it makes its way
-                to its destination.
-              </p>
+              <p>{t("orderModel.text")}</p>
             </div>
 
-            <div className="col-lg-6 col-12 p-2">
-              <SelectField
-                label="Select Shipment Type"
-                defaultSelect={"Select Shipment Type"}
-                options={[
-                  { name: "Air Freight", value: "air_freight" },
-                  { name: "Sea freight", value: "sea_freight" },
-                ]}
-              />
-            </div>
-
-            <div className="col-lg-6 col-12 p-2">
+            <div className="col-12 p-2">
               <div className="select_destination">
                 <SelectField
-                  label="Select Destination"
-                  defaultSelect={"Select Destination"}
-                  options={[
-                    { name: "Home", value: "home" },
-                    { name: "Business", value: "business" },
-                  ]}
+                  required={true}
+                  label={t("orderModel.selectDestination")}
+                  defaultSelect={t("orderModel.selectDestination")}
+                  options={addresses?.map((address) => ({
+                    name: address?.nickname,
+                    value: address?.id,
+                  }))}
+                  value={payload.address_id}
+                  onChange={(e) => {
+                    setPayload((prev) => ({
+                      ...prev,
+                      address_id: e.target.value,
+                    }));
+                  }}
                 />
 
                 <button
@@ -54,7 +74,7 @@ export default function OrderShipment({ show, setShow }) {
                     setShowAddressForm(!showAddressForm);
                   }}
                 >
-                  Add Destination
+                  {t("orderModel.addDestination")}
                 </button>
               </div>
             </div>
@@ -117,24 +137,11 @@ export default function OrderShipment({ show, setShow }) {
             )}
 
             <div className="col-12 p-2">
-              <div className="shp_info">
-                <div className="d-flex align-items-center gap-5">
-                  <h6>
-                    Total Weight: <span>1.5kg</span>
-                  </h6>
-                  <h6>
-                    Final Dimensions: <span>30 x 20 x 10 cm <sup>3</sup></span>
-                  </h6>
-                </div>
-
-                <h6>
-                  Total Price <span>100$</span>
-                </h6>
-              </div>
-            </div>
-
-            <div className="col-12 p-2">
-              <SubmitButton text={"Confirm Shipment"} className="mt-2" />
+              <SubmitButton
+                text={t("orderModel.orderShipment")}
+                className="mt-2"
+                loading={isPending}
+              />
             </div>
           </div>
         </Form>

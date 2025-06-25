@@ -211,5 +211,13 @@
     "addressUpdated": "Address updated successfully",
     "addressDeleted": "Address deleted successfully",
     "deleteAddressConfirm": "Are you sure you want to delete this address?"
+  },
+  "orderModel": {
+    "title": "You're almost ready to ship!",
+    "text": "Simply select your desired destination, choose the shipment type that best suits your needs, and confirm your payment. Once completed, sit back and track your package as it makes its way to its destination.",
+    "orderShipment":"Order Shipment",
+    "selectDestination": "Select Destination",
+    "addDestination": "Add other destination",
+    "orderCreated": "Order created successfully"
   }
 }

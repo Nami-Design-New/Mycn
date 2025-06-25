@@ -186,7 +186,11 @@
     "desccription": "Description",
     "status": "Status",
     "confirm": "Confirm",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "termsTitle": "Terms and Conditions",
+    "termsDescription": "Please read our terms and conditions carefully before using My CN services. By registering or using our platform, you agree to be bound by these terms regarding shipping, storage, payments, and more.",
+    "privacyTitle": "Privacy Policy",
+    "privacyDescription": "Your privacy is important to us. This policy outlines how My CN collects, uses, and protects your personal information when you use our services. By using our platform, you consent to our data practices as described."
   },
   "address_modal": {
     "addNew": "Add New Address",
@@ -215,7 +219,7 @@
   "orderModel": {
     "title": "You're almost ready to ship!",
     "text": "Simply select your desired destination, choose the shipment type that best suits your needs, and confirm your payment. Once completed, sit back and track your package as it makes its way to its destination.",
-    "orderShipment":"Order Shipment",
+    "orderShipment": "Order Shipment",
     "selectDestination": "Select Destination",
     "addDestination": "Add other destination",
     "orderCreated": "Order created successfully"

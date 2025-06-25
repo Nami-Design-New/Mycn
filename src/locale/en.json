@@ -229,5 +229,41 @@
     "title": "Have a question? We're here to help!",
     "viewAll": "View All FAQs",
     "signUp": "Sign Up Now, It's Free!"
+  },
+  "contact": {
+    "followUs": "Follow Us",
+    "followUsOn": "Follow us on Social Media",
+    "followUsText": "Stay connected through our social media channels.",
+    "helpSupport": "Help & Support",
+    "helpSupportText": "For help with a current product or service or refer to FAQs and developer tools.",
+    "callUs": "Call Us",
+    "callUsText": "Call us to speak to a member of our team.",
+    "chinaOffice": "China Office",
+    "findUs": "Find us in ",
+    "title": "Contact Our Expert Team",
+    "description": " Have questions or need guidance? Our experienced professionals are here to provide you with solutions.",
+    "fullName": "Full Name",
+    "enterFullName": "Enter your name",
+    "subject": "Subject",
+    "enterSubject": "Enter subject",
+    "emailAddress": "Email Address",
+    "enterEmailAddress": "Enter your email",
+    "message": "Message",
+    "enterMessage": "Enter your message",
+    "send": "Send Message",
+    "success": "Your message has been sent successfully."
+  },
+  "about": {
+    "vision": "Our Vision",
+    "visionText": "We envision a seamless global marketplace where individuals and businesses can shop and ship across borders without barriers — anytime, anywhere.",
+    "mission": "Our Mission",
+    "missionText": "Our mission is to simplify and empower global logistics by providing reliable, cost-effective, and user-friendly solutions tailored to the needs of every customer.",
+    "values": "Our Values",
+    "valuesText": "We are driven by transparency, trust, and innovation. Our values reflect a strong commitment to customer satisfaction, operational excellence, and continuous improvement in everything we do.",
+    "title": "What our customers say",
+    "subtitle": "Testimonials",
+    "workProcessTitle": "Our work process",
+    "workProcessDescription": "We always follow the best ways of logistics",
+    "watchVideo": "Show How My CN Works"
   }
 }

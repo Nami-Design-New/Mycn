@@ -1,42 +1,65 @@
+import { useTranslation } from "react-i18next";
 import InputField from "../../ui/forms/InputField";
+import useGetSettings from "../../hooks/settings/useGetSettings";
+import useContact from "../../hooks/settings/useContact";
+import SubmitButton from "./../../ui/forms/SubmitButton";
 
 export default function ContactForm() {
+  const { t } = useTranslation();
+  const { data: settings } = useGetSettings();
+  const { register, handleSubmit, errors, isLoading } = useContact(t);
+
   return (
     <div className="row">
       <div className="col-12 p-2 mt-5 mb-3">
-        <h4 className="title">Contact Our Expert Team</h4>
-        <p className="description">
-          Have questions or need guidance? Our experienced professionals are
-          here to provide you with solutions.
-        </p>
+        <h4 className="title">{t("contact.title")}</h4>
+        <p className="description">{t("contact.description")}</p>
       </div>
 
       <div className="col-lg-6 col-12 p-2">
-        <form className="form_ui d-flex flex-column gap-3">
-          <InputField label="Full Name" placeholder="Enter your name" />
-
+        <form className="form_ui d-flex flex-column gap-3" onSubmit={handleSubmit}>
           <InputField
-            label="Email Address"
-            type="email"
-            placeholder="Enter your email"
+            label={t("contact.fullName")}
+            placeholder={t("contact.enterFullName")}
+            error={errors?.name?.message}
+            {...register("name")}
           />
 
-          <InputField label="Subject" placeholder="Enter subject" />
+          <InputField
+            label={t("contact.emailAddress")}
+            placeholder={t("contact.enterEmailAddress")}
+            type="email"
+            error={errors?.email?.message}
+            {...register("email")}
+          />
+
+          <InputField
+            label={t("contact.subject")}
+            placeholder={t("contact.enterSubject")}
+            error={errors?.subject?.message}
+            {...register("subject")}
+          />
 
           <InputField
             as="textarea"
-            label="Message"
-            placeholder="Enter your message"
+            label={t("contact.message")}
+            placeholder={t("contact.enterMessage")}
+            error={errors?.message?.message}
+            {...register("message")}
           />
 
-          <button className="submit_btn mt-2">Send Message</button>
+          <SubmitButton
+            text={t("contact.send")}
+            loading={isLoading}
+            className="submit_btn mt-2"
+          />
         </form>
       </div>
 
       <div className="col-lg-6 col-12 p-2">
         <div className="map">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12936.24050690352!2d104.59188115263468!3d35.84752917824837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x365b0dcf03375849%3A0x5a96fac806f40e1e!2sState%20Grid!5e0!3m2!1sar!2seg!4v1746961369686!5m2!1sar!2seg"
+            src={`https://www.google.com/maps?q=${settings?.latitude},${settings?.longitude}&hl=ar&z=14&output=embed`}
             width="100%"
             height="100%"
             loading="lazy"

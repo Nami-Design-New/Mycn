@@ -357,6 +357,7 @@
           color: #000;
           overflow: hidden;
           display: -webkit-box;
+          direction: ltr;
           -webkit-line-clamp: 2;
           line-clamp: 2;
           -webkit-box-orient: vertical;
@@ -394,7 +395,7 @@
 
         .num {
           text-align: right;
-          right: 40px;
+          left: 40px;
         }
 
         .title {
@@ -454,7 +455,7 @@
       .num {
         position: absolute;
         top: 30px;
-        right: 25px;
+        left: 25px;
         font-size: 20px;
         line-height: 20px;
         text-align: center;
@@ -678,6 +679,7 @@
 
   .swiper_navigation {
     display: flex;
+    flex-direction: row-reverse;
     gap: 12px;
 
     button {

@@ -1510,6 +1510,7 @@ body .how_we_work_section .steps .step .imgbox .title {
   color: #000;
   overflow: hidden;
   display: -webkit-box;
+  direction: ltr;
   -webkit-line-clamp: 2;
   line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -1545,7 +1546,7 @@ body .how_we_work_section .steps .step .content-box {
 }
 body .how_we_work_section .steps .step .content-box .num {
   text-align: right;
-  right: 40px;
+  left: 40px;
 }
 body .how_we_work_section .steps .step .content-box .title {
   font-size: 30px;
@@ -1597,7 +1598,7 @@ body .how_we_work_section .steps .step .pbmit-static-btn .pbmit-button-inner {
 body .how_we_work_section .steps .step .num {
   position: absolute;
   top: 30px;
-  right: 25px;
+  left: 25px;
   font-size: 20px;
   line-height: 20px;
   text-align: center;
@@ -1804,6 +1805,7 @@ body .testimonials_section {
 }
 body .testimonials_section .swiper_navigation {
   display: flex;
+  flex-direction: row-reverse;
   gap: 12px;
 }
 body .testimonials_section .swiper_navigation button {
@@ -3348,9 +3350,17 @@ body.en .notification_card span {
   right: 16px;
 }
 body.en .testimonials_section .swiper_navigation {
-  flex-direction: row-reverse !important;
+  flex-direction: row;
 }
 body.en .faqs_section .accordion .accordion-item .accordion-button:not(.collapsed)::after {
   margin-left: auto;
   margin-right: 0;
+}
+body.en .how_we_work_section .steps .step .num {
+  left: initial;
+  right: 25px;
+}
+body.en .how_we_work_section .steps .step .content-box .num {
+  left: initial;
+  right: 40px;
 }/*# sourceMappingURL=main.css.map */

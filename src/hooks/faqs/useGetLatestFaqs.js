@@ -6,7 +6,7 @@ export default function useGetLatestFaqs() {
     queryKey: ["lateset-faqs"],
     queryFn: async () => {
       try {
-        const res = await axiosInstance.get("home/latestFaqs");
+        const res = await axiosInstance.get("/home/latestFaqs");
         if (res.status === 200) {
           return res.data.data || {};
         }

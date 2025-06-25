@@ -1,48 +1,52 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
+import useGetSettings from "../../hooks/settings/useGetSettings";
 
 export default function ContactInfo() {
+  const { t } = useTranslation();
+  const { data: settings } = useGetSettings();
+
   const contactInfo = [
     {
       icon: "fa-regular fa-location-dot",
-      title: "China Office",
-      description: "Find us in Gansu, Dingxi, Anding District, Dingxi.",
-      linkText: "Gansu, Dingxi, Anding District, Dingxi",
-      linkUrl: "https://maps.app.goo.gl/MUZLHJg29LWAKg7a9",
+      title: t("contact.chinaOffice"),
+      description: t("contact.findUs") + settings?.address,
+      linkText: settings?.address,
+      linkUrl: `https://www.google.com/maps?q=${settings?.latitude},${settings?.longitude}`,
     },
     {
       icon: "fa-regular fa-phone-volume",
-      title: "Call Us",
-      description: "Call us to speak to a member of our team.",
-      linkText: "+1-800-123-4567",
-      linkUrl: "tel:+1-800-123-4567",
+      title: t("contact.callUs"),
+      description: t("contact.callUsText"),
+      linkText: settings?.phone,
+      linkUrl: `tel:${settings?.phone}`,
     },
     {
       icon: "fa-regular fa-envelope",
-      title: "Help & Support",
-      description:
-        "For help with a current product or service or refer to FAQs and developer tools.",
-      linkText: "support@example.com",
-      linkUrl: "mailto:support@example.com",
+      title: t("contact.helpSupport"),
+      description: t("contact.helpSupportText"),
+      linkText: settings?.email,
+      linkUrl: `mailto:${settings?.email}`,
     },
     {
       icon: "fa-regular fa-share-alt",
-      title: "Follow us on Social Media",
-      description: "Stay connected through our social media channels.",
+      title: t("contact.followUsOn"),
+      description: t("contact.followUsText"),
       subLinks: [
         {
-          link: "https://facebook.com/yourpage",
+          link: settings?.facebook,
           icon: "fa-brands fa-facebook-f",
         },
         {
-          link: "https://twitter.com/yourhandle",
+          link: settings?.twitter,
           icon: "fa-brands fa-twitter",
         },
         {
-          link: "https://instagram.com/yourprofile",
+          link: settings?.instagram,
           icon: "fa-brands fa-instagram",
         },
         {
-          link: "https://linkedin.com/yourprofile",
+          link: settings?.linkedin,
           icon: "fa-brands fa-linkedin-in",
         },
       ],
@@ -63,7 +67,7 @@ export default function ContactInfo() {
 
             {item.subLinks && (
               <div className="social-media">
-                <h6>Follow us</h6>
+                <h6>{t("contact.followUs")}</h6>
                 {item.subLinks && (
                   <div className="social-media-links">
                     {item.subLinks.map((link, idx) => (

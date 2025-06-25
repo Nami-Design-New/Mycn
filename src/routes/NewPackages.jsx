@@ -1,5 +1,5 @@
 import { DragDropContext, Draggable, Droppable } from "@hello-pangea/dnd";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import { useTranslation } from "react-i18next";
 import OrderShipment from "../ui/modals/OrderShipment";
@@ -13,9 +13,15 @@ export default function NewPackages() {
 
   const maxPackages = settings?.max_orders_count || 6;
 
-  const [newPackages, setNewPackages] = useState(newPackagesData);
+  const [newPackages, setNewPackages] = useState([]);
   const [consolidated, setConsolidated] = useState([]);
   const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    if (newPackagesData) {
+      setNewPackages(newPackagesData);
+    }
+  }, [newPackagesData]);
 
   const handleDragEnd = (result) => {
     const { source, destination } = result;

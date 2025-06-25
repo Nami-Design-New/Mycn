@@ -65,28 +65,6 @@
     "passwordMatch": "Passwords do not match",
     "terms": "You must accept the terms and conditions"
   },
-  "heroSection": {
-    "slides": [
-      {
-        "smallHint": "Start your business with ease",
-        "slideTitle": "Import Your Goods from China Hassle-Free",
-        "slideDescription": "Seamless shipping, secure storage, and smooth customs — your goods delivered hassle-free to your doorstep.",
-        "slideButton": "Get Started"
-      },
-      {
-        "smallHint": "Save More, Grow Faster",
-        "slideTitle": "Affordable Shipping & Consolidation for Traders",
-        "slideDescription": "We collect your orders from different suppliers and ship them together to reduce costs and speed up delivery.",
-        "slideButton": "Learn More"
-      },
-      {
-        "smallHint": "Real-Time Tracking & Clear Pricing",
-        "slideTitle": "Track Your Shipments Every Step of the Way",
-        "slideDescription": "Monitor your shipment from pickup in China to delivery, with instant cost estimates and no hidden fees.",
-        "slideButton": "Try Now"
-      }
-    ]
-  },
   "features": {
     "subtitle": "Why choose us",
     "title": "Why we are considered the best in",
@@ -268,6 +246,12 @@
     "faqsTitle": "Frequently Asked Questions",
     "faqT1": "Find answers here, or",
     "faqT2": "Contact us",
-    "faqT3": "if you need more help."
-  }
+    "faqT3": "if you need more help.",
+    "howHint": "Easy import process",
+    "howTitle": "Three steps to more efficient shopping",
+    "experiences": "Our experience",
+    "experiencesTitle": "Trusted by clients for decades of success"
+  },
+  "transportationSubtitle": "Our Delivery Vehicles",
+  "transportationTitle": "A variety of trusted transportation methods for every shipment"
 }

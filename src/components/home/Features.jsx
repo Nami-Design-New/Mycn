@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-export default function Features() {
+export default function Features({ features }) {
   const { t } = useTranslation("");
 
   return (
@@ -14,54 +14,19 @@ export default function Features() {
               <span>{t("features.transportationBusiness")}</span>
             </h3>
           </div>
-
-          <div className="col-lg-3 col-md-6 col-12 p-2">
-            <div className="feature_card">
-              <div className="icon">
-                <img src="/icons/shopping.svg" alt="feature" />
-              </div>
-              <div className="content">
-                <h3 className="title">{t("features.title1")}</h3>
-                <p className="description">{t("features.description1")}</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-3 col-md-6 col-12 p-2">
-            <div className="feature_card">
-              <div className="icon">
-                <img src="/icons/layers.svg" alt="feature" />
-              </div>
-              <div className="content">
-                <h3 className="title">{t("features.title2")}</h3>
-                <p className="description">{t("features.description2")}</p>
+          {features?.map((feature) => (
+            <div className="col-lg-3 col-md-6 col-12 p-2" key={feature.id}>
+              <div className="feature_card">
+                <div className="icon">
+                  <img src={feature.icon} alt="feature" />
+                </div>
+                <div className="content">
+                  <h3 className="title">{feature.title}</h3>
+                  <p className="description">{feature.description}</p>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div className="col-lg-3 col-md-6 col-12 p-2">
-            <div className="feature_card">
-              <div className="icon">
-                <img src="/icons/tracking.svg" alt="feature" />
-              </div>
-              <div className="content">
-                <h3 className="title">{t("features.title3")}</h3>
-                <p className="description">{t("features.description3")}</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-3 col-md-6 col-12 p-2">
-            <div className="feature_card">
-              <div className="icon">
-                <img src="/icons/support.svg" alt="feature" />
-              </div>
-              <div className="content">
-                <h3 className="title">{t("features.title4")}</h3>
-                <p className="description">{t("features.description4")}</p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

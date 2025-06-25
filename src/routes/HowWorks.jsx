@@ -4,9 +4,8 @@ import Faqs from "../ui/layout/Faqs";
 export default function HowWorks() {
   return (
     <>
-    <Steps/>
-    <Faqs />
-  
+      <Steps />
+      <Faqs />
     </>
- )
+  );
 }

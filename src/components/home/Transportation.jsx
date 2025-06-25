@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useTranslation } from "react-i18next";
 import { Autoplay } from "swiper/modules";
 
 import "swiper/css";
 
 export default function Transportation() {
+  const { t } = useTranslation();
   const initialImages = Array.from(
     { length: 7 },
     (_, i) => `/images/c${i + 1}.png`
@@ -16,9 +18,9 @@ export default function Transportation() {
       <div className="container">
         <div className="row">
           <div className="col-12 p-2 mb-3">
-            <h6 className="section_hint">Our Delivery Vehicles</h6>
+            <h6 className="section_hint">{t("transportationSubtitle")}</h6>
             <h3 className="section_title">
-              A variety of trusted transportation methods for every shipment
+              {t("transportationTitle")}
             </h3>
           </div>
 

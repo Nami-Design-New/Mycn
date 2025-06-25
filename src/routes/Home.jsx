@@ -5,16 +5,19 @@ import HowWeWorks from "../components/home/HowWeWorks";
 import Testimonials from "../components/home/Testimonials";
 import ExperienceSection from "../components/home/Experiences";
 import Transportation from "../components/home/Transportation";
+import useGetHome from "../hooks/settings/useGetHome";
 
 export default function Home() {
+  const { data: home } = useGetHome();
+
   return (
     <>
-      <Hero />
-      <Features />
-      <ExperienceSection />
+      <Hero slides={home?.sliders} />
+      <Features features={home?.whyChooseUsDetail} />
+      <ExperienceSection experiences={home?.experienceDetail} />
       <Transportation />
-      <HowWeWorks />
-      <Testimonials />
+      <HowWeWorks data={home?.workProcessDetail} />
+      <Testimonials data={home?.testimonialDetail} />
       <Faqs />
     </>
   );

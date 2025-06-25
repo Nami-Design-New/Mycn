@@ -24,7 +24,7 @@ export default function Footer() {
             <Link to="/" className="logo">
               <img src="/images/logo.svg" alt="logo" />
             </Link>
-            <p className="description">{t("footer.text")}</p>
+            <p className="description">{settings?.text_footer}</p>
           </div>
 
           <div className="col-lg-2 col-md-6 col-12 p-2">

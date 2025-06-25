@@ -4,11 +4,9 @@ import { useTranslation } from "react-i18next";
 import "swiper/css";
 import "swiper/css/effect-fade";
 
-export default function Hero() {
-  const { t, i18n } = useTranslation();
+export default function Hero({ slides }) {
+  const { i18n } = useTranslation();
   const lang = i18n.language === "ar" ? "ar" : "en";
-
-  const slides = t("heroSection.slides", { returnObjects: true });
 
   return (
     <section className="hero_section">
@@ -30,9 +28,9 @@ export default function Hero() {
                 <img src={`/images/Hero.png`} alt={slide.slideTitle} />
               </div>
               <div className="content">
-                <p className="small_hint">{slide.smallHint}</p>
-                <h2 className="slide_title">{slide.slideTitle}</h2>
-                <p className="slide_description">{slide.slideDescription}</p>
+                <p className="small_hint">{slide.subtitle}</p>
+                <h2 className="slide_title">{slide.title}</h2>
+                <p className="slide_description">{slide.description}</p>
               </div>
             </div>
           </SwiperSlide>

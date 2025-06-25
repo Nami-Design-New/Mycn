@@ -223,5 +223,11 @@
     "selectDestination": "Select Destination",
     "addDestination": "Add other destination",
     "orderCreated": "Order created successfully"
+  },
+  "faq": {
+    "subtitle": "FAQs",
+    "title": "Have a question? We're here to help!",
+    "viewAll": "View All FAQs",
+    "signUp": "Sign Up Now, It's Free!"
   }
 }

@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import { useTranslation } from "react-i18next";
 import OrderShipment from "../ui/modals/OrderShipment";
-import useGetSettings from "./../hooks/settings/useGetSettings";
-import useGetNewPackages from "./../hooks/profile/useGetNewPackages";
+import useGetSettings from "../hooks/settings/useGetSettings";
+import useGetNewPackages from "../hooks/profile/useGetNewPackages";
 
 export default function NewPackages() {
   const { t } = useTranslation();

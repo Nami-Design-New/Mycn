@@ -1,4 +1,4 @@
-import InputField from "./../../ui/forms/InputField";
+import InputField from "../../ui/forms/InputField";
 
 export default function ContactForm() {
   return (

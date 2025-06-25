@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Form } from "react-bootstrap";
 import { Link } from "react-router";
 import InputField from "../ui/forms/InputField";
-import SelectField from "./../ui/forms/SelectField";
-import SubmitButton from "./../ui/forms/SubmitButton";
+import SelectField from "../ui/forms/SelectField";
+import SubmitButton from "../ui/forms/SubmitButton";
 import Faqs from "../ui/layout/Faqs";
 
 export default function ShippingCalculator() {

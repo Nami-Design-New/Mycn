@@ -798,8 +798,8 @@
           font-weight: 400;
           transform: rotate(135deg);
           transform-origin: center;
-          margin-left: auto;
-          margin-right: 0;
+          margin-left: 0;
+          margin-right: auto;
         }
         &:not(.collapsed)::after {
           transform: rotate(0deg);
@@ -905,8 +905,8 @@
           font-weight: 400;
           transform: rotate(135deg);
           transform-origin: center;
-          margin-left: auto;
-          margin-right: 0;
+          margin-left: 0;
+          margin-right: auto;
         }
         &:not(.collapsed)::after {
           transform: rotate(0deg);

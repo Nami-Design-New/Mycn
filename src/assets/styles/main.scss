@@ -48,5 +48,17 @@ body {
       left: initial;
       right: 16px;
     }
+
+    .testimonials_section .swiper_navigation {
+      flex-direction: row-reverse !important;
+    }
+
+    .faqs_section
+      .accordion
+      .accordion-item
+      .accordion-button:not(.collapsed)::after {
+      margin-left: auto;
+      margin-right: 0;
+    }
   }
 }

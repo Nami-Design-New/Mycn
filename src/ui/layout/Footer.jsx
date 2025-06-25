@@ -1,8 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
+import useGetSettings from "../../hooks/settings/useGetSettings";
 
 export default function Footer() {
   const { t } = useTranslation();
+  const { data: settings } = useGetSettings();
 
   return (
     <footer className="footer">
@@ -80,19 +82,23 @@ export default function Footer() {
             <ul className="links_list">
               <li>
                 {t("footer.phone")}:{" "}
-                <a href="tel:+1-800-123-4567">+1-800-123-4567</a>
+                <a href={`tel:${settings?.phone}`}>{settings?.phone}</a>
               </li>
               <li>
                 {t("footer.email")}:{" "}
-                <a href="mailto:support@example.com">support@example.com</a>
+                <a href={`mailto:${settings?.email}`}>
+                  {"support@example.com"}
+                </a>
               </li>
               <li>
                 {t("footer.address")}:{" "}
-                <a href="https://www.google.com/maps">
-                  123 Main Street, Anytown, USA 12345
+                <a
+                  href={`https://www.google.com/maps?q=${settings?.latitude},${settings?.longitude}`}
+                  target="_blank"
+                >
+                  {settings?.address}
                 </a>
               </li>
-              <li>{t("footer.businessHours")}: 9 AM - 5 PM EST</li>
             </ul>
           </div>
 
@@ -104,16 +110,16 @@ export default function Footer() {
               </p>
 
               <div className="socials">
-                <Link>
+                <Link to={settings?.facebook} target="_blank">
                   <i className="fa-brands fa-facebook-f"></i>
                 </Link>
-                <Link>
+                <Link to={settings?.twitter} target="_blank">
                   <i className="fa-brands fa-twitter"></i>
                 </Link>
-                <Link>
+                <Link to={settings?.linkedin} target="_blank">
                   <i className="fa-brands fa-linkedin-in"></i>
                 </Link>
-                <Link>
+                <Link to={settings?.instagram} target="_blank">
                   <i className="fa-brands fa-instagram"></i>
                 </Link>
               </div>

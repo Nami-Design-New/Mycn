@@ -1,4 +1,4 @@
-import useGetNotifications from "./../hooks/profile/useGetNotifications";
+import useGetNotifications from "../hooks/profile/useGetNotifications";
 
 export default function Notifications() {
   const { data: notifications } = useGetNotifications();

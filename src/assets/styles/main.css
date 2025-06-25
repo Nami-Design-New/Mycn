@@ -1920,8 +1920,8 @@ body .faqs_section .accordion .accordion-item .accordion-button::after {
   font-weight: 400;
   transform: rotate(135deg);
   transform-origin: center;
-  margin-left: auto;
-  margin-right: 0;
+  margin-left: 0;
+  margin-right: auto;
 }
 body .faqs_section .accordion .accordion-item .accordion-button:not(.collapsed)::after {
   transform: rotate(0deg);
@@ -2028,8 +2028,8 @@ body .faqs_page .accordion .accordion-item .accordion-button::after {
   font-weight: 400;
   transform: rotate(135deg);
   transform-origin: center;
-  margin-left: auto;
-  margin-right: 0;
+  margin-left: 0;
+  margin-right: auto;
 }
 body .faqs_page .accordion .accordion-item .accordion-button:not(.collapsed)::after {
   transform: rotate(0deg);
@@ -3346,4 +3346,11 @@ body.en .profile_section .address_card ul b .tooltip {
 body.en .notification_card span {
   left: initial;
   right: 16px;
+}
+body.en .testimonials_section .swiper_navigation {
+  flex-direction: row-reverse !important;
+}
+body.en .faqs_section .accordion .accordion-item .accordion-button:not(.collapsed)::after {
+  margin-left: auto;
+  margin-right: 0;
 }/*# sourceMappingURL=main.css.map */

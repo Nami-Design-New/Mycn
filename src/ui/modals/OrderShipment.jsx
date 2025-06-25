@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import SubmitButton from "../forms/SubmitButton";
 import SelectField from "../forms/SelectField";
 import InputField from "../forms/InputField";
-import useGetAddresses from "./../../hooks/profile/useGetAddresses";
+import useGetAddresses from "../../hooks/profile/useGetAddresses";
 import useCreateOrder from "../../hooks/profile/useCreateOrder";
 
 export default function OrderShipment({ show, setShow, consolidated }) {

@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import useGetSettings from "./../hooks/settings/useGetSettings";
+import useGetSettings from "../hooks/settings/useGetSettings";
 
 export default function Terms() {
   const { t } = useTranslation();

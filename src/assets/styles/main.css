@@ -474,6 +474,10 @@ button {
   align-items: center;
 }
 
+.mt-80 {
+  margin-top: 80px;
+}
+
 body {
   position: relative;
   direction: rtl;

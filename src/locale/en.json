@@ -65,7 +65,10 @@
     "resetPasswordSubtitle2": "Enter the verification code sent to your email address {{email}} to reset your password",
     "resetPasswordTitle3": "Change Password",
     "resetPasswordSubtitle3": "Enter your new password and confirm password to change your password",
-    "newPassword": "New Password"
+    "newPassword": "New Password",
+    "resetLinkSent": "A password reset code has been sent to your email address {{email}}. Please check your inbox.",
+    "codeVerified": "Your code has been verified successfully",
+    "passwordChangedSuccess": "Your password has been updated successfully"
   },
   "validation": {
     "required": "This field is required",

@@ -1,61 +1,15 @@
 import { ProgressBar } from "react-bootstrap";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import ViewPackageContent from "../ui/modals/ViewPackageContent";
+import useGetShipment from "../hooks/profile/useGetShipment";
+import { ORDER_STATUS } from "../utils/constants";
 
 export default function ShipmentDetails() {
   const [show, setShow] = useState(false);
+  const { t } = useTranslation();
   const [selectedPackage, setSelectedPackage] = useState(null);
-
-  const initialPackages = [
-    {
-      tracking_number: "#NY1001",
-      weight: "5 kg",
-      dimensions: "30x20x10 cm",
-      quantity: "1",
-      source: "Apple Store - New York",
-      receipt_date: "2023-01-12",
-    },
-    {
-      tracking_number: "#CA1002",
-      weight: "3.5 kg",
-      dimensions: "25x25x15 cm",
-      quantity: "2",
-      source: "Amazon Warehouse - California",
-      receipt_date: "2023-02-08",
-    },
-    {
-      tracking_number: "#TX1003",
-      weight: "4.2 kg",
-      dimensions: "35x30x20 cm",
-      quantity: "1",
-      source: "Best Buy - Texas",
-      receipt_date: "2023-03-10",
-    },
-    {
-      tracking_number: "#FL1004",
-      weight: "2.8 kg",
-      dimensions: "20x20x10 cm",
-      quantity: "3",
-      source: "Target - Florida",
-      receipt_date: "2023-04-14",
-    },
-    {
-      tracking_number: "#IL1005",
-      weight: "6 kg",
-      dimensions: "40x35x25 cm",
-      quantity: "1",
-      source: "Walmart - Illinois",
-      receipt_date: "2023-05-19",
-    },
-    {
-      tracking_number: "#NJ1006",
-      weight: "1.5 kg",
-      dimensions: "18x18x12 cm",
-      quantity: "1",
-      source: "eBay Seller - New Jersey",
-      receipt_date: "2023-06-23",
-    },
-  ];
+  const { data: shipment } = useGetShipment();
 
   const handleView = (pkg) => {
     setSelectedPackage(pkg);
@@ -72,46 +26,51 @@ export default function ShipmentDetails() {
                 <i className="fa-regular fa-warehouse"></i>
               </div>
               <div className="content">
-                <h6>Package arrived at China warehouse</h6>
-                <span>24/10/2022</span>
+                <h6>{t(`orderStatus.${shipment?.status}`)}</h6>
+                <span>{shipment?.updated_at}</span>
               </div>
             </div>
 
-            <ProgressBar now={25} />
+            <ProgressBar
+              now={
+                (100 / ORDER_STATUS.length) *
+                (ORDER_STATUS.indexOf(shipment?.status) + 1)
+              }
+            />
           </div>
 
           <div className="packages mt-4">
             <h5>
-              <i className="fa-regular fa-boxes"></i> Packages
+              <i className="fa-regular fa-boxes"></i> {t("common.packages")}
             </h5>
 
             <div className="table_container">
               <table className="mt-3">
                 <thead>
                   <tr>
-                    <th>Tracking Number</th>
-                    <th>Weight</th>
-                    <th>Dimensions</th>
-                    <th>Quantity</th>
-                    <th>Source</th>
-                    <th>Receipt Date</th>
-                    <th>Actions</th>
+                    <th>{t("common.trackingNumber")}</th>
+                    <th>{t("common.weight")}</th>
+                    <th>{t("common.dimensions")}</th>
+                    <th>{t("common.quantity")}</th>
+                    <th>{t("common.source")}</th>
+                    <th>{t("common.receiptDate")}</th>
+                    <th>{t("common.actions")}</th>
                   </tr>
                 </thead>
 
                 <tbody>
-                  {initialPackages.map((item, index) => (
+                  {shipment?.details?.map((item, index) => (
                     <tr key={index}>
-                      <td>{item.tracking_number}</td>
-                      <td>{item.weight}</td>
-                      <td>{item.dimensions}</td>
-                      <td>{item.quantity}</td>
-                      <td>{item.source}</td>
-                      <td>{item.receipt_date}</td>
+                      <td>{item?.package.tracking_id}</td>
+                      <td>{item?.package.weight}</td>
+                      <td>{item?.package.size}</td>
+                      <td>{item?.package.quantity}</td>
+                      <td>{item?.package.source}</td>
+                      <td>{item?.package.receipt_date}</td>
                       <td className="actions">
                         <i
                           className="fa-regular fa-eye cursor-pointer"
-                          onClick={() => handleView(item)}
+                          onClick={() => handleView(item?.package)}
                         ></i>
                       </td>
                     </tr>

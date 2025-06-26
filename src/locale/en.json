@@ -184,24 +184,30 @@
     "cancel": "Cancel",
     "details": "Details",
     "address": "Address",
+    "packages": "Packages",
+    "receiptDate": "Receipt Date",
+    "actions": "Actions",
+    "quantity": "Quantity",
+    "dimensions": "Dimensions",
+    "packageDetails": "Package details",
     "packages_count": "Packages count",
     "shipping_date": "Shipping date",
     "termsTitle": "Terms and Conditions",
     "termsDescription": "Please read our terms and conditions carefully before using My CN services. By registering or using our platform, you agree to be bound by these terms regarding shipping, storage, payments, and more.",
     "privacyTitle": "Privacy Policy",
     "privacyDescription": "Your privacy is important to us. This policy outlines how My CN collects, uses, and protects your personal information when you use our services. By using our platform, you consent to our data practices as described."
-    
-  },"orderStatus": {
-      "in_stock": "In Stock",
-      "approved": "Approved",
-      "paid": "Paid",
-      "shipped_from_china": "Shipped from China",
-      "arrived_country": "Arrived in Country",
-      "out_for_delivery": "Out for Delivery",
-      "will_be_delivered": "Will Be Delivered",
-      "received": "Received",
-      "completed": "Completed"
-    },
+  },
+  "orderStatus": {
+    "in_stock": "In Stock",
+    "approved": "Approved",
+    "paid": "Paid",
+    "shipped_from_china": "Shipped from China",
+    "arrived_country": "Arrived in Country",
+    "out_for_delivery": "Out for Delivery",
+    "will_be_delivered": "Will Be Delivered",
+    "received": "Received",
+    "completed": "Completed"
+  },
   "address_modal": {
     "addNew": "Add New Address",
     "text": "First and last name must match the government-issued ID of the person receiving the shipment.",

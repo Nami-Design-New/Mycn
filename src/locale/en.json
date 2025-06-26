@@ -68,7 +68,10 @@
     "newPassword": "New Password",
     "resetLinkSent": "A password reset code has been sent to your email address {{email}}. Please check your inbox.",
     "codeVerified": "Your code has been verified successfully",
-    "passwordChangedSuccess": "Your password has been updated successfully"
+    "passwordChangedSuccess": "Your password has been updated successfully",
+    "registerTitle2": "Verify Your Email",
+    "registerSubtitle2": "Please verify your email address to receive a verification code",
+    "codeSent": "A verification code has been sent to your email address {{email}}. Please check your inbox."
   },
   "validation": {
     "required": "This field is required",

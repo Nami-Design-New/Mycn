@@ -14,7 +14,7 @@ export default function Login() {
       <div className="container">
         <div className="row">
 
-          <div className="col-lg-6 col-12 p-2 d-flex  flex-column">
+          <div className="col-lg-6 col-12 p-2 d-flex flex-column">
             <h3 className="section_title">{t("auth.loginTitle")}</h3>
             <p className="section_description">{t("auth.loginSubtitle")}</p>
 

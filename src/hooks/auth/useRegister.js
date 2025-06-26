@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
@@ -7,8 +8,9 @@ import { useNavigate } from "react-router";
 import * as yup from "yup";
 import axiosInstance from "../../utils/axiosInstance";
 
-export default function useRegister(t) {
+export default function useRegister(t, setStep) {
   const navigate = useNavigate();
+  const [code, setCode] = useState(null);
   const [, setCookie] = useCookies(["token"]);
 
   const schema = yup.object().shape({
@@ -40,6 +42,7 @@ export default function useRegister(t) {
 
   const {
     register,
+    watch,
     handleSubmit,
     formState: { errors },
   } = useForm({
@@ -57,9 +60,9 @@ export default function useRegister(t) {
     },
   });
 
-  const { mutate: submitRegister, isPending } = useMutation({
-    mutationFn: async (data) => {
-      const response = await axiosInstance.post("/auth/register", data);
+  const { mutate: submitRegister, isPending: isPendingRegister } = useMutation({
+    mutationFn: async () => {
+      const response = await axiosInstance.post("/auth/register", watch());
       return response.data;
     },
     onSuccess: (data) => {
@@ -74,14 +77,62 @@ export default function useRegister(t) {
       navigate("/profile");
     },
     onError: (error) => {
-      toast.error(error.message || "Something went wrong");
+      toast.error(
+        error.response?.data?.message || error.message || "Something went wrong"
+      );
+    },
+  });
+
+  const { mutate: submitSendCode, isPending: isPendingSendCode } = useMutation({
+    mutationFn: async (data) => {
+      const response = await axiosInstance.post("/auth/sendOtp", {
+        email: data.email,
+        type: "register",
+      });
+      return response.data;
+    },
+    onSuccess: () => {
+      toast.success(t("auth.codeSent", { email: watch("email") }));
+      setStep(2);
+    },
+    onError: (error) => {
+      toast.error(
+        error.response?.data?.message || error.message || "Something went wrong"
+      );
+    },
+  });
+
+  const { mutate: checkCode, isPending: isPendingCheckCode } = useMutation({
+    mutationFn: async () => {
+      const response = await axiosInstance.post("/auth/checkCode", {
+        email: watch("email"),
+        code,
+      });
+      return response.data;
+    },
+    onSuccess: () => {
+      const formData = watch();
+      submitRegister({
+        ...formData,
+        code,
+      });
+    },
+    onError: (error) => {
+      toast.error(
+        error.response?.data?.message || error.message || "Something went wrong"
+      );
     },
   });
 
   return {
     register,
-    handleSubmit: handleSubmit(submitRegister),
+    handleSubmit,
     errors,
-    isLoading: isPending,
+    isLoading: isPendingRegister || isPendingSendCode || isPendingCheckCode,
+    checkCode,
+    watch,
+    setCode,
+    code,
+    submitSendCode,
   };
 }

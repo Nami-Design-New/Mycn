@@ -71,7 +71,8 @@
     "passwordChangedSuccess": "Your password has been updated successfully",
     "registerTitle2": "Verify Your Email",
     "registerSubtitle2": "Please verify your email address to receive a verification code",
-    "codeSent": "A verification code has been sent to your email address {{email}}. Please check your inbox."
+    "codeSent": "A verification code has been sent to your email address {{email}}. Please check your inbox.",
+    "emailSubscribed": "Your email has been subscribed successfully"
   },
   "validation": {
     "required": "This field is required",
@@ -181,11 +182,26 @@
     "status": "Status",
     "confirm": "Confirm",
     "cancel": "Cancel",
+    "details": "Details",
+    "address": "Address",
+    "packages_count": "Packages count",
+    "shipping_date": "Shipping date",
     "termsTitle": "Terms and Conditions",
     "termsDescription": "Please read our terms and conditions carefully before using My CN services. By registering or using our platform, you agree to be bound by these terms regarding shipping, storage, payments, and more.",
     "privacyTitle": "Privacy Policy",
     "privacyDescription": "Your privacy is important to us. This policy outlines how My CN collects, uses, and protects your personal information when you use our services. By using our platform, you consent to our data practices as described."
-  },
+    
+  },"orderStatus": {
+      "in_stock": "In Stock",
+      "approved": "Approved",
+      "paid": "Paid",
+      "shipped_from_china": "Shipped from China",
+      "arrived_country": "Arrived in Country",
+      "out_for_delivery": "Out for Delivery",
+      "will_be_delivered": "Will Be Delivered",
+      "received": "Received",
+      "completed": "Completed"
+    },
   "address_modal": {
     "addNew": "Add New Address",
     "text": "First and last name must match the government-issued ID of the person receiving the shipment.",
@@ -305,6 +321,48 @@
       "Estimated delivery times and shipping rates are provided by carriers and may be subject to change due to external factors.",
       "For high-value or fragile items, consider adding insurance or opting for a premium shipping service."
     ]
+  },
+  "package": {
+    "title": "MYCN's Package Consolidation",
+    "description": "Consolidate your packages into one shipment and enjoy lower fees, faster delivery, and more convenience.",
+    "individual": "Shipping Individually",
+    "consolidated": "Shipping After Consolidation"
+  },
+  "repacking": {
+    "title": "MYCN Repacking Service",
+    "description": "Combine your packages into one shipment and enjoy lower fees, faster delivery, and more convenience.",
+    "itemDescription": "For users who want to ship only one item, we can prepare the shipment as it is or with some adjustments based on your preferences. You can choose to ship with the original seller's packaging or take advantage of our repacking service for more efficiency.",
+    "exampleLabel": "Example:",
+    "exampleTitle": "iPhone",
+    "exampleDescription": "If you purchase an iPhone, we can remove the seller's shipping box and repack it into a smaller, more compact box. We can also add extra padding for protection and ensure it arrives safely.",
+    "note": "These adjustments not only save on shipping costs but also provide better protection during transit.",
+    "costTitle": "How much does repacking cost?",
+    "costSubtitle": "Costs",
+    "costDescription": "MYCN's repacking service costs $5. While there is a small fee, the savings from reducing the shipment size often outweigh the cost. If we cannot optimize the packaging, the $5 fee will be waived.",
+    "careSubtitle": "Care and Customization",
+    "careDescription": "We handle all items, especially fragile or high-value products, with the utmost care. You can choose to keep the original seller's packaging or request additional protection for your peace of mind.",
+    "shipTitle": "Ship as is",
+    "shipDescription": "If you prefer to keep the seller's original packaging, you can opt for shipping as is with no changes. However, if the shipment contains a hazardous product (hazmat), additional steps may be required to ensure compliance with shipping regulations."
+  },
+  "restricted": {
+    "title": "Restricted & Special Handling Items",
+    "description": "Some items require special care or may be restricted due to shipping regulations. Learn what can and cannot be shipped, and how we handle them.",
+    "hazmatAlt": "Hazardous Material",
+    "hazmatTitle": "Hazardous Materials (Hazmat)",
+    "hazmatDescription": "Items like perfumes, sprays, batteries, and flammable materials require special packaging and compliance with international regulations. We ensure all hazmat shipments meet safety standards.",
+    "fragileAlt": "Fragile Items",
+    "fragileTitle": "Fragile Items",
+    "fragileDescription": "We provide extra padding and protective wrapping for fragile items such as glassware, electronics, and ceramics to ensure they arrive in perfect condition.",
+    "prohibitedAlt": "Prohibited Items",
+    "prohibitedTitle": "Prohibited Items",
+    "prohibitedDescription": "Certain items are strictly prohibited from international shipping, including firearms, explosives, and illegal goods. Please check our prohibited items list before placing your order.",
+    "hazardousMaterialsTitle": "How to Handle and Ship Hazardous Materials?",
+    "hazardousMaterialsDescription": "The Mycn team carefully inspects all items before shipment. If we identify any items that require special handling (hazardous items), your shipment will require special procedures. Here's what you can expect:",
+    "hazardousStep1": "We provide specialized packaging and labeling to ensure safe delivery of hazardous materials.",
+    "hazardousStep2": "A fee of $12.50 applies for the additional handling and preparation of each hazardous material shipment.",
+    "hazardousStep3": "Shipping options for hazardous materials may be limited. We can assist you in finding the best available carrier.",
+    "contactSupport": "Contact Mycn Support via chat or email at",
+    "contactNote": "Please contact customer support if you're unsure whether your item is allowed or needs special handling."
   },
   "transportationSubtitle": "Our Delivery Vehicles",
   "transportationTitle": "A variety of trusted transportation methods for every shipment"

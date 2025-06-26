@@ -1,10 +1,12 @@
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "sonner";
+import { useNavigate } from "react-router";
 import axiosInstance from "../../utils/axiosInstance";
 import useGetAddresses from "./useGetAddresses";
 
 export default function useCreateOrder(t, setShow, payload) {
   const { refetch } = useGetAddresses();
+  const navigate = useNavigate();
 
   const { mutate: createOrder, isPending } = useMutation({
     mutationFn: async () => {
@@ -14,6 +16,7 @@ export default function useCreateOrder(t, setShow, payload) {
     onSuccess: () => {
       refetch();
       setShow(false);
+      navigate("/profile/my-shipments");
       toast.success(t("address_modal.orderCreated"));
     },
     onError: (err) => {

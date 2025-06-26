@@ -4,6 +4,9 @@ import useGetShipments from "../hooks/profile/useGetShipments";
 export default function MyShipments() {
   const { data: shipments } = useGetShipments();
 
+  console.log(shipments);
+  
+
   return (
     <div className="my_shipments_section">
       <div className="row">

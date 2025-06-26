@@ -1,10 +1,33 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { toast } from "sonner";
 import { Link } from "react-router";
 import useGetSettings from "../../hooks/settings/useGetSettings";
+import axiosInstance from "../../utils/axiosInstance";
 
 export default function Footer() {
   const { t } = useTranslation();
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
   const { data: settings } = useGetSettings();
+
+  const handleSubmit = async (e) => {
+    setLoading(true);
+    e.preventDefault();
+    try {
+      const res = await axiosInstance.post("/home/storeEmailToNewsLetters", {
+        email: email,
+      });
+      if (res.status === 200) {
+        toast.success(t("auth.emailSubscribed"));
+        setEmail("");
+      }
+    } catch (error) {
+      toast.error(error.message || t("auth.somethingWentWrong"));
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <footer className="footer">
@@ -13,9 +36,20 @@ export default function Footer() {
           <div className="col-12 p-2">
             <div className="news_letter">
               <h6>{t("footer.subscribeToNewsletter")}</h6>
-              <form>
-                <input type="email" placeholder={t("auth.enterEmail")} />
-                <button type="submit">{t("footer.subscribe")}</button>
+              <form onSubmit={handleSubmit}>
+                <input
+                  type="email"
+                  placeholder={t("auth.enterEmail")}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <button type="submit">
+                  {loading ? (
+                    <i className="fa-regular fa-circle-notch fa-spin"></i>
+                  ) : (
+                    t("footer.subscribe")
+                  )}
+                </button>
               </form>
             </div>
           </div>

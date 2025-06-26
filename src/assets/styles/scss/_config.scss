@@ -466,13 +466,17 @@ button {
   align-items: flex-end;
   gap: 12px;
 
-  button {
+  a {
     width: fit-content !important;
     white-space: nowrap !important;
     padding: 0 18px !important;
     font-size: 14px !important;
     background: #237ff0 !important;
     border: 0 !important;
+    height: 48px;
+    border-radius: 12px;
+    color: $white;
+    @include centerFlex();
   }
 }
 

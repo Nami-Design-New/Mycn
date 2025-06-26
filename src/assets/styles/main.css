@@ -434,7 +434,7 @@ button {
   align-items: flex-end;
   gap: 12px;
 }
-.select_destination button {
+.select_destination a {
   width: -moz-fit-content !important;
   width: fit-content !important;
   white-space: nowrap !important;
@@ -442,6 +442,12 @@ button {
   font-size: 14px !important;
   background: #237ff0 !important;
   border: 0 !important;
+  height: 48px;
+  border-radius: 12px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .shp_info h6 {
@@ -816,6 +822,7 @@ body .footer .news_letter form button {
   background: #d8250f;
   color: #fff;
   height: 52px;
+  width: 86px;
   padding: 0 24px;
 }
 body .footer .description {

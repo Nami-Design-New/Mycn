@@ -67,12 +67,12 @@ export default function Testimonials({ data }) {
                       <div className="media-body">
                         <h6 className="title">{slide.author_name}</h6>
                         <div className="rating">
-                          {Array(slide.rate)
+                          {Array(+slide.rate)
                             .fill()
                             .map((_, index) => (
                               <i key={index} className="fa-solid fa-star"></i>
                             ))}
-                          {Array(5 - slide.rate)
+                          {Array(5 - +slide.rate)
                             .fill()
                             .map((_, index) => (
                               <i key={index} className="fa-regular fa-star"></i>

@@ -77,5 +77,15 @@ body {
       padding-right: 0;
       padding-left: 16px;
     }
+
+    header nav .nav_links {
+      @media screen and (max-width: 1200px) {
+        right: initial;
+        left: -100%;
+        &.open {
+          left: 0;
+        }
+      }
+    }
   }
 }

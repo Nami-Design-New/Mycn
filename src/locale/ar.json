@@ -14,7 +14,8 @@
     "myTransactions": "معاملاتي",
     "myAddresses": "عناويني",
     "dashboard": "لوحة التحكم",
-    "newPackages": "شحنات جديدة"
+    "newPackages": "شحنات جديدة",
+    "myAccount": "حسابي"
   },
   "errorPage": {
     "pageNotFoundTitle": "الصفحة غير موجودة",

@@ -14,7 +14,8 @@
     "myTransactions": "My Transactions",
     "myAddresses": "My Addresses",
     "dashboard": "Dashboard",
-    "newPackages": "New Packages"
+    "newPackages": "New Packages",
+    "myAccount": "My Account"
   },
   "errorPage": {
     "pageNotFoundTitle": "Page Not Found",

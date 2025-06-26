@@ -3047,7 +3047,7 @@ body .shipping_calculator .content h6 {
   margin-bottom: 12px;
 }
 body .shipping_calculator .content ul {
-  padding-left: 16px;
+  padding-right: 16px;
   list-style: disc;
   display: flex;
   flex-direction: column;
@@ -3352,7 +3352,11 @@ body.en .notification_card span {
 body.en .testimonials_section .swiper_navigation {
   flex-direction: row;
 }
-body.en .faqs_section .accordion .accordion-item .accordion-button:not(.collapsed)::after {
+body.en .faqs_section .accordion .accordion-item .accordion-button::after {
+  margin-left: auto;
+  margin-right: 0;
+}
+body.en .faqs_page .accordion .accordion-item .accordion-button::after {
   margin-left: auto;
   margin-right: 0;
 }
@@ -3363,4 +3367,8 @@ body.en .how_we_work_section .steps .step .num {
 body.en .how_we_work_section .steps .step .content-box .num {
   left: initial;
   right: 40px;
+}
+body.en .shipping_calculator .content ul {
+  padding-right: 0;
+  padding-left: 16px;
 }/*# sourceMappingURL=main.css.map */

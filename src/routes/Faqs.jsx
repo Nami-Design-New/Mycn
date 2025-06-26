@@ -61,11 +61,6 @@ export default function Faqs() {
                   </Accordion.Body>
                 </Accordion.Item>
               ))}
-              {questions.length === 0 && (
-                <p className="mt-3">
-                  {t("No questions available in this category.")}
-                </p>
-              )}
             </Accordion>
           </div>
         </div>

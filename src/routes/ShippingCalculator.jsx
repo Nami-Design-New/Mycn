@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Form } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 import InputField from "../ui/forms/InputField";
 import SelectField from "../ui/forms/SelectField";
@@ -7,6 +8,7 @@ import SubmitButton from "../ui/forms/SubmitButton";
 import Faqs from "../ui/layout/Faqs";
 
 export default function ShippingCalculator() {
+  const { t } = useTranslation();
   const [isMore, setIsMore] = useState(false);
 
   return (
@@ -15,10 +17,9 @@ export default function ShippingCalculator() {
         <div className="container">
           <div className="row">
             <div className="col-12 p-2">
-              <h3 className="section_title">Shipping Cost Calculator</h3>
+              <h3 className="section_title">{t("shippingCalculator.title")}</h3>
               <p className="section_description">
-                Quickly estimate your shipping fees based on destination,
-                weight, and delivery preferences.
+                {t("shippingCalculator.subtitle")}
               </p>
             </div>
 
@@ -138,59 +139,40 @@ export default function ShippingCalculator() {
                 )}
 
                 <div className="d-flex w-100 justify-content-end">
-                  <SubmitButton text="Estimate Cost" />
+                  <SubmitButton text={t("shippingCalculator.calculate")} />
                 </div>
 
                 <p className="contact_note">
-                  If you would like to ship a full container, please{" "}
-                  <Link to="/contact"> contact us</Link> .
+                  {t("shippingCalculator.note")}{" "}
+                  <Link to="/contact">{t("shippingCalculator.contactUs")}</Link>{" "}
+                  .
                 </p>
               </form>
             </div>
 
             <div className="col-lg-4 p-2">
               <div className="estimated_cost">
-                <h5>Estimated Shipping Cost</h5>
+                <h5>{t("shippingCalculator.estimatedCost")}</h5>
                 <p>
-                  Starting from <strong>$12.99</strong>
+                  {t("shippingCalculator.startsFrom")}: <strong>$12.99</strong>
                 </p>
                 <p>
-                  Delivery time: <strong>5 to 10 business days</strong>
+                  {t("shippingCalculator.deliveryTime")}:{" "}
+                  <strong>5 to 10 business days</strong>
                 </p>
-                <button className="btn">Ship Now</button>
+                <button className="btn">
+                  {t("shippingCalculator.shipNow")}
+                </button>
               </div>
 
               <div className="content mt-3">
-                <h6>Estimate your shipping rates</h6>
+                <h6>{t("shippingCalculator.instructionsTitle")}</h6>
                 <ul>
-                  <li>
-                    Enter your packages weight and dimensions to get an
-                    estimated shipping cost and check carrier availability in
-                    your region.
-                  </li>
-                  <li>
-                    Keep in mind that any changes to weight, size, declared
-                    value, or item classification may affect your final shipping
-                    quote.
-                  </li>
-                  <li>
-                    Shipping costs may vary depending on the selected shipping
-                    method, destination country, and applicable customs or
-                    duties.
-                  </li>
-                  <li>
-                    Make sure your package details are accurate to avoid delays
-                    or additional fees.
-                  </li>
-                  <li>
-                    Estimated delivery times and shipping rates are provided by
-                    carriers and may be subject to change due to external
-                    factors.
-                  </li>
-                  <li>
-                    For high-value or fragile items, consider adding insurance
-                    or opting for a premium shipping service.
-                  </li>
+                  {t("shippingCalculator.instructions", {
+                    returnObjects: true,
+                  }).map((instruction, index) => (
+                    <li key={index}>{instruction}</li>
+                  ))}
                 </ul>
               </div>
             </div>

@@ -1,13 +1,17 @@
 import { useEffect, useState } from "react";
 
 const OtpContainer = ({ setCode }) => {
-  const [otpValue, setOtpValue] = useState(Array(5).fill(""));
+  const [otpValue, setOtpValue] = useState(Array(6).fill(""));
 
   useEffect(() => {
-    const firstInput = document.getElementById("input0");
-    if (firstInput) {
-      firstInput.focus();
+    const firstEmpty = otpValue.findIndex((val) => val === "");
+    if (firstEmpty !== -1) {
+      document.getElementById(`input${firstEmpty}`)?.focus();
     }
+  }, [otpValue]);
+
+  useEffect(() => {
+    document.getElementById("input0")?.focus();
   }, []);
 
   const handleInput = (index, event) => {
@@ -19,30 +23,47 @@ const OtpContainer = ({ setCode }) => {
     setOtpValue(newOtpValue);
     setCode(newOtpValue.join(""));
 
-    if (value && index < 4) {
-      document.getElementById(`input${index + 1}`)?.focus();
+    if (value && index < 5) {
+      setTimeout(() => {
+        document.getElementById(`input${index + 1}`)?.focus();
+      }, 10);
     }
   };
 
   const handleKeyDown = (index, event) => {
-    if (event.key === "Backspace" && !otpValue[index] && index > 0) {
-      document.getElementById(`input${index - 1}`)?.focus();
+    if (event.key === "Backspace") {
+      if (otpValue[index]) {
+        const newOtpValue = [...otpValue];
+        newOtpValue[index] = "";
+        setOtpValue(newOtpValue);
+        setCode(newOtpValue.join(""));
+      } else if (index > 0) {
+        setTimeout(() => {
+          document.getElementById(`input${index - 1}`)?.focus();
+        }, 10);
+      }
     }
   };
 
   const handlePaste = (event) => {
     const data = event.clipboardData.getData("Text");
-    const numbers = data.replace(/\D/g, "");
-    if (numbers.length <= 5) {
-      setOtpValue(numbers.split(""));
-      setCode(numbers);
+    const numbers = data.replace(/\D/g, "").slice(0, 6);
+    const arr = numbers.split("");
+    setOtpValue(arr);
+    setCode(numbers);
+
+    if (arr.length < 6) {
+      setTimeout(() => {
+        document.getElementById(`input${arr.length}`)?.focus();
+      }, 10);
     }
+
     event.preventDefault();
   };
 
   return (
     <div className="otp-container" onPaste={handlePaste}>
-      {Array.from({ length: 5 }).map((_, index) => (
+      {Array.from({ length: 6 }).map((_, index) => (
         <input
           key={index}
           id={`input${index}`}
@@ -51,8 +72,7 @@ const OtpContainer = ({ setCode }) => {
           maxLength="1"
           inputMode="numeric"
           pattern="[0-9]"
-          required
-          value={otpValue[index] || ""}
+          value={otpValue[index]}
           onChange={(e) => handleInput(index, e)}
           onKeyDown={(e) => handleKeyDown(index, e)}
         />

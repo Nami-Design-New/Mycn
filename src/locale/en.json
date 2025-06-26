@@ -56,7 +56,16 @@
     "alreadyHaveAnAccount": "Already have an account?",
     "selectCountry": "Select your country",
     "enterPhoneNumber": "Enter your phone number",
-    "somethingWentWrong": "Something went wrong, please try again later"
+    "somethingWentWrong": "Something went wrong, please try again later",
+    "resetPasswordTitle": "Reset Password",
+    "resetPasswordSubtitle": "Enter your email address to reset your password",
+    "send": "Send",
+    "confirm": "Confirm",
+    "resetPasswordTitle2": "enter verification code",
+    "resetPasswordSubtitle2": "Enter the verification code sent to your email address {{email}} to reset your password",
+    "resetPasswordTitle3": "Change Password",
+    "resetPasswordSubtitle3": "Enter your new password and confirm password to change your password",
+    "newPassword": "New Password"
   },
   "validation": {
     "required": "This field is required",

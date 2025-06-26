@@ -948,8 +948,8 @@ body .package_contents p {
 body .package_contents p strong {
   font-size: 14px;
 }
-body .mt-80 {
-  margin-top: 80px;
+body .mt-100 {
+  margin-top: 100px;
 }
 body .confirmation_modal p {
   margin-top: 16px;
@@ -1098,11 +1098,14 @@ body .form_ui button.success {
 body .otp-container {
   display: flex;
   gap: 8px;
+  width: 100%;
+  direction: ltr !important;
 }
 body .otp-container .otp-input {
   flex: 1;
   width: 100%;
   aspect-ratio: 1/1;
+  max-height: 90px;
   outline: none;
   border: 1px solid #f4f4f4;
   border-radius: 12px;
@@ -2352,6 +2355,32 @@ body .auth_section .link {
   margin-top: 12px;
   display: block;
 }
+body .reset_btns {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+body .back_btn {
+  height: 48px;
+  border-radius: 12px;
+  border: 1px solid #000;
+  width: 90px;
+  color: #000;
+  cursor: pointer;
+  background: none;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .back_btn:hover {
+  background: #a80200;
+  color: #fff;
+  border: 1px solid #a80200;
+}
+body .back_btn i {
+  font-size: 18px;
+}
 body .about_section {
   padding: 60px 0;
 }
@@ -3396,4 +3425,7 @@ body.en .shipping_calculator .content ul {
   body.en header nav .nav_links.open {
     left: 0;
   }
+}
+body.en .back_btn i {
+  transform: scale(-1);
 }/*# sourceMappingURL=main.css.map */

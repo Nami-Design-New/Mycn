@@ -10,10 +10,9 @@ export default function Login() {
   const { register, handleSubmit, errors, isLoading } = useLogin(t);
 
   return (
-    <section className="auth_section main_section mt-80">
+    <section className="auth_section main_section mt-100">
       <div className="container">
         <div className="row">
-          <div className="col-12 p-2 mb-2"></div>
 
           <div className="col-lg-6 col-12 p-2 d-flex  flex-column">
             <h3 className="section_title">{t("auth.loginTitle")}</h3>

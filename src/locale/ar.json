@@ -56,7 +56,16 @@
     "alreadyHaveAnAccount": "لديك حساب بالفعل؟",
     "selectCountry": "اختر دولتك",
     "enterPhoneNumber": "أدخل رقم الهاتف",
-    "somethingWentWrong": "حدث خطأ ما، يرجى المحاولة مرة أخرى لاحقًا"
+    "somethingWentWrong": "حدث خطأ ما، يرجى المحاولة مرة أخرى لاحقًا",
+    "resetPasswordTitle": "إعادة تعيين كلمة المرور",
+    "resetPasswordSubtitle": "أدخل بريدك الإلكتروني لإعادة تعيين كلمة المرور",
+    "send": "ارسال",
+    "confirm": "تاكيد",
+    "resetPasswordTitle2": "أدخل رمز التحقق",
+    "resetPasswordSubtitle2": "أدخل رمز التحقق المرسل إلى بريدك الإلكتروني {{email}} لإعادة تعيين كلمة المرور",
+    "resetPasswordTitle3": "تغيير كلمة المرور",
+    "resetPasswordSubtitle3": "ادخل كلمة المرور الجديدة وتاكيد كلمة المرور لتغيير كلمة المرور",
+    "newPassword": "كلمة المرور الجديدة"
   },
   "validation": {
     "required": "هذا الحقل مطلوب",

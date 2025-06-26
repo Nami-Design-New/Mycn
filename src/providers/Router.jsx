@@ -24,6 +24,7 @@ import MyTransactions from "../routes/MyTransactions";
 import ShipmentDetails from "../routes/ShipmentDetails";
 import NewPackages from "../routes/NewPackages";
 import HowWorks from "../routes/HowWorks";
+import ResetPassword from "../routes/ResetPassword";
 
 export const router = createBrowserRouter([
   {
@@ -54,6 +55,10 @@ export const router = createBrowserRouter([
       {
         path: "signup",
         element: <Register />,
+      },
+      {
+        path: "reset-password",
+        element: <ResetPassword />,
       },
       {
         path: "about",

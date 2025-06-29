@@ -6,9 +6,11 @@ import InputField from "../ui/forms/InputField";
 import SelectField from "../ui/forms/SelectField";
 import SubmitButton from "../ui/forms/SubmitButton";
 import Faqs from "../ui/layout/Faqs";
+import useGetCities from "../hooks/settings/useGetCities";
 
 export default function ShippingCalculator() {
   const { t } = useTranslation();
+  const { data: cities } = useGetCities();
   const [isMore, setIsMore] = useState(false);
 
   return (
@@ -25,33 +27,6 @@ export default function ShippingCalculator() {
 
             <div className="col-lg-8 col-12 p-2">
               <form className="calculator_form form_ui">
-                <div className="transportation_type">
-                  <label htmlFor="air_freight">
-                    <input
-                      type="radio"
-                      name="transportation_type"
-                      id="air_freight"
-                      value="air_freight"
-                    />
-
-                    <span>
-                      <i className="fa-regular fa-plane-up"></i> Air Freight
-                    </span>
-                  </label>
-
-                  <label htmlFor="sea_freight">
-                    <input
-                      type="radio"
-                      name="transportation_type"
-                      id="sea_freight"
-                      value="sea_freight"
-                    />
-                    <span>
-                      <i className="fa-regular fa-ship"></i> Sea freight
-                    </span>
-                  </label>
-                </div>
-
                 <div className="form_group">
                   <InputField
                     label="Weight"
@@ -60,47 +35,27 @@ export default function ShippingCalculator() {
                   />
 
                   <SelectField
-                    label="Unit"
-                    defaultSelect="Select unit"
-                    options={[
-                      { name: "Kg", value: "kg" },
-                      { name: "Lbs", value: "lbs" },
-                    ]}
-                  />
-                </div>
-
-                <div className="form_group">
-                  <InputField
                     label="City"
                     icon="fa-regular fa-location-dot"
-                    placeholder="Enter your city"
-                  />
-
-                  <SelectField
-                    label="Currency"
-                    icon="fa-solid fa-dollar-sign"
-                    defaultSelect="Select currency"
-                    options={[
-                      { name: "US Dollar (USD)", value: "USD" },
-                      { name: "Euro (EUR)", value: "EUR" },
-                      { name: "British Pound (GBP)", value: "GBP" },
-                      { name: "Japanese Yen (JPY)", value: "JPY" },
-                      { name: "Saudi Riyal (SAR)", value: "SAR" },
-                      { name: "UAE Dirham (AED)", value: "AED" },
-                      { name: "Egyptian Pound (EGP)", value: "EGP" },
-                    ]}
+                    defaultSelect={t("shippingCalculator.selectCity")}
+                    options={cities?.map((city) => ({
+                      name: city?.title,
+                      value: city?.id,
+                    }))}
                   />
                 </div>
 
                 <p className="note">
-                  <i className=" fa-regular fa-circle-info"></i> &nbsp; If the
-                  sum of <b>(length * width * height)</b> exceeds 130 cm ,
-                  please enter the dimensions to calculate the price accurately.
+                  <i className=" fa-regular fa-circle-info"></i> &nbsp;
+                  {t("shippingCalculator.note1")}{" "}
+                  <b>{t("shippingCalculator.vol")}</b>{" "}
+                  {t("shippingCalculator.note3")} ,
+                  {t("shippingCalculator.note2")}
                 </p>
 
                 <Form.Check
                   type="switch"
-                  label="Is the size larger than 130cm?"
+                  label={t("shippingCalculator.more")}
                   onChange={() => setIsMore(!isMore)}
                   checked={isMore}
                 />
@@ -127,14 +82,6 @@ export default function ShippingCalculator() {
                       placeholder="00"
                       icon={"fa-sharp-duotone fa-regular fa-arrows-up-down"}
                     />
-                    <SelectField
-                      label="Unit"
-                      defaultSelect="Select unit"
-                      options={[
-                        { name: "Cm", value: "cm" },
-                        { name: "Inch", value: "inch" },
-                      ]}
-                    />
                   </div>
                 )}
 
@@ -158,7 +105,7 @@ export default function ShippingCalculator() {
                 </p>
                 <p>
                   {t("shippingCalculator.deliveryTime")}:{" "}
-                  <strong>5 to 10 business days</strong>
+                  <strong>{t("shippingCalculator.days")}</strong>
                 </p>
                 <button className="btn">
                   {t("shippingCalculator.shipNow")}

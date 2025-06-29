@@ -152,7 +152,8 @@
     "addressesSubTitle": "Manage your shipping addresses and track your shipments.",
     "addAddress": "Add address",
     "editAddress": "Edit address",
-    "deleteAddress": "Remove address"
+    "deleteAddress": "Remove address",
+    "noAddresses": "No addresses at the moment"
   },
   "addressFields": {
     "recipient": "Recipient Name",
@@ -318,6 +319,13 @@
     "startsFrom": "Starting from",
     "deliveryTime": "Delivery Time",
     "shipNow": "Ship Now",
+    "days": "5 to 15 business days",
+    "note2": "please enter the dimensions to calculate the price accurately.",
+    "vol": "(length * width * height)",
+    "note1": "If the sum of",
+    "note3": "exceeds 130 cm",
+    "selectCity": "Select city",
+    "more": "Is the size larger than 130cm?",
     "instructionsTitle": "Estimate your shipping rates",
     "instructions": [
       "Enter your package's weight and dimensions to get an estimated shipping cost and check carrier availability in your region.",
@@ -371,5 +379,7 @@
     "contactNote": "Please contact customer support if you're unsure whether your item is allowed or needs special handling."
   },
   "transportationSubtitle": "Our Delivery Vehicles",
-  "transportationTitle": "A variety of trusted transportation methods for every shipment"
+  "transportationTitle": "A variety of trusted transportation methods for every shipment",
+  "empty_shipments": "Here you will be able to see all your shipments.",
+  "empty_notifications": "Here you will be able to see all your notifications."
 }

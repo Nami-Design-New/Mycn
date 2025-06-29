@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router";
+import { useEffect } from "react";
 
 export default function HowWeWorks({ data }) {
   const { t } = useTranslation();
@@ -11,6 +11,15 @@ export default function HowWeWorks({ data }) {
     const step = e.currentTarget;
     step.classList.add("active");
   };
+
+  useEffect(() => {
+    if (data && data.length > 0) {
+      const firstStep = document.querySelector(".step");
+      if (firstStep) {
+        firstStep.classList.add("active");
+      }
+    }
+  }, [data]);
 
   return (
     <section className="how_we_work_section">
@@ -27,7 +36,7 @@ export default function HowWeWorks({ data }) {
             <div className="steps">
               {data?.map((item, index) => (
                 <article
-                  className={`step ${item.id === 1 ? "active" : ""}`}
+                  className="step"
                   onMouseEnter={onMouseEnter}
                   key={item.id}
                 >
@@ -59,11 +68,11 @@ export default function HowWeWorks({ data }) {
             </div>
           </div>
 
-          <div className="col-12 p-2 mt-4  d-flex justify-content-center">
+          {/* <div className="col-12 p-2 mt-4  d-flex justify-content-center">
             <Link to="how-it-works">
               <button className="watch_btn">{t("about.watchVideo")}</button>{" "}
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

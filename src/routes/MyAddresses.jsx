@@ -38,7 +38,7 @@ export default function MyAddresses() {
   return (
     <div className="my_addresses">
       <div className="row">
-        <div className="col-12 header_row">
+        <div className="col-12 header_row ">
           <div>
             <h3 className="sec_title">{t("profile.addressesTitle")}</h3>
             <p className="sec_desc">{t("profile.addressesSubTitle")}</p>
@@ -76,6 +76,15 @@ export default function MyAddresses() {
             </div>
           </div>
         ))}
+
+        {myAddresses?.length === 0 && (
+          <div className="col-12 p-2 mt-5">
+            <div className="empty_wrap align-items-start">
+              <img src="/img/empty.png" alt="" />
+              <h6>{t("profile.noAddresses")}</h6>
+            </div>
+          </div>
+        )}
       </div>
 
       <AddressModal

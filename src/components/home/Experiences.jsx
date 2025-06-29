@@ -18,7 +18,7 @@ const ExperienceSection = ({ experiences }) => {
           {experiences?.map((item, index) => (
             <div className="col-lg-4 col-md-6 col-sm-12" key={index}>
               <div className="experience-box">
-                <div className="step-number">{item.count}</div>
+                <div className="step-number">+ {item.count}</div>
                 <div className="icon">
                   <img src={item.icon} alt={item.title} />
                 </div>

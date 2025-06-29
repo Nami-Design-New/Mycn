@@ -5,6 +5,7 @@ import Footer from "../ui/layout/Footer";
 import ResponsiveNav from "../ui/layout/ResponsiveNav";
 import useAuth from "../hooks/useAuth";
 import PageLoader from "./../ui/PageLoader";
+import useGetHome from "../hooks/settings/useGetHome";
 
 export default function RootLayout() {
   const location = useLocation();
@@ -13,8 +14,9 @@ export default function RootLayout() {
   }, [location]);
 
   const auth = useAuth();
+  const { isLoading } = useGetHome();
 
-  if (auth.loading) return <PageLoader />;
+  if (auth.loading || isLoading) return <PageLoader />;
 
   return (
     <>

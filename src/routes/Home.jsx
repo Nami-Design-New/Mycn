@@ -15,7 +15,7 @@ export default function Home() {
       <Hero slides={home?.sliders} />
       <Features features={home?.whyChooseUsDetail} />
       <ExperienceSection experiences={home?.experienceDetail} />
-      <Transportation />
+      <Transportation images={home?.deliveryVehiclesDetail} />
       <HowWeWorks data={home?.workProcessDetail} />
       <Testimonials data={home?.testimonialDetail} />
       <Faqs />

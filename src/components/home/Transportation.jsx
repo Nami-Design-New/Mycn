@@ -1,17 +1,11 @@
-import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useTranslation } from "react-i18next";
 import { Autoplay } from "swiper/modules";
 
 import "swiper/css";
 
-export default function Transportation() {
+export default function Transportation({ images }) {
   const { t } = useTranslation();
-  const initialImages = Array.from(
-    { length: 7 },
-    (_, i) => `/images/c${i + 1}.png`
-  );
-  const [images] = useState(initialImages);
 
   return (
     <section className="transportation_section">
@@ -43,10 +37,10 @@ export default function Transportation() {
                 1400: { slidesPerView: 6 },
               }}
             >
-              {images.map((src, index) => (
+              {images?.map((src, index) => (
                 <SwiperSlide key={index}>
                   <div className="logo">
-                    <img src={src} alt={`c ${index + 1}`} loading="lazy" />
+                    <img src={src.image} alt={`c ${index + 1}`} loading="lazy" />
                   </div>
                 </SwiperSlide>
               ))}

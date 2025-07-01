@@ -120,9 +120,7 @@ export default function Footer() {
               </li>
               <li>
                 {t("footer.email")}:{" "}
-                <a href={`mailto:${settings?.email}`}>
-                  {"support@example.com"}
-                </a>
+                <a href={`mailto:${settings?.email}`}>{settings?.email}</a>
               </li>
               <li>
                 {t("footer.address")}:{" "}

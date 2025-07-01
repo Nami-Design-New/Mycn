@@ -76,7 +76,8 @@
     "wrongCode": "The verification code is incorrect",
     "emailNotFound": "Email address not found",
     "didnotReceiveCode": "Didn't receive the code?",
-    "resendCode": "Resend Code"
+    "resendCode": "Resend Code",
+    "acceptTermsWarning": "Please accept the terms and conditions to sign up"
   },
   "validation": {
     "required": "This field is required",

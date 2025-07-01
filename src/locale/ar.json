@@ -76,7 +76,8 @@
     "wrongCode": "رمز التحقق غير صحيح",
     "emailNotFound": "البريد الالكتروني غير موجود",
     "didnotReceiveCode": "لم تستلم الرمز؟",
-    "resendCode": "اعادة الارسال"
+    "resendCode": "اعادة الارسال",
+    "acceptTermsWarning": "يرجى قبول الشروط والأحكام للتسجيل"
   },
   "validation": {
     "required": "هذا الحقل مطلوب",

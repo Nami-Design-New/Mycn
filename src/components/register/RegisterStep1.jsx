@@ -1,4 +1,5 @@
 import { Form } from "react-bootstrap";
+import { toast } from "sonner";
 import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
 import InputField from "../../ui/forms/InputField";
@@ -11,13 +12,21 @@ export default function RegisterStep1({
   register,
   handleSubmit,
   errors,
+  watch,
   isLoading,
 }) {
   const { t } = useTranslation();
   const { data: countries, isLoading: isCountriesLoading } = useGetCountries();
 
+  const onSubmit = (e) => {
+    e.preventDefault();
+    handleSubmit();
+    if (watch("terms")) return;
+    toast.warning(t("auth.acceptTermsWarning"));
+  };
+
   return (
-    <form className="form_ui mt-3" onSubmit={handleSubmit}>
+    <form className="form_ui mt-3" onSubmit={onSubmit}>
       <div className="form_group">
         <InputField
           label={t("auth.firstName")}

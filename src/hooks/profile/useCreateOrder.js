@@ -17,7 +17,7 @@ export default function useCreateOrder(t, setShow, payload) {
       refetch();
       setShow(false);
       navigate("/profile/my-shipments");
-      toast.success(t("address_modal.orderCreated"));
+      toast.success(t("orderModel.orderCreated"));
     },
     onError: (err) => {
       toast.error(err?.response?.data?.message || t("auth.somethingWentWrong"));

@@ -64,7 +64,7 @@ export default function NewPackages() {
       <div className="row">
         <div className="col-12 p-2">
           <h6 className="sec_title">{t("profile.newPackagesTitle")}</h6>
-          <p className="sec_desc">{t("profile.newPackagesSubtitle")}</p>
+          <p className="sec_desc">{t("profile.newPackagesSubtitle" , { maxPackages: maxPackages })}</p>
         </div>
 
         <DragDropContext onDragEnd={handleDragEnd}>

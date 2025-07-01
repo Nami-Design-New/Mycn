@@ -2564,6 +2564,8 @@ body .profile_section .shipment {
   gap: 12px;
   height: 100%;
   flex-wrap: wrap;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 body .profile_section .shipment p {
   margin-bottom: 0;
@@ -2636,6 +2638,7 @@ body .profile_section .address_card {
   background: #fff;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 16px;
+  height: 100%;
 }
 body .profile_section .address_card h4 {
   font-size: 16px;

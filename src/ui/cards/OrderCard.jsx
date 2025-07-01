@@ -19,7 +19,7 @@ export default function OrderCard({ shipment }) {
 
       <p className="w-100">
         <i className="fa-regular fa-location-dot"></i> {t("common.address")}:{" "}
-        {shipment?.address?.address_1}
+        {shipment?.address?.nickname}
       </p>
 
       <p>

@@ -88,6 +88,7 @@
     gap: 12px;
     height: 100%;
     flex-wrap: wrap;
+    height: fit-content;
 
     p {
       margin-bottom: 0;
@@ -170,6 +171,7 @@
     background: $white;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 16px;
+    height: 100%;
 
     h4 {
       font-size: 16px;

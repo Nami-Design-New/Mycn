@@ -3,10 +3,8 @@ import { useState } from "react";
 const useShippingCalculator = (cities) => {
   const [isMore, setIsMore] = useState(false);
   const [result, setResult] = useState(null);
-  const [loading, setLoading] = useState(false);
 
   const calculateShipping = (data) => {
-    setLoading(true);
     setResult(null);
 
     try {
@@ -25,8 +23,6 @@ const useShippingCalculator = (cities) => {
       setResult(finalCost.toFixed(2));
     } catch (error) {
       console.error("Shipping calculation failed:", error);
-    } finally {
-      setLoading(false);
     }
   };
 
@@ -34,7 +30,6 @@ const useShippingCalculator = (cities) => {
     isMore,
     setIsMore,
     result,
-    loading,
     calculateShipping,
   };
 };

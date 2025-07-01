@@ -4,7 +4,7 @@ import Header from "../ui/layout/Header";
 import Footer from "../ui/layout/Footer";
 import ResponsiveNav from "../ui/layout/ResponsiveNav";
 import useAuth from "../hooks/useAuth";
-import PageLoader from "../ui/PageLoader";
+import PageLoader from "../ui/loaders/PageLoader";
 import useGetHome from "../hooks/settings/useGetHome";
 
 export default function RootLayout() {

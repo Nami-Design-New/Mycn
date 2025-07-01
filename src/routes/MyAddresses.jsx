@@ -5,6 +5,7 @@ import AddressModal from "../ui/modals/AddressModal";
 import useGetAddresses from "../hooks/profile/useGetAddresses";
 import ConfirmDeleteModal from "../ui/modals/ConfirmDeleteModal";
 import useDeleteAddress from "../hooks/profile/useDeleteAddress";
+import AddressLoading from "../ui/loaders/AddressLoading";
 
 export default function MyAddresses() {
   const { t } = useTranslation();
@@ -13,7 +14,7 @@ export default function MyAddresses() {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [addressToEdit, setAddressToEdit] = useState(null);
 
-  const { data: myAddresses } = useGetAddresses();
+  const { data: myAddresses, isLoading } = useGetAddresses();
   const { deleteAddress, isPending } = useDeleteAddress(
     t,
     addressToEdit?.id,
@@ -47,6 +48,16 @@ export default function MyAddresses() {
             <i className="fa-regular fa-plus"></i> {t("profile.addAddress")}
           </button>
         </div>
+
+        {isLoading && (
+          <div className="row">
+            {Array.from({ length: 3 }).map((_, index) => (
+              <div className="col-lg-4 col-md-6 col-12 p-2" key={index}>
+                <AddressLoading />
+              </div>
+            ))}
+          </div>
+        )}
 
         {myAddresses?.map((address) => (
           <div className="col-lg-4 col-md-6 col-12 p-2" key={address.id}>

@@ -138,6 +138,27 @@
         background-color: $second !important;
       }
     }
+
+    .skeleton-text {
+      background: #e0e0e0;
+      height: 16px;
+      border-radius: 4px;
+      animation: pulse 1.5s ease-in-out infinite;
+      width: calc(42% - 4px);
+
+      &.skeleton-title {
+        width: 64px;
+        height: 26.5px;
+        animation: pulse 1.5s ease-in-out infinite;
+      }
+    }
+
+    .skeleton-status {
+      background: #e0e0e0;
+      height: 69px;
+      margin-top: 16px;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
   }
 
   .content {
@@ -262,6 +283,19 @@
 
     .dropdown-menu {
       margin: 0;
+    }
+
+    .skeleton-text {
+      background: #e0e0e0;
+      height: 16px;
+      border-radius: 4px;
+      animation: pulse 1.5s ease-in-out infinite;
+
+      &.skeleton-title {
+        width: 50%;
+        height: 24px;
+        animation: pulse 1.5s ease-in-out infinite;
+      }
     }
   }
 
@@ -398,6 +432,27 @@
           flex-wrap: wrap;
           color: $black;
           font-size: 14px;
+        }
+
+        .skeleton-img {
+          min-width: 64px;
+          height: 64px;
+          border-radius: 8px;
+          background: #e0e0e0;
+          animation: pulse 1.5s ease-in-out infinite;
+        }
+        .content {
+          width: 100%;
+        }
+        ul {
+          gap: 4px;
+        }
+        .skeleton-text {
+          background: #e0e0e0;
+          height: 16px;
+          border-radius: 4px;
+          animation: pulse 1.5s ease-in-out infinite;
+          width: calc(50% - 4px);
         }
       }
     }
@@ -553,6 +608,35 @@
   p {
     margin: 0;
     color: $gray !important;
+  }
+
+  &.skeleton {
+    .content {
+      width: 100%;
+
+      span {
+        max-width: 48px;
+      }
+    }
+    .skeleton-img {
+      min-width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: #e0e0e0;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+    .skeleton-text {
+      background: #e0e0e0;
+      height: 16px;
+      border-radius: 4px;
+      animation: pulse 1.5s ease-in-out infinite;
+      width: calc(50% - 4px);
+      &.skeleton-title {
+        width: calc(70% - 4px);
+        height: 20px;
+        animation: pulse 1.5s ease-in-out infinite;
+      }
+    }
   }
 }
 

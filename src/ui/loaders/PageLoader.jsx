@@ -6,7 +6,7 @@ export default function PageLoader() {
           <circle
             fill="#D8250F"
             stroke="#D8250F"
-            stroke-width="15"
+            strokeWidth="15"
             r="15"
             cx="40"
             cy="100"
@@ -24,7 +24,7 @@ export default function PageLoader() {
           <circle
             fill="#D8250F"
             stroke="#D8250F"
-            stroke-width="15"
+            strokeWidth="15"
             r="15"
             cx="100"
             cy="100"
@@ -42,7 +42,7 @@ export default function PageLoader() {
           <circle
             fill="#D8250F"
             stroke="#D8250F"
-            stroke-width="15"
+            strokeWidth="15"
             r="15"
             cx="160"
             cy="100"

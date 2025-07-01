@@ -1,12 +1,23 @@
 import { useTranslation } from "react-i18next";
 import useGetNotifications from "../hooks/profile/useGetNotifications";
+import NotificationLoader from "../ui/loaders/NotificationLoader";
 
 export default function Notifications() {
   const { t } = useTranslation();
-  const { data: notifications } = useGetNotifications();
+  const { data: notifications, isLoading } = useGetNotifications();
 
   return (
     <div className="notifications h-100">
+      {isLoading && (
+        <div className="row">
+          {Array.from({ length: 3 }).map((_, index) => (
+            <div className="col-12 p-2" key={index}>
+              <NotificationLoader />
+            </div>
+          ))}
+        </div>
+      )}
+
       <div className="row h-100">
         {notifications?.map((notification) => (
           <div className="col-12 p-2" key={notification.id}>

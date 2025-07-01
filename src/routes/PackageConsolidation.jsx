@@ -45,10 +45,10 @@ export default function PackageConsolidation() {
           <p className="section_description">{t("package.description")}</p>
         </div>
 
-        <div className="row gy-4">
+        <div className="row">
           {individualPackages.map((pkg, index) => (
             <React.Fragment key={index}>
-              <div className="col-12 col-lg-6">
+              <div className="col-12 col-lg-6 p-2">
                 <div className="package-section">
                   <h5 className="section-title red">
                     <i className="fas fa-box-open"></i>{" "}
@@ -58,7 +58,7 @@ export default function PackageConsolidation() {
                 </div>
               </div>
 
-              <div className="col-12 col-lg-6">
+              <div className="col-12 col-lg-6 p-2">
                 <div className="package-section">
                   <h5 className="section-title green">
                     <i className="fas fa-boxes"></i> {t("package.consolidated")}

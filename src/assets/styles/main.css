@@ -502,6 +502,17 @@ button {
   font-size: 24px;
 }
 
+@keyframes pulse {
+  0% {
+    background-color: #e0e0e0;
+  }
+  50% {
+    background-color: #f0f0f0;
+  }
+  100% {
+    background-color: #e0e0e0;
+  }
+}
 body {
   position: relative;
   direction: rtl;
@@ -2649,6 +2660,24 @@ body .profile_section .shipment .status .progress {
 body .profile_section .shipment .status .progress-bar {
   background-color: #d8250f !important;
 }
+body .profile_section .shipment .skeleton-text {
+  background: #e0e0e0;
+  height: 16px;
+  border-radius: 4px;
+  animation: pulse 1.5s ease-in-out infinite;
+  width: calc(42% - 4px);
+}
+body .profile_section .shipment .skeleton-text.skeleton-title {
+  width: 64px;
+  height: 26.5px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+body .profile_section .shipment .skeleton-status {
+  background: #e0e0e0;
+  height: 69px;
+  margin-top: 16px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
 body .profile_section .content h3 {
   font-size: 20px;
   display: flex;
@@ -2756,6 +2785,17 @@ body .profile_section .address_card .dropdown-toggle {
 }
 body .profile_section .address_card .dropdown-menu {
   margin: 0;
+}
+body .profile_section .address_card .skeleton-text {
+  background: #e0e0e0;
+  height: 16px;
+  border-radius: 4px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+body .profile_section .address_card .skeleton-text.skeleton-title {
+  width: 50%;
+  height: 24px;
+  animation: pulse 1.5s ease-in-out infinite;
 }
 body .profile_section .shipment_details .order_tracking {
   display: flex;
@@ -2871,6 +2911,26 @@ body .profile_section .new_packages .package_list .package_item ul {
   flex-wrap: wrap;
   color: #000;
   font-size: 14px;
+}
+body .profile_section .new_packages .package_list .package_item .skeleton-img {
+  min-width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  background: #e0e0e0;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+body .profile_section .new_packages .package_list .package_item .content {
+  width: 100%;
+}
+body .profile_section .new_packages .package_list .package_item ul {
+  gap: 4px;
+}
+body .profile_section .new_packages .package_list .package_item .skeleton-text {
+  background: #e0e0e0;
+  height: 16px;
+  border-radius: 4px;
+  animation: pulse 1.5s ease-in-out infinite;
+  width: calc(50% - 4px);
 }
 body .profile_section .new_packages .log {
   font-size: 14px;
@@ -3008,6 +3068,31 @@ body .notification_card h6 {
 body .notification_card p {
   margin: 0;
   color: #777 !important;
+}
+body .notification_card.skeleton .content {
+  width: 100%;
+}
+body .notification_card.skeleton .content span {
+  max-width: 48px;
+}
+body .notification_card.skeleton .skeleton-img {
+  min-width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+body .notification_card.skeleton .skeleton-text {
+  background: #e0e0e0;
+  height: 16px;
+  border-radius: 4px;
+  animation: pulse 1.5s ease-in-out infinite;
+  width: calc(50% - 4px);
+}
+body .notification_card.skeleton .skeleton-text.skeleton-title {
+  width: calc(70% - 4px);
+  height: 20px;
+  animation: pulse 1.5s ease-in-out infinite;
 }
 body .sec_title {
   font-size: 24px;
@@ -3340,7 +3425,7 @@ body .restricted {
 body .restricted__items {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 1rem;
   margin-top: 3rem;
 }
 @media (min-width: 768px) {

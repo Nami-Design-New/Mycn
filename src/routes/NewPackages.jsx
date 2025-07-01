@@ -5,11 +5,12 @@ import { useTranslation } from "react-i18next";
 import OrderShipment from "../ui/modals/OrderShipment";
 import useGetSettings from "../hooks/settings/useGetSettings";
 import useGetNewPackages from "../hooks/profile/useGetNewPackages";
+import PackageLoader from "../ui/loaders/PackageLoader";
 
 export default function NewPackages() {
   const { t } = useTranslation();
   const { data: settings } = useGetSettings();
-  const { data: newPackagesData } = useGetNewPackages();
+  const { data: newPackagesData, isLoading } = useGetNewPackages();
 
   const maxPackages = settings?.max_orders_count || 6;
 
@@ -64,7 +65,9 @@ export default function NewPackages() {
       <div className="row">
         <div className="col-12 p-2">
           <h6 className="sec_title">{t("profile.newPackagesTitle")}</h6>
-          <p className="sec_desc">{t("profile.newPackagesSubtitle" , { maxPackages: maxPackages })}</p>
+          <p className="sec_desc">
+            {t("profile.newPackagesSubtitle", { maxPackages: maxPackages })}
+          </p>
         </div>
 
         <DragDropContext onDragEnd={handleDragEnd}>
@@ -78,6 +81,14 @@ export default function NewPackages() {
                     {...provided.droppableProps}
                     ref={provided.innerRef}
                   >
+                    {isLoading && (
+                      <>
+                        {Array.from({ length: 3 }).map((_, index) => (
+                          <PackageLoader key={index} />
+                        ))}
+                      </>
+                    )}
+                    
                     {newPackages?.map((pkg, index) => (
                       <Draggable
                         key={pkg.id}

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
 import SubmitButton from "../../ui/forms/SubmitButton";
-import OtpContainer from "./../../ui/forms/OtpContainer";
+import OtpContainer from "../../ui/forms/OtpContainer";
 import axiosInstance from "../../utils/axiosInstance";
 
 export default function Step2({ setStep, email }) {
@@ -21,9 +21,11 @@ export default function Step2({ setStep, email }) {
       if (res.status === 200) {
         toast.success(t("auth.codeVerified", { email }));
         setStep(3);
+      } else {
+        toast.error(t("auth.wrongCode"));
       }
     } catch (error) {
-      toast.error(error.message || t("auth.somethingWentWrong"));
+      console.log(error);
     } finally {
       setLoading(false);
     }

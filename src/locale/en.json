@@ -72,7 +72,9 @@
     "registerTitle2": "Verify Your Email",
     "registerSubtitle2": "Please verify your email address to receive a verification code",
     "codeSent": "A verification code has been sent to your email address {{email}}. Please check your inbox.",
-    "emailSubscribed": "Your email has been subscribed successfully"
+    "emailSubscribed": "Your email has been subscribed successfully",
+    "wrongCode": "The verification code is incorrect",
+    "emailNotFound": "Email address not found"
   },
   "validation": {
     "required": "This field is required",
@@ -245,7 +247,8 @@
     "subtitle": "FAQs",
     "title": "Have a question? We're here to help!",
     "viewAll": "View All FAQs",
-    "signUp": "Sign Up Now, It's Free!"
+    "signUp": "Sign Up Now, It's Free!",
+    "startShipping": "Start Shipping Now!"
   },
   "contact": {
     "followUs": "Follow Us",

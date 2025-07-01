@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import InputField from "../../ui/forms/InputField";
 import useGetSettings from "../../hooks/settings/useGetSettings";
 import useContact from "../../hooks/settings/useContact";
-import SubmitButton from "./../../ui/forms/SubmitButton";
+import SubmitButton from "../../ui/forms/SubmitButton";
 
 export default function ContactForm() {
   const { t } = useTranslation();

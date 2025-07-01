@@ -2,10 +2,12 @@ import { Accordion } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 import useGetLatestFaqs from "../../hooks/faqs/useGetLatestFaqs";
+import useAuth from "../../hooks/useAuth";
 
 export default function Faqs() {
   const { t } = useTranslation();
   const { data: faqs } = useGetLatestFaqs();
+  const { isAuthed } = useAuth();
 
   return (
     <section className="faqs_section">
@@ -32,8 +34,8 @@ export default function Faqs() {
               <Link to="/faqs" className="btn">
                 {t("faq.viewAll")}
               </Link>
-              <Link to="/signup" className="btn">
-                {t("faq.signUp")}
+              <Link to={isAuthed ? "/profile" : "/signup"} className="btn">
+                {isAuthed ? t("faq.startShipping") : t("faq.signUp")}
               </Link>
             </div>
           </div>

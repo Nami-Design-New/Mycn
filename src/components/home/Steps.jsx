@@ -1,8 +1,10 @@
 import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
+import useAuth from "../../hooks/useAuth";
 
 export default function Steps() {
   const { t } = useTranslation();
+  const { isAuthed } = useAuth();
 
   return (
     <section className="steps-section mt-80">
@@ -20,7 +22,7 @@ export default function Steps() {
                 className="step-img"
               />
               <h4>{t("steps.step1.title")}</h4>
-              <Link className="highlight" to="/signup">
+              <Link className="highlight" to={isAuthed ? "/profile" : "/signup"}>
                 {t("steps.step1.link")}
               </Link>
               <p>{t("steps.step1.description")}</p>

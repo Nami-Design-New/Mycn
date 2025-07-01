@@ -4,7 +4,7 @@ import { Link } from "react-router";
 import { toast } from "sonner";
 import InputField from "../../ui/forms/InputField";
 import SubmitButton from "../../ui/forms/SubmitButton";
-import axiosInstance from "./../../utils/axiosInstance";
+import axiosInstance from "../../utils/axiosInstance";
 
 export default function Step1({ setStep, email, setEmail }) {
   const { t } = useTranslation();
@@ -21,9 +21,11 @@ export default function Step1({ setStep, email, setEmail }) {
       if (res.status === 200) {
         toast.success(t("auth.resetLinkSent", { email }));
         setStep(2);
+      } else {
+        toast.error(t("auth.emailNotFound"));
       }
     } catch (error) {
-      toast.error(error.message || t("auth.somethingWentWrong"));
+      console.log(error);
     } finally {
       setLoading(false);
     }

@@ -1,7 +1,7 @@
 import { ProgressBar } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
-import { ORDER_STATUS } from "./../../utils/constants";
+import { ORDER_STATUS } from "../../utils/constants";
 
 export default function OrderCard({ shipment }) {
   const { t } = useTranslation();

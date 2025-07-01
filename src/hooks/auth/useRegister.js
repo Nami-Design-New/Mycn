@@ -118,9 +118,8 @@ export default function useRegister(t, setStep) {
       });
     },
     onError: (error) => {
-      toast.error(
-        error.response?.data?.message || error.message || "Something went wrong"
-      );
+      toast.error(t("auth.wrongCode"));
+      console.log("error in step 2", error);
     },
   });
 

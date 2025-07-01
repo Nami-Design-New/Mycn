@@ -21,11 +21,10 @@ export default function Step1({ setStep, email, setEmail }) {
       if (res.status === 200) {
         toast.success(t("auth.resetLinkSent", { email }));
         setStep(2);
-      } else {
-        toast.error(t("auth.emailNotFound"));
       }
     } catch (error) {
-      console.log(error);
+      toast.error(t("auth.emailNotFound"));
+      console.log("error in step 1", error);
     } finally {
       setLoading(false);
     }

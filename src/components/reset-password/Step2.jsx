@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
 import SubmitButton from "../../ui/forms/SubmitButton";
@@ -9,6 +9,17 @@ export default function Step2({ setStep, email }) {
   const { t } = useTranslation();
   const [loading, setLoading] = useState(false);
   const [code, setCode] = useState("");
+  const [timer, setTimer] = useState(60);
+  const [resendDisabled, setResendDisabled] = useState(false);
+
+  useEffect(() => {
+    if (timer > 0) {
+      const countdown = setTimeout(() => setTimer(timer - 1), 1000);
+      return () => clearTimeout(countdown);
+    } else {
+      setResendDisabled(false);
+    }
+  }, [timer]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,13 +32,30 @@ export default function Step2({ setStep, email }) {
       if (res.status === 200) {
         toast.success(t("auth.codeVerified", { email }));
         setStep(3);
+      }
+    } catch (error) {
+      toast.error(t("auth.wrongCode"));
+      console.log("error in step 2", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleResend = async () => {
+    try {
+      const res = await axiosInstance.post("/auth/sendOtp", {
+        email: email,
+        type: "reset_password ",
+      });
+      if (res.status === 200) {
+        toast.success(t("auth.resetLinkSent", { email }));
+        setResendDisabled(true);
+        setTimer(60);
       } else {
-        toast.error(t("auth.wrongCode"));
+        toast.error(t("auth.emailNotFound"));
       }
     } catch (error) {
       console.log(error);
-    } finally {
-      setLoading(false);
     }
   };
 
@@ -41,6 +69,30 @@ export default function Step2({ setStep, email }) {
       <form className="form_ui mt-5" onSubmit={handleSubmit}>
         <div className="form_group mb-4">
           <OtpContainer setCode={setCode} />
+        </div>
+
+        <div className="resend-code">
+          <span className={`resend_link ${resendDisabled ? "disabled" : ""}`}>
+            {t("auth.didnotReceiveCode")}
+            <span
+              className=""
+              style={{ cursor: "pointer" }}
+              onClick={handleResend}
+            >
+              {t("auth.resendCode")}
+            </span>
+          </span>
+          <div
+            className="timer flex-row-reverse"
+            style={{ justifyContent: "end !important" }}
+          >
+            <span>
+              {Math.floor(timer / 60)
+                .toString()
+                .padStart(2, "0")}
+            </span>
+            :<span>{(timer % 60).toString().padStart(2, "0")}</span>
+          </div>
         </div>
 
         <div className="reset_btns">

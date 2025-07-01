@@ -511,6 +511,7 @@ body {
 }
 body header {
   position: fixed;
+  background: #fff;
   top: 0;
   left: 0;
   width: 100%;
@@ -1215,6 +1216,43 @@ body .form-check .form-check-input {
   width: 16px;
   height: 16px;
   box-shadow: none !important;
+}
+body .resend-code {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+body .resend-code .resend_link {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  color: #a80200;
+  gap: 6px;
+  color: #333333;
+  cursor: pointer;
+}
+body .resend-code .resend_link span {
+  white-space: nowrap;
+  color: #a80200;
+  cursor: pointer;
+}
+body .resend-code .resend_link.disabled {
+  pointer-events: none;
+}
+body .resend-code .resend_link.disabled span {
+  color: #a80200;
+  cursor: default;
+}
+body .resend-code .timer {
+  flex: 1 0;
+  display: flex;
+  justify-content: end !important;
+}
+body .resend-code .timer span {
+  color: #a80200;
 }
 body .hero_section {
   height: 100vh;

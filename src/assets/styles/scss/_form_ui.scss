@@ -198,3 +198,44 @@
   height: 16px;
   box-shadow: none !important;
 }
+
+.resend-code {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  .resend_link {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    color: $main;
+    gap: 6px;
+    color: #333333;
+    cursor: pointer;
+
+    span {
+      white-space: nowrap;
+      color: $main;
+      cursor: pointer;
+    }
+
+    &.disabled {
+      pointer-events: none;
+
+      span {
+        color: $main;
+        cursor: default;
+      }
+    }
+  }
+  .timer {
+    flex: 1 0;
+    display: flex;
+    justify-content: end !important;
+    span {
+      color: $main;
+    }
+  }
+}

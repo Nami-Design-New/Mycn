@@ -74,7 +74,9 @@
     "codeSent": "A verification code has been sent to your email address {{email}}. Please check your inbox.",
     "emailSubscribed": "Your email has been subscribed successfully",
     "wrongCode": "The verification code is incorrect",
-    "emailNotFound": "Email address not found"
+    "emailNotFound": "Email address not found",
+    "didnotReceiveCode": "Didn't receive the code?",
+    "resendCode": "Resend Code"
   },
   "validation": {
     "required": "This field is required",

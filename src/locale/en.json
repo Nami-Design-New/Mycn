@@ -83,9 +83,12 @@
     "required": "This field is required",
     "email": "Please enter a valid email address",
     "passwordComplexity": "Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character",
-    "min": "Password must be at least {{min}} characters",
+    "min": "Must be at least {{min}} characters",
+    "max": "Must be no more than {{max}} characters",
     "passwordMatch": "Passwords do not match",
-    "terms": "You must accept the terms and conditions"
+    "terms": "You must agree to the terms and conditions",
+    "alphaNumericOnly": "Only letters and numbers are allowed",
+    "numbersOnly": "Only numeric values are allowed"
   },
   "features": {
     "subtitle": "Why choose us",
@@ -329,7 +332,7 @@
     "weight": "Weight",
     "enterWeight": "Enter weight",
     "country": "Country",
-    "selectCountry":"Select country",
+    "selectCountry": "Select country",
     "days": "5 to 15 business days",
     "note2": "please enter the dimensions to calculate the price accurately.",
     "vol": "(length * width * height)",

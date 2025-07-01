@@ -14,26 +14,54 @@ export default function useRegister(t, setStep) {
   const [, setCookie] = useCookies(["token"]);
 
   const schema = yup.object().shape({
-    first_name: yup.string().required(t("validation.required")),
-    last_name: yup.string().required(t("validation.required")),
-    whatsapp: yup.string().required(t("validation.required")),
+    first_name: yup
+      .string()
+      .required(t("validation.required"))
+      .min(2, t("validation.min", { min: 2 }))
+      .max(32, t("validation.max", { max: 32 }))
+      .matches(
+        /^[A-Za-z0-9\u0600-\u06FF\s]+$/,
+        t("validation.alphaNumericOnly")
+      ),
+
+    last_name: yup
+      .string()
+      .required(t("validation.required"))
+      .min(2, t("validation.min", { min: 2 }))
+      .max(32, t("validation.max", { max: 32 }))
+      .matches(
+        /^[A-Za-z0-9\u0600-\u06FF\s]+$/,
+        t("validation.alphaNumericOnly")
+      ),
+
+    whatsapp: yup
+      .string()
+      .required(t("validation.required"))
+      .matches(/^\d+$/, t("validation.numbersOnly"))
+      .min(6, t("validation.min", { min: 6 })),
+
     country_id: yup.string().required(t("validation.required")),
+
     email: yup
       .string()
+      .required(t("validation.required"))
       .email(t("validation.email"))
-      .required(t("validation.required")),
+      .max(63, t("validation.max", { max: 63 })),
+
     password: yup
       .string()
       .required(t("validation.required"))
-      .min(6, t("validation.min", { min: 8 }))
+      .min(6, t("validation.min", { min: 6 }))
       .matches(
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?#&])[A-Za-z\d@$!#%*?&]{8,}$/,
         t("validation.passwordComplexity")
       ),
+
     password_confirmation: yup
       .string()
-      .oneOf([yup.ref("password"), null], t("validation.passwordMatch"))
-      .required(t("validation.required")),
+      .required(t("validation.required"))
+      .oneOf([yup.ref("password"), null], t("validation.passwordMatch")),
+
     terms: yup
       .boolean()
       .oneOf([true], t("validation.terms"))

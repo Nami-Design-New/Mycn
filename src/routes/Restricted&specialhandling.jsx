@@ -1,67 +1,51 @@
-import { useTranslation } from "react-i18next";
+import useSpecialHandle from "./../hooks/settings/useSpecialHandle";
 
 export default function Restricted() {
-  const { t } = useTranslation();
+  const { data: special } = useSpecialHandle();
 
   return (
     <>
       <section className="restricted main_section mt-80">
         <div className="container">
           <div className="restricted__header">
-            <h3 className="section_title">{t("restricted.title")}</h3>
-            <p className="section_description">{t("restricted.description")}</p>
+            <h3 className="section_title">
+              {special?.mainSpecialHandlingPage?.title}
+            </h3>
+            <p className="section_description">
+              {special?.mainSpecialHandlingPage?.subtitle}
+            </p>
           </div>
 
-          <div className="restricted__items">
-            <div className="restricted__item">
-              <img
-                src="../icons/restricted2.svg"
-                alt={t("restricted.hazmatAlt")}
-              />
-              <div className="restricted__text">
-                <h4>{t("restricted.hazmatTitle")}</h4>
-                <p>{t("restricted.hazmatDescription")}</p>
+          <div className="row">
+            {special?.specialHandlingFeatures?.map((item, index) => (
+              <div className="col-lg-4 col-12 p-2" key={index}>
+                <div className="restricted__item">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="restricted__image"
+                  />
+                  <div className="restricted__text">
+                    <h4>{item.title}</h4>
+                    <p>{item.description}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-
-            <div className="restricted__item">
-              <img
-                src="../icons/restricted1.svg"
-                alt={t("restricted.fragileAlt")}
-              />
-              <div className="restricted__text">
-                <h4>{t("restricted.fragileTitle")}</h4>
-                <p>{t("restricted.fragileDescription")}</p>
-              </div>
-            </div>
-
-            <div className="restricted__item">
-              <img
-                src="../icons/restricted3.svg"
-                alt={t("restricted.prohibitedAlt")}
-              />
-              <div className="restricted__text">
-                <h4>{t("restricted.prohibitedTitle")}</h4>
-                <p>{t("restricted.prohibitedDescription")}</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
         <div className="restricted__benefits">
-          <h4>{t("restricted.hazardousMaterialsTitle")}</h4>
-          <p>{t("restricted.hazardousMaterialsDescription")}</p>
-          <ol>
-            <li>{t("restricted.hazardousStep1")}</li>
-            <li>{t("restricted.hazardousStep2")}</li>
-            <li>{t("restricted.hazardousStep3")}</li>
-          </ol>
-          <p>
-            {t("restricted.contactSupport")}
-            <a href="mailto:support@example.com">support@example.com</a>
-          </p>
+          <h4>{special?.mainSpecialHandlingPage?.title2}</h4>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: special?.mainSpecialHandlingPage?.description,
+            }}
+          ></div>
         </div>
 
-        <div className="restricted__note">⚠️ {t("restricted.contactNote")}</div>
+        <div className="restricted__note">
+          {special?.mainSpecialHandlingPage?.note}
+        </div>
       </section>
     </>
   );

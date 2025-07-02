@@ -1,41 +1,13 @@
 import React from "react";
-import PackageCard from "../ui/cards/PackageCard";
 import { useTranslation } from "react-i18next";
-
-const individualPackages = [
-  {
-    id: 1,
-    image: "../images/2.webp",
-    description: "Amazon - Electronics",
-    price: 297,
-  },
-  { id: 2, image: "../images/4.webp", description: "eBay-Shoes", price: 208 },
-  {
-    id: 3,
-    image: "../images/6.webp",
-    description: "AliExpress - Accessories",
-    price: 306,
-  },
-];
-
-const consolidatedPackage = [
-  {
-    id: 1,
-    image: "../images/1.webp",
-    description: "Amazon - Electronics",
-    price: 90,
-  },
-  { id: 2, image: "../images/3.webp", description: "eBay-Shoes", price: 93 },
-  {
-    id: 3,
-    image: "../images/5.webp",
-    description: "AliExpress - Accessories",
-    price: 131,
-  },
-];
+import PackageCard from "../ui/cards/PackageCard";
+import useConsilidation from "./../hooks/settings/useConsilidation";
 
 export default function PackageConsolidation() {
   const { t } = useTranslation();
+  const { data: concilidation } = useConsilidation();
+
+  const details = concilidation?.packageConsolidationDetail || [];
 
   return (
     <section className="package main_section mt-80">
@@ -46,28 +18,38 @@ export default function PackageConsolidation() {
         </div>
 
         <div className="row">
-          {individualPackages.map((pkg, index) => (
-            <React.Fragment key={index}>
-              <div className="col-12 col-lg-6 p-2">
-                <div className="package-section">
-                  <h5 className="section-title red">
-                    <i className="fas fa-box-open"></i>{" "}
-                    {t("package.individual")}
-                  </h5>
-                  <PackageCard data={individualPackages[index]} />
-                </div>
-              </div>
+          {details.map((_, i) => {
+            if (i % 2 !== 0) return null;
 
-              <div className="col-12 col-lg-6 p-2">
-                <div className="package-section">
-                  <h5 className="section-title green">
-                    <i className="fas fa-boxes"></i> {t("package.consolidated")}
-                  </h5>
-                  <PackageCard data={consolidatedPackage[index]} />
+            const individual = details[i];
+            const consolidated = details[i + 1];
+
+            return (
+              <React.Fragment key={i}>
+                {/* Individual */}
+                <div className="col-12 col-lg-6 p-2">
+                  <div className="package-section">
+                    <h5 className="section-title red">
+                      <i className="fas fa-box-open"></i>{" "}
+                      {t("package.individual")}
+                    </h5>
+                    <PackageCard data={individual} />
+                  </div>
                 </div>
-              </div>
-            </React.Fragment>
-          ))}
+
+                {/* Consolidated */}
+                <div className="col-12 col-lg-6 p-2">
+                  <div className="package-section">
+                    <h5 className="section-title green">
+                      <i className="fas fa-boxes"></i>{" "}
+                      {t("package.consolidated")}
+                    </h5>
+                    <PackageCard data={consolidated} />
+                  </div>
+                </div>
+              </React.Fragment>
+            );
+          })}
         </div>
       </div>
     </section>

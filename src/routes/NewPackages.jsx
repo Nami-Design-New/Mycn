@@ -34,7 +34,9 @@ export default function NewPackages() {
       destination.droppableId === "consolidated" &&
       consolidated.length >= maxPackages
     ) {
-      toast.error(t("profile.maxPackagesError", { maxPackages: maxPackages }));
+      toast.warning(
+        t("profile.maxPackagesError", { maxPackages: maxPackages })
+      );
       return;
     }
 
@@ -88,7 +90,7 @@ export default function NewPackages() {
                         ))}
                       </>
                     )}
-                    
+
                     {newPackages?.map((pkg, index) => (
                       <Draggable
                         key={pkg.id}

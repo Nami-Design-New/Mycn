@@ -2912,6 +2912,9 @@ body .profile_section .new_packages .package_list .package_item ul {
   color: #000;
   font-size: 14px;
 }
+body .profile_section .new_packages .package_list .package_item .skeleton ul {
+  gap: 4px;
+}
 body .profile_section .new_packages .package_list .package_item .skeleton-img {
   min-width: 64px;
   height: 64px;
@@ -2921,9 +2924,6 @@ body .profile_section .new_packages .package_list .package_item .skeleton-img {
 }
 body .profile_section .new_packages .package_list .package_item .content {
   width: 100%;
-}
-body .profile_section .new_packages .package_list .package_item ul {
-  gap: 4px;
 }
 body .profile_section .new_packages .package_list .package_item .skeleton-text {
   background: #e0e0e0;

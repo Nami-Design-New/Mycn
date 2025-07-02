@@ -434,6 +434,11 @@
           font-size: 14px;
         }
 
+        .skeleton {
+          ul {
+            gap: 4px;
+          }
+        }
         .skeleton-img {
           min-width: 64px;
           height: 64px;
@@ -443,9 +448,6 @@
         }
         .content {
           width: 100%;
-        }
-        ul {
-          gap: 4px;
         }
         .skeleton-text {
           background: #e0e0e0;

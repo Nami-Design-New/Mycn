@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import HowWeWorks from "../components/home/HowWeWorks";
 import Testimonials from "../components/home/Testimonials";
 import useGetAbout from "../hooks/settings/useGetAbout";
 
@@ -75,7 +74,6 @@ export default function About() {
       </section>
 
       <Testimonials data={about?.testimonialDetail} />
-      <HowWeWorks data={about?.workProcessDetail} />
     </>
   );
 }

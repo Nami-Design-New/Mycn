@@ -1,11 +1,14 @@
 import Steps from "../components/home/Steps";
-import Faqs from "../ui/layout/Faqs";
+import useGetAbout from "../hooks/settings/useGetAbout";
+import HowWeWorks from "./../components/home/HowWeWorks";
 
 export default function HowWorks() {
+  const { data: about } = useGetAbout();
+
   return (
     <>
       <Steps />
-      <Faqs />
+      <HowWeWorks data={about?.workProcessDetail} />
     </>
   );
 }

@@ -58,25 +58,21 @@ export default function Testimonials({ data }) {
                 <SwiperSlide key={index}>
                   <div className="review">
                     <div className="review-speech">
-                      <p>{slide.text}</p>
+                      <p>{slide?.text}</p>
                     </div>
                     <div className="media">
                       <div className="thumbnail">
-                        <img src={slide.author_image} alt="testimonial image" />
+                        <img src={slide?.author_image} style={{ objectFit: "cover" }} alt="testimonial image" />
                       </div>
                       <div className="media-body">
-                        <h6 className="title">{slide.author_name}</h6>
+                        <h6 className="title">{slide?.author_name}</h6>
                         <div className="rating">
-                          {Array(+slide.rate)
-                            .fill()
-                            .map((_, index) => (
-                              <i key={index} className="fa-solid fa-star"></i>
-                            ))}
-                          {Array(5 - +slide.rate)
-                            .fill()
-                            .map((_, index) => (
-                              <i key={index} className="fa-regular fa-star"></i>
-                            ))}
+                          {Array.from({ length: Math.max(0, Number(slide?.rate)) }).map((_, index) => (
+                            <i key={index} className="fa-solid fa-star"></i>
+                          ))}
+                          {Array.from({ length: Math.max(0, 5 - Number(slide?.rate)) }).map((_, index) => (
+                            <i key={index} className="fa-regular fa-star"></i>
+                          ))}
                         </div>
                       </div>
                     </div>

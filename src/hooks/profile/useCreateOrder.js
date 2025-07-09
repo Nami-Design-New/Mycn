@@ -2,10 +2,10 @@ import { useMutation } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { useNavigate } from "react-router";
 import axiosInstance from "../../utils/axiosInstance";
-import useGetAddresses from "./useGetAddresses";
+import useGetNewPackages from "./useGetNewPackages";
 
 export default function useCreateOrder(t, setShow, payload) {
-  const { refetch } = useGetAddresses();
+  const { refetch } = useGetNewPackages();
   const navigate = useNavigate();
 
   const { mutate: createOrder, isPending } = useMutation({

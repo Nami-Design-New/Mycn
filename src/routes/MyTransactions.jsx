@@ -22,7 +22,6 @@ export default function MyTransactions() {
                   <th>{t("common.date")}</th>
                   <th>{t("common.amount")}</th>
                   <th>{t("common.desccription")}</th>
-                  <th>{t("common.status")}</th>
                 </tr>
               </thead>
 
@@ -33,7 +32,6 @@ export default function MyTransactions() {
                     <td>{item.created_at || "12-01-2025"}</td>
                     <td>{item.amount}</td>
                     <td>{item.description}</td>
-                    <td>{item.status}</td>
                   </tr>
                 ))}
               </tbody>

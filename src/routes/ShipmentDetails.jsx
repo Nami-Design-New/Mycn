@@ -51,9 +51,7 @@ export default function ShipmentDetails() {
                     <th>{t("common.trackingNumber")}</th>
                     <th>{t("common.weight")}</th>
                     <th>{t("common.dimensions")}</th>
-                    <th>{t("common.quantity")}</th>
                     <th>{t("common.source")}</th>
-                    <th>{t("common.receiptDate")}</th>
                     <th>{t("common.actions")}</th>
                   </tr>
                 </thead>
@@ -64,9 +62,7 @@ export default function ShipmentDetails() {
                       <td>{item?.package.tracking_id}</td>
                       <td>{item?.package.weight}</td>
                       <td>{item?.package.size}</td>
-                      <td>{item?.package.quantity}</td>
                       <td>{item?.package.source}</td>
-                      <td>{item?.package.receipt_date}</td>
                       <td className="actions">
                         <i
                           className="fa-regular fa-eye cursor-pointer"

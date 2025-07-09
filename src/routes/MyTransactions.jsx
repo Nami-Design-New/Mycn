@@ -31,7 +31,7 @@ export default function MyTransactions() {
                     <td>{item.id}</td>
                     <td>{item.created_at || "12-01-2025"}</td>
                     <td>{item.amount}</td>
-                    <td>{item.description}</td>
+                    <td>{item.notes}</td>
                   </tr>
                 ))}
               </tbody>

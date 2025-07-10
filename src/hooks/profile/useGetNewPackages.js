@@ -7,7 +7,7 @@ export default function useGetNewPackages() {
     queryFn: async () => {
       try {
         const res = await axiosInstance.get("/profile/packages");
-        if (res.status === 200) {
+        if (res.data.code === 200) {
           return res.data.data || {};
         }
       } catch (error) {

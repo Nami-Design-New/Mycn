@@ -16,11 +16,14 @@ export default function Step1({ setStep, email, setEmail }) {
     try {
       const res = await axiosInstance.post("/auth/sendOtp", {
         email: email,
-        type: "reset_password ",
+        type: "reset_password",
       });
-      if (res.status === 200) {
+
+      if (res.data.code === 200) {
         toast.success(t("auth.resetLinkSent", { email }));
         setStep(2);
+      } else {
+        toast.error(res.data.message);
       }
     } catch (error) {
       toast.error(t("auth.emailNotFound"));

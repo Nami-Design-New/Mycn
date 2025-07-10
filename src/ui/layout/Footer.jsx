@@ -18,7 +18,7 @@ export default function Footer() {
       const res = await axiosInstance.post("/home/storeEmailToNewsLetters", {
         email: email,
       });
-      if (res.status === 200) {
+      if (res.data.code === 200) {
         toast.success(t("auth.emailSubscribed"));
         setEmail("");
       }

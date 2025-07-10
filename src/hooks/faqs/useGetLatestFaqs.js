@@ -10,7 +10,7 @@ export default function useGetLatestFaqs() {
     queryFn: async () => {
       try {
         const res = await axiosInstance.get("/home/latestFaqs");
-        if (res.status === 200) {
+        if (res.data.code === 200) {
           return res.data.data || {};
         }
       } catch (error) {

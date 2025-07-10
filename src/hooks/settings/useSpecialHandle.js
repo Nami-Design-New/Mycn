@@ -10,7 +10,7 @@ export default function useSpecialHandle() {
     queryFn: async () => {
       try {
         const res = await axiosInstance.get("/home/restricted-special-handling");
-        if (res.status === 200) {
+        if (res.data.code === 200) {
           return res.data.data || {};
         }
       } catch (error) {

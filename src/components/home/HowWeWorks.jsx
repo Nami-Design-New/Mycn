@@ -1,9 +1,6 @@
-import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 
-export default function HowWeWorks({ data }) {
-  const { t } = useTranslation();
-
+export default function HowWeWorks({ data, head }) {
   const onMouseEnter = (e) => {
     const steps = document.querySelectorAll(".step");
     steps.forEach((step) => step.classList.remove("active"));
@@ -26,10 +23,8 @@ export default function HowWeWorks({ data }) {
       <div className="container">
         <div className="row">
           <div className="col-12 p-2 mb-3">
-            <h6 className="section_hint">{t("about.workProcessTitle")}</h6>
-            <h3 className="section_title">
-              {t("about.workProcessDescription")}
-            </h3>
+            <h6 className="section_hint">{head?.title}</h6>
+            <h3 className="section_title">{head?.subtitle}</h3>
           </div>
 
           <div className="col-12 p-2">

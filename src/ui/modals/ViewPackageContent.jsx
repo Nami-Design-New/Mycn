@@ -21,25 +21,21 @@ export default function ViewPackageContent({ show, setShow, packageData }) {
       <Modal.Body>
         <div className="package_contents d-flex gap-3 align-items-start">
           <div className="img">
-            <img src={packageData.image} alt="contents" />
+            <img
+              src={packageData.image}
+              alt="contents"
+              style={{ width: "100%", aspectRatio: "1/1" }}
+            />
           </div>
           <div className="content">
             <p>
               {t("common.weight")}: <strong>{packageData.weight}</strong>
             </p>
             <p>
-              {t("common.dimensions")}:{" "}
-              <strong>{packageData.dimensions}</strong>
-            </p>
-            <p>
-              {t("common.quantity")}: <strong>{packageData.quantity}</strong>
+              {t("common.dimensions")}: <strong>{packageData.size}</strong>
             </p>
             <p>
               {t("common.source")}: <strong>{packageData.source}</strong>
-            </p>
-            <p>
-              {t("common.receiptDate")}:{" "}
-              <strong>{packageData.receipt_date}</strong>
             </p>
           </div>
         </div>

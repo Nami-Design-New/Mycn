@@ -1,8 +1,4 @@
-import { useTranslation } from "react-i18next";
-
-const ExperienceSection = ({ experiences }) => {
-  const { t } = useTranslation();
-
+const ExperienceSection = ({ experiences, head }) => {
   return (
     <section className="experience-section text-center">
       <div className="shape-img">
@@ -11,8 +7,8 @@ const ExperienceSection = ({ experiences }) => {
 
       <div className="container">
         <div className="section-header">
-          <p className="section_hint">{t("about.experiences")}</p>
-          <h2>{t("about.experiencesTitle")}</h2>
+          <p className="section_hint">{head.title}</p>
+          <h2>{head.subtitle}</h2>
         </div>
         <div className="row">
           {experiences?.map((item, index) => (

@@ -4,11 +4,9 @@ import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-export default function Testimonials({ data }) {
-  const { t, i18n } = useTranslation();
+export default function Testimonials({ data, head }) {
+  const { i18n } = useTranslation();
   const lang = i18n.language === "ar" ? "ar" : "en";
-
- 
 
   return (
     <section className="testimonials_section">
@@ -16,8 +14,8 @@ export default function Testimonials({ data }) {
         <div className="row">
           <div className="col-12 p-2 d-flex justify-content-between">
             <div>
-              <h6 className="section_hint">{t("about.subtitle")}</h6>
-              <h3 className="section_title">{t("about.title")}</h3>
+              <h6 className="section_hint">{head?.title}</h6>
+              <h3 className="section_title">{head?.subtitle}</h3>
             </div>
 
             <div className="swiper_navigation">
@@ -62,15 +60,23 @@ export default function Testimonials({ data }) {
                     </div>
                     <div className="media">
                       <div className="thumbnail">
-                        <img src={slide?.author_image} style={{ objectFit: "cover" }} alt="testimonial image" />
+                        <img
+                          src={slide?.author_image}
+                          style={{ objectFit: "cover" }}
+                          alt="testimonial image"
+                        />
                       </div>
                       <div className="media-body">
                         <h6 className="title">{slide?.author_name}</h6>
                         <div className="rating">
-                          {Array.from({ length: Math.max(0, Number(slide?.rate)) }).map((_, index) => (
+                          {Array.from({
+                            length: Math.max(0, Number(slide?.rate)),
+                          }).map((_, index) => (
                             <i key={index} className="fa-solid fa-star"></i>
                           ))}
-                          {Array.from({ length: Math.max(0, 5 - Number(slide?.rate)) }).map((_, index) => (
+                          {Array.from({
+                            length: Math.max(0, 5 - Number(slide?.rate)),
+                          }).map((_, index) => (
                             <i key={index} className="fa-regular fa-star"></i>
                           ))}
                         </div>

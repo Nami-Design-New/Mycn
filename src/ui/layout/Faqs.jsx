@@ -14,8 +14,12 @@ export default function Faqs() {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12 p-2 mb-3">
-            <h6 className="section_hint">{t("faq.subtitle")}</h6>
-            <h3 className="section_title text-center">{t("faq.title")}</h3>
+            <h6 className="section_hint">
+              {faqs?.mainFrequentlyQuestions?.title}
+            </h6>
+            <h3 className="section_title text-center">
+              {faqs?.mainFrequentlyQuestions?.subtitle}
+            </h3>
           </div>
 
           <div className="col-lg-9 col-12 p-2">

@@ -29,9 +29,11 @@ export default function Step2({ setStep, email }) {
         email: email,
         code: code,
       });
-      if (res.status === 200) {
+      if (res.data.code === 200) {
         toast.success(t("auth.codeVerified", { email }));
         setStep(3);
+      } else {
+        toast.error(res.data.message);
       }
     } catch (error) {
       toast.error(t("auth.wrongCode"));
@@ -47,7 +49,7 @@ export default function Step2({ setStep, email }) {
         email: email,
         type: "reset_password ",
       });
-      if (res.status === 200) {
+      if (res.data.code === 200) {
         toast.success(t("auth.resetLinkSent", { email }));
         setResendDisabled(true);
         setTimer(60);

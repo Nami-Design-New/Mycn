@@ -10,7 +10,7 @@ export default function useGetCountries() {
     queryFn: async () => {
       try {
         const res = await axiosInstance.get("/home/countries");
-        if (res.status === 200) {
+        if (res.data.code === 200) {
           return res.data.data || {};
         }
       } catch (error) {

@@ -13,11 +13,11 @@ export default function Home() {
   return (
     <>
       <Hero slides={home?.sliders} />
-      <Features features={home?.whyChooseUsDetail} />
-      <ExperienceSection experiences={home?.experienceDetail} />
-      <Transportation images={home?.deliveryVehiclesDetail} />
-      <HowWeWorks data={home?.workProcessDetail} />
-      <Testimonials data={home?.testimonialDetail} />
+      <Features features={home?.whyChooseUsDetail} head={home?.mainWhyChooseUs}/>
+      <ExperienceSection experiences={home?.experienceDetail} head={home?.mainExperience} />
+      <Transportation images={home?.deliveryVehiclesDetail} head={home?.mainDeliveryVehicles} />
+      <HowWeWorks data={home?.workProcessDetail} head={home?.mainWorkProcess} />
+      <Testimonials data={home?.testimonialDetail} head={home?.mainTestimonial} />
       <Faqs />
     </>
   );

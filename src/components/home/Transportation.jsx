@@ -1,21 +1,16 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useTranslation } from "react-i18next";
 import { Autoplay } from "swiper/modules";
 
 import "swiper/css";
 
-export default function Transportation({ images }) {
-  const { t } = useTranslation();
-
+export default function Transportation({ images, head }) {
   return (
     <section className="transportation_section">
       <div className="container">
         <div className="row">
           <div className="col-12 p-2 mb-3">
-            <h6 className="section_hint">{t("transportationSubtitle")}</h6>
-            <h3 className="section_title">
-              {t("transportationTitle")}
-            </h3>
+            <h6 className="section_hint">{head?.title}</h6>
+            <h3 className="section_title">{head?.subtitle}</h3>
           </div>
 
           <div className="col-12 p-2">
@@ -40,7 +35,11 @@ export default function Transportation({ images }) {
               {images?.map((src, index) => (
                 <SwiperSlide key={index}>
                   <div className="logo">
-                    <img src={src.image} alt={`c ${index + 1}`} loading="lazy" />
+                    <img
+                      src={src.image}
+                      alt={`c ${index + 1}`}
+                      loading="lazy"
+                    />
                   </div>
                 </SwiperSlide>
               ))}

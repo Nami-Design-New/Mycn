@@ -31,7 +31,7 @@ export default function RegisterStep2({
         email: email,
         type: "register",
       });
-      if (res.status === 200) {
+      if (res.data.code === 200) {
         toast.success(t("auth.resetLinkSent", { email }));
         setResendDisabled(true);
         setTimer(60);

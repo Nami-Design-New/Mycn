@@ -46,7 +46,7 @@ export default function Step3({ setStep, email }) {
   const handleReset = async (data) => {
     try {
       const res = await axiosInstance.post("auth/resetPassword", data);
-      if (res.status === 200) {
+      if (res.data.code === 200) {
         setCookie("token", res.data?.data?.auth?.token, {
           path: "/",
           secure: true,
@@ -54,6 +54,8 @@ export default function Step3({ setStep, email }) {
         });
         navigate("/profile");
         toast.success(t("auth.passwordChangedSuccess"));
+      } else {
+        toast.error(res.data.message);
       }
     } catch (error) {
       toast.error(error.message || t("auth.somethingWentWrong"));

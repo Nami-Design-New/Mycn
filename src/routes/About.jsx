@@ -73,7 +73,7 @@ export default function About() {
         </div>
       </section>
 
-      <Testimonials data={about?.testimonialDetail} />
+      <Testimonials data={about?.testimonialDetail} head={about?.mainTestimonial} />
     </>
   );
 }

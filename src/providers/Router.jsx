@@ -25,6 +25,7 @@ import ShipmentDetails from "../routes/ShipmentDetails";
 import NewPackages from "../routes/NewPackages";
 import HowWorks from "../routes/HowWorks";
 import ResetPassword from "../routes/ResetPassword";
+import ExpectedPackages from "../routes/ExpectedPackages";
 
 export const router = createBrowserRouter([
   {
@@ -83,6 +84,10 @@ export const router = createBrowserRouter([
           {
             index: true,
             element: <Address />,
+          },
+          {
+            path: "expected-packages",
+            element: <ExpectedPackages />,
           },
           {
             path: "my-shipments",

@@ -108,7 +108,7 @@
     "quickLinks": "Quick Links",
     "ourServices": "Our Services",
     "getInTouch": "Get In Touch",
-    "about": "About MYCN",
+    "about": "About MY CN",
     "contactUs": "Contact Us",
     "privacyPolicy": "Privacy Policy",
     "terms": "Terms & Conditions",
@@ -129,6 +129,7 @@
   },
   "profile": {
     "welcomeText": "Welcome to MY CN - Your Gateway to Chinese Shopping",
+    "expectedPackages": "Expected Packages",
     "address": {
       "title": "Your Dedicated MY CN China Shipping Hub",
       "sections": [
@@ -180,6 +181,7 @@
     "copied": "Copied!",
     "max": "Maximum",
     "trackingNumber": "Tracking Number",
+    "uploadImage": "Upload Image",
     "weight": "Weight",
     "size": "Size",
     "source": "Source",
@@ -351,13 +353,13 @@
     ]
   },
   "package": {
-    "title": "MYCN's Package Consolidation",
+    "title": "MY CN's Package Consolidation",
     "description": "Consolidate your packages into one shipment and enjoy lower fees, faster delivery, and more convenience.",
     "individual": "Shipping Individually",
     "consolidated": "Shipping After Consolidation"
   },
   "repacking": {
-    "title": "MYCN Repacking Service",
+    "title": "MY CN Repacking Service",
     "description": "Combine your packages into one shipment and enjoy lower fees, faster delivery, and more convenience.",
     "itemDescription": "For users who want to ship only one item, we can prepare the shipment as it is or with some adjustments based on your preferences. You can choose to ship with the original seller's packaging or take advantage of our repacking service for more efficiency.",
     "exampleLabel": "Example:",
@@ -366,7 +368,7 @@
     "note": "These adjustments not only save on shipping costs but also provide better protection during transit.",
     "costTitle": "How much does repacking cost?",
     "costSubtitle": "Costs",
-    "costDescription": "MYCN's repacking service costs $5. While there is a small fee, the savings from reducing the shipment size often outweigh the cost. If we cannot optimize the packaging, the $5 fee will be waived.",
+    "costDescription": "MY CN's repacking service costs $5. While there is a small fee, the savings from reducing the shipment size often outweigh the cost. If we cannot optimize the packaging, the $5 fee will be waived.",
     "careSubtitle": "Care and Customization",
     "careDescription": "We handle all items, especially fragile or high-value products, with the utmost care. You can choose to keep the original seller's packaging or request additional protection for your peace of mind.",
     "shipTitle": "Ship as is",
@@ -385,11 +387,11 @@
     "prohibitedTitle": "Prohibited Items",
     "prohibitedDescription": "Certain items are strictly prohibited from international shipping, including firearms, explosives, and illegal goods. Please check our prohibited items list before placing your order.",
     "hazardousMaterialsTitle": "How to Handle and Ship Hazardous Materials?",
-    "hazardousMaterialsDescription": "The Mycn team carefully inspects all items before shipment. If we identify any items that require special handling (hazardous items), your shipment will require special procedures. Here's what you can expect:",
+    "hazardousMaterialsDescription": "The MY CN team carefully inspects all items before shipment. If we identify any items that require special handling (hazardous items), your shipment will require special procedures. Here's what you can expect:",
     "hazardousStep1": "We provide specialized packaging and labeling to ensure safe delivery of hazardous materials.",
     "hazardousStep2": "A fee of $12.50 applies for the additional handling and preparation of each hazardous material shipment.",
     "hazardousStep3": "Shipping options for hazardous materials may be limited. We can assist you in finding the best available carrier.",
-    "contactSupport": "Contact Mycn Support via chat or email at",
+    "contactSupport": "Contact MY CN Support via chat or email at",
     "contactNote": "Please contact customer support if you're unsure whether your item is allowed or needs special handling."
   },
   "transportationSubtitle": "Our Delivery Vehicles",

@@ -31,6 +31,11 @@ export default function Profile() {
                   {t("header.dashboard")}
                 </NavLink>
 
+                <NavLink to="expected-packages" className="nav_link">
+                  <i className="fa-regular fa-box-taped"></i>
+                  {t("profile.expectedPackages")}
+                </NavLink>
+
                 <NavLink to="new-packages" className="nav_link">
                   <i className="fa-regular fa-box-taped"></i>
                   {t("header.newPackages")}

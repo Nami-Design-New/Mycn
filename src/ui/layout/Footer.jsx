@@ -138,7 +138,7 @@ export default function Footer() {
             <div className="copyright">
               <p>
                 {t("footer.copyright")} &copy; {new Date().getFullYear()}{" "}
-                {t("footer.allRightsReserved")} <span>MYCN</span>
+                {t("footer.allRightsReserved")} <span>MY CN</span>
               </p>
 
               <div className="socials">

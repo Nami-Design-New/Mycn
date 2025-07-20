@@ -14,6 +14,7 @@ export default function Register() {
     errors,
     isLoading,
     checkCode,
+    setValue,
     setCode,
     submitSendCode,
     watch,
@@ -38,6 +39,7 @@ export default function Register() {
                 register={register}
                 handleSubmit={handleSubmit(submitSendCode)}
                 errors={errors}
+                setValue={setValue}
                 watch={watch}
                 isLoading={isLoading}
               />

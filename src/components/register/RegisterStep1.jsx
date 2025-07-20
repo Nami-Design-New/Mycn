@@ -7,13 +7,14 @@ import SelectField from "../../ui/forms/SelectField";
 import SubmitButton from "../../ui/forms/SubmitButton";
 import PasswordField from "../../ui/forms/PasswordField";
 import useGetCountries from "../../hooks/settings/useGetCountries";
-import PhoneField from './../../ui/forms/PhoneField';
+import PhoneField from "./../../ui/forms/PhoneField";
 
 export default function RegisterStep1({
   register,
   handleSubmit,
   errors,
   watch,
+  setValue,
   isLoading,
 }) {
   const { t } = useTranslation();
@@ -54,12 +55,13 @@ export default function RegisterStep1({
           error={errors.email?.message}
           autoComplete="email"
         />
+
         <PhoneField
           type="tel"
           id="whatsapp"
           label={t("auth.whatsapp")}
           placeholder={t("auth.enterPhoneNumber")}
-          {...register("whatsapp")}
+          setValue={setValue}
           error={errors.whatsapp?.message}
           autoComplete="tel"
         />

@@ -2710,6 +2710,17 @@ body .profile_section .address_card {
   border-radius: 16px;
   height: 100%;
 }
+body .profile_section .address_card .img {
+  width: 100%;
+}
+body .profile_section .address_card .img img {
+  width: 100%;
+  border: 1px solid #f4f4f4;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
 body .profile_section .address_card h4 {
   font-size: 16px;
   display: flex;
@@ -3169,6 +3180,11 @@ body .image_field h6 {
 }
 body .image_field input {
   display: none;
+}
+body .expectedPackage_card {
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid #f4f4f4;
 }
 body .shipping_calculator .calculator_form {
   padding: 24px;

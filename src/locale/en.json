@@ -130,6 +130,8 @@
   "profile": {
     "welcomeText": "Welcome to MY CN - Your Gateway to Chinese Shopping",
     "expectedPackages": "Expected Packages",
+    "addExpectedPackage": "Add Expected Package",
+    "addPackage": "Add Package",
     "address": {
       "title": "Your Dedicated MY CN China Shipping Hub",
       "sections": [
@@ -178,6 +180,7 @@
   },
   "common": {
     "copy": "Copy",
+    "save": "Save",
     "copied": "Copied!",
     "max": "Maximum",
     "trackingNumber": "Tracking Number",
@@ -397,5 +400,14 @@
   "transportationSubtitle": "Our Delivery Vehicles",
   "transportationTitle": "A variety of trusted transportation methods for every shipment",
   "empty_shipments": "Here you will be able to see all your shipments.",
-  "empty_notifications": "Here you will be able to see all your notifications."
+  "empty_notifications": "Here you will be able to see all your notifications.",
+  "expected": {
+    "addSuccess": "Expected package added successfully",
+    "editSuccess": "Expected package edited successfully",
+    "edit":"Edit Package",
+    "delete":"Delete Package",
+    "empty": "Here You will see yor expected packages",
+    "deleteConfirm": "Are you sure you want to delete this package?",
+    "deleteSuccess": "Expected package deleted successfully"
+  }
 }

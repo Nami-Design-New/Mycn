@@ -71,6 +71,7 @@ export default function useRegister(t, setStep) {
   const {
     register,
     watch,
+    setValue,
     handleSubmit,
     formState: { errors },
   } = useForm({
@@ -159,6 +160,7 @@ export default function useRegister(t, setStep) {
     checkCode,
     watch,
     setCode,
+    setValue,
     code,
     submitSendCode,
   };

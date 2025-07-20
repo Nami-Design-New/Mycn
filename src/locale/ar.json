@@ -130,6 +130,8 @@
   "profile": {
     "welcomeText": "مرحبًا بكم في MY CN - بوابتك للتسوق من الصين",
     "expectedPackages": "الطرود المتوقعة",
+    "addPackage": "اضافة طرد",
+    "addExpectedPackage": "اضافة طرد متوقع",
     "address": {
       "title": "مركز الشحن الصيني المخصص لك في MY CN",
       "sections": [
@@ -183,6 +185,7 @@
     "max": "الحد الأقصى",
     "trackingNumber": "رقم التتبع",
     "weight": "الوزن",
+    "save": "حفظ",
     "size": "الحجم",
     "source": "المصدر",
     "reciept_date": "تاريخ الاستلام",
@@ -397,5 +400,14 @@
   "transportationSubtitle": "مركبات التوصيل الخاصة بنا",
   "transportationTitle": "مجموعة متنوعة من وسائل النقل الموثوقة لكل شحنة",
   "empty_shipments": "هنا سترى كل شحناتك.",
-  "empty_notifications": "هنا سترى كل الاشعارات."
+  "empty_notifications": "هنا سترى كل الاشعارات.",
+  "expected": {
+    "addSuccess": "تمت اضافة الحالة المتوقعة بنجاح",
+    "editSuccess": "تم تعديل الحالة المتوقعة بنجاح",
+    "edit": "تعديل الطرد",
+    "delete": "حذف الطرد",
+    "empty": "هنا سترى طرودك المتوقعة",
+    "deleteConfirm": "هل تريد حذف الحالة المتوقعة؟",
+    "deleteSuccess": "تم حذف الطرد بنجاح"
+  }
 }

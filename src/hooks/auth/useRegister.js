@@ -95,15 +95,19 @@ export default function useRegister(t, setStep) {
       return response.data;
     },
     onSuccess: (data) => {
-      toast.success(t("auth.registerSuccess"));
+      if (data.code === 200) {
+        toast.success(t("auth.registerSuccess"));
 
-      setCookie("token", data.data?.auth?.token, {
-        path: "/",
-        secure: true,
-        sameSite: "Strict",
-      });
+        setCookie("token", data.data?.auth?.token, {
+          path: "/",
+          secure: true,
+          sameSite: "Strict",
+        });
 
-      navigate("/profile");
+        navigate("/profile");
+      } else {
+        toast.error(data.message);
+      }
     },
     onError: (error) => {
       toast.error(
@@ -120,9 +124,13 @@ export default function useRegister(t, setStep) {
       });
       return response.data;
     },
-    onSuccess: () => {
-      toast.success(t("auth.codeSent", { email: watch("email") }));
-      setStep(2);
+    onSuccess: (res) => {
+      if (res.code === 200) {
+        toast.success(t("auth.codeSent", { email: watch("email") }));
+        setStep(2);
+      } else {
+        toast.error(res.message);
+      }
     },
     onError: (error) => {
       toast.error(
@@ -139,12 +147,16 @@ export default function useRegister(t, setStep) {
       });
       return response.data;
     },
-    onSuccess: () => {
-      const formData = watch();
-      submitRegister({
-        ...formData,
-        code,
-      });
+    onSuccess: (res) => {
+      if (res.code === 200) {
+        const formData = watch();
+        submitRegister({
+          ...formData,
+          code,
+        });
+      } else {
+        toast.error(res.message);
+      }
     },
     onError: (error) => {
       toast.error(t("auth.wrongCode"));

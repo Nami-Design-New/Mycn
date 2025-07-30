@@ -8,7 +8,7 @@ export default function HowWorks() {
   return (
     <>
       <Steps />
-      <HowWeWorks data={about?.workProcessDetail} />
+       <HowWeWorks data={about?.workProcessDetail} head={about?.mainWorkProcess} />
     </>
   );
 }

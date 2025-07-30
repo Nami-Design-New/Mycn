@@ -17,7 +17,7 @@ export default function Home() {
       <ExperienceSection experiences={home?.experienceDetail} head={home?.mainExperience} />
       <Transportation images={home?.deliveryVehiclesDetail} head={home?.mainDeliveryVehicles} />
       <HowWeWorks data={home?.workProcessDetail} head={home?.mainWorkProcess} />
-      <Testimonials data={home?.testimonialDetail} head={home?.mainTestimonial} />
+      <Testimonials data={home?.testimonialDetail} head={home?.mainTestimonials} />
       <Faqs />
     </>
   );

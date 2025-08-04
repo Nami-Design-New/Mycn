@@ -29,7 +29,7 @@
     "returnToHome": "Return To Home"
   },
   "auth": {
-    "loginTitle": "Welcome Back to My CN",
+    "loginTitle": "Welcome Back to MYCN",
     "loginSubtitle": "Log in to access your dashboard, track shipments, manage packages, and enjoy seamless international shipping services.",
     "email": "Email Address",
     "password": "Password",
@@ -43,7 +43,7 @@
     "registerSuccess": "Registration successful",
     "logout_success": "Logout successful",
     "loginFailed": "Login failed, please check your credentials",
-    "registerTitle": "Create Your My CN Account",
+    "registerTitle": "Create Your MYCN Account",
     "registerSubtitle": "Sign up to start managing your shipments, tracking packages, and accessing exclusive shipping solutions tailored to your needs",
     "firstName": "First Name",
     "lastName": "Last Name",
@@ -104,11 +104,11 @@
     "description4": "We're here 24/7 to assist you anytime."
   },
   "footer": {
-    "text": "At My CN, we are a premier logistics provider committed to delivering efficient and dependable shipping solutions tailored to our customers' needs. Leveraging cutting-edge technology and a customer-centric approach, we ensure seamless and timely delivery experiences across the globe.",
+    "text": "At MYCN, we are a premier logistics provider committed to delivering efficient and dependable shipping solutions tailored to our customers' needs. Leveraging cutting-edge technology and a customer-centric approach, we ensure seamless and timely delivery experiences across the globe.",
     "quickLinks": "Quick Links",
     "ourServices": "Our Services",
     "getInTouch": "Get In Touch",
-    "about": "About MY CN",
+    "about": "About MYCN",
     "contactUs": "Contact Us",
     "privacyPolicy": "Privacy Policy",
     "terms": "Terms & Conditions",
@@ -128,15 +128,15 @@
     "subscribe": "Subscribe"
   },
   "profile": {
-    "welcomeText": "Welcome to MY CN - Your Gateway to Chinese Shopping",
+    "welcomeText": "Welcome to MYCN - Your Gateway to Chinese Shopping",
     "expectedPackages": "Expected Packages",
     "addExpectedPackage": "Add Expected Package",
     "addPackage": "Add Package",
     "address": {
-      "title": "Your Dedicated MY CN China Shipping Hub",
+      "title": "Your Dedicated MYCN China Shipping Hub",
       "sections": [
-        "Your exclusive MY CN China locker address is now ready for use! Shop effortlessly from any Chinese online store.",
-        "Simply enter your unique MY CN address during checkout to have purchases delivered directly to your secure personal locker."
+        "Your exclusive MYCN China locker address is now ready for use! Shop effortlessly from any Chinese online store.",
+        "Simply enter your unique MYCN address during checkout to have purchases delivered directly to your secure personal locker."
       ],
       "benefits": {
         "heading": "Key Benefits:",
@@ -207,9 +207,9 @@
     "packages_count": "Packages count",
     "shipping_date": "Shipping date",
     "termsTitle": "Terms and Conditions",
-    "termsDescription": "Please read our terms and conditions carefully before using My CN services. By registering or using our platform, you agree to be bound by these terms regarding shipping, storage, payments, and more.",
+    "termsDescription": "Please read our terms and conditions carefully before using MYCN services. By registering or using our platform, you agree to be bound by these terms regarding shipping, storage, payments, and more.",
     "privacyTitle": "Privacy Policy",
-    "privacyDescription": "Your privacy is important to us. This policy outlines how My CN collects, uses, and protects your personal information when you use our services. By using our platform, you consent to our data practices as described."
+    "privacyDescription": "Your privacy is important to us. This policy outlines how MYCN collects, uses, and protects your personal information when you use our services. By using our platform, you consent to our data practices as described."
   },
   "orderStatus": {
     "in_stock": "In Stock",
@@ -295,7 +295,7 @@
     "subtitle": "Testimonials",
     "workProcessTitle": "Our work process",
     "workProcessDescription": "We always follow the best ways of logistics",
-    "watchVideo": "Show How My CN Works",
+    "watchVideo": "Show How MYCN Works",
     "faqsTitle": "Frequently Asked Questions",
     "faqT1": "Find answers here, or",
     "faqT2": "Contact us",
@@ -356,13 +356,13 @@
     ]
   },
   "package": {
-    "title": "MY CN's Package Consolidation",
+    "title": "MYCN's Package Consolidation",
     "description": "Consolidate your packages into one shipment and enjoy lower fees, faster delivery, and more convenience.",
     "individual": "Shipping Individually",
     "consolidated": "Shipping After Consolidation"
   },
   "repacking": {
-    "title": "MY CN Repacking Service",
+    "title": "MYCN Repacking Service",
     "description": "Combine your packages into one shipment and enjoy lower fees, faster delivery, and more convenience.",
     "itemDescription": "For users who want to ship only one item, we can prepare the shipment as it is or with some adjustments based on your preferences. You can choose to ship with the original seller's packaging or take advantage of our repacking service for more efficiency.",
     "exampleLabel": "Example:",
@@ -371,7 +371,7 @@
     "note": "These adjustments not only save on shipping costs but also provide better protection during transit.",
     "costTitle": "How much does repacking cost?",
     "costSubtitle": "Costs",
-    "costDescription": "MY CN's repacking service costs $5. While there is a small fee, the savings from reducing the shipment size often outweigh the cost. If we cannot optimize the packaging, the $5 fee will be waived.",
+    "costDescription": "MYCN's repacking service costs $5. While there is a small fee, the savings from reducing the shipment size often outweigh the cost. If we cannot optimize the packaging, the $5 fee will be waived.",
     "careSubtitle": "Care and Customization",
     "careDescription": "We handle all items, especially fragile or high-value products, with the utmost care. You can choose to keep the original seller's packaging or request additional protection for your peace of mind.",
     "shipTitle": "Ship as is",
@@ -390,11 +390,11 @@
     "prohibitedTitle": "Prohibited Items",
     "prohibitedDescription": "Certain items are strictly prohibited from international shipping, including firearms, explosives, and illegal goods. Please check our prohibited items list before placing your order.",
     "hazardousMaterialsTitle": "How to Handle and Ship Hazardous Materials?",
-    "hazardousMaterialsDescription": "The MY CN team carefully inspects all items before shipment. If we identify any items that require special handling (hazardous items), your shipment will require special procedures. Here's what you can expect:",
+    "hazardousMaterialsDescription": "The MYCN team carefully inspects all items before shipment. If we identify any items that require special handling (hazardous items), your shipment will require special procedures. Here's what you can expect:",
     "hazardousStep1": "We provide specialized packaging and labeling to ensure safe delivery of hazardous materials.",
     "hazardousStep2": "A fee of $12.50 applies for the additional handling and preparation of each hazardous material shipment.",
     "hazardousStep3": "Shipping options for hazardous materials may be limited. We can assist you in finding the best available carrier.",
-    "contactSupport": "Contact MY CN Support via chat or email at",
+    "contactSupport": "Contact MYCN Support via chat or email at",
     "contactNote": "Please contact customer support if you're unsure whether your item is allowed or needs special handling."
   },
   "transportationSubtitle": "Our Delivery Vehicles",

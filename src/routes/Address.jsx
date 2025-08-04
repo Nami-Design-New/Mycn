@@ -66,7 +66,7 @@ export default function Address() {
           <div className="address_card">
             <h4>
               {addressContent.title}{" "}
-              <img src="/images/logo.svg" alt="MY CN Logo" />
+              <img src="/images/logo.svg" alt="MYCN Logo" />
             </h4>
             <ul>
               {addressFields.map((field, index) => (

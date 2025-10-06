@@ -673,14 +673,42 @@
   color: $black;
   margin-bottom: 0;
 }
+.transactions_history {
+  position: relative;
+  .table_container {
+    width: 100%;
+    overflow-x: scroll;
 
-.table_container {
-  width: 100%;
-  overflow-x: scroll;
-
-  &::-webkit-scrollbar {
-    height: 4px;
+    &::-webkit-scrollbar {
+      height: 4px;
+    }
   }
+
+.popup_overlay {
+  position: absolute;
+  top: 0;
+
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup_box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+.popup_actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
 }
 
 table {

@@ -209,7 +209,10 @@
     "termsTitle": "Terms and Conditions",
     "termsDescription": "Please read our terms and conditions carefully before using MYCN services. By registering or using our platform, you agree to be bound by these terms regarding shipping, storage, payments, and more.",
     "privacyTitle": "Privacy Policy",
-    "privacyDescription": "Your privacy is important to us. This policy outlines how MYCN collects, uses, and protects your personal information when you use our services. By using our platform, you consent to our data practices as described."
+    "privacyDescription": "Your privacy is important to us. This policy outlines how MYCN collects, uses, and protects your personal information when you use our services. By using our platform, you consent to our data practices as described.",
+    "paid": "Paid",
+    "payNow": "Pay Now",
+    "loading": "loading..."
   },
   "orderStatus": {
     "in_stock": "In Stock",
@@ -404,8 +407,8 @@
   "expected": {
     "addSuccess": "Expected package added successfully",
     "editSuccess": "Expected package edited successfully",
-    "edit":"Edit Package",
-    "delete":"Delete Package",
+    "edit": "Edit Package",
+    "delete": "Delete Package",
     "empty": "Here You will see yor expected packages",
     "deleteConfirm": "Are you sure you want to delete this package?",
     "deleteSuccess": "Expected package deleted successfully"

@@ -1,43 +1,49 @@
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
 import useGetTransactions from "../hooks/profile/useGetTransactions";
+import { useEffect, useState } from "react";
 import useGetGeneratePayTransaction from "../hooks/profile/useGetGeneratePayTransaction";
 
 export default function MyTransactions() {
   const { t } = useTranslation();
 
-  const [showPopup, setShowPopup] = useState(false);
-  const [selectedTransaction, setSelectedTransaction] = useState(null);
+  const [selectId, setSelectId] = useState(null);
+  // const [generatedUrl, setGeneratedUrl] = useState(null);
 
-  // All transactions
   const { data: transactions } = useGetTransactions();
+  const { data: generatePayTransactionData, isLoading } =
+    useGetGeneratePayTransaction(selectId, !!selectId);
 
-  // Mutation hook to trigger payment generation
-  const { mutate: generatePayTransaction, isPending } = useGetGeneratePayTransaction();
+  // ✅ لما الداتا توصل نفتح صفحة الدفع تلقائيًا
+  useEffect(() => {
+    if (generatePayTransactionData?.url) {
+      // setGeneratedUrl(generatePayTransactionData.url);
 
-  const handlePayClick = (transaction) => {
-    setSelectedTransaction(transaction);
-    setShowPopup(true);
-  };
+      // نفتح نافذة دفع في Popup
+      const width = 600;
+      const height = 600;
+      const left = window.screenX + (window.innerWidth - width) / 2;
+      const top = window.screenY + (window.innerHeight - height) / 2;
 
-  const handleConfirmPay = () => {
-    if (selectedTransaction) {
-      generatePayTransaction(selectedTransaction.id, {
-        onSuccess: (data) => {
-          console.log("✅ Payment transaction generated:", data);
-          alert("تم إنشاء عملية الدفع بنجاح!");
-        },
-        onError: (error) => {
-          console.error("❌ Error generating payment:", error);
-          alert("حدث خطأ أثناء إنشاء عملية الدفع.");
-        },
-      });
+      const popup = window.open(
+        generatePayTransactionData.url,
+        "PaymentWindow",
+        `width=${width},height=${height},top=${top},left=${left}`
+      );
+
+      // ✅ ممكن نراقب النافذة لو المستخدم قفلها
+      const timer = setInterval(() => {
+        if (popup?.closed) {
+          clearInterval(timer);
+          console.log("🔒 Payment window closed");
+          // ممكن هنا تحدث حالة الدفع من جديد أو تعمل refetch
+          // refetchTransactions();
+        }
+      }, 1000);
     }
-    setShowPopup(false);
-  };
+  }, [generatePayTransactionData]);
 
   return (
-    <div className="transactions_history">
+    <div className="transactions_history position-relative">
       <div className="row">
         <div className="col-12 p-2">
           <h3 className="sec_title">{t("profile.transactionsTitle")}</h3>
@@ -53,7 +59,7 @@ export default function MyTransactions() {
                   <th>{t("common.date")}</th>
                   <th>{t("common.amount")}</th>
                   <th>{t("common.desccription")}</th>
-                  <th>{t("common.status")}</th>
+                  <th>{t("common.actions")}</th>
                 </tr>
               </thead>
 
@@ -64,17 +70,18 @@ export default function MyTransactions() {
                     <td>{item.created_at || "12-01-2025"}</td>
                     <td>{item.amount}</td>
                     <td>{item.notes}</td>
-                    <td className="text-center">
+                    <td>
                       {item.is_paid ? (
-                        "paid "
+                        t('common.paid')
                       ) : (
                         <button
-                          onClick={() => handlePayClick(item)}
+                          onClick={() => setSelectId(item.id)}
                           className="btn btn-primary btn-sm"
+                          disabled={isLoading && selectId === item.id}
                         >
-                          {isPending && selectedTransaction?.id === item.id
-                            ? "loading.."
-                            : " pay now"}
+                          {isLoading && selectId === item.id
+                            ? t('common.loading')
+                            : t('common.payNow')}
                         </button>
                       )}
                     </td>
@@ -85,34 +92,129 @@ export default function MyTransactions() {
           </div>
         </div>
       </div>
-
-      {/* النافذة المنبثقة */}
-      {showPopup && (
-        <div className="popup_overlay">
-          <div className="popup_box">
-            <h4>تأكيد عملية الدفع</h4>
-            <p>
-              هل أنت متأكد أنك تريد الدفع للمعاملة رقم{" "}
-              <strong>{selectedTransaction?.id}</strong>؟
-            </p>
-            <div className="popup_actions">
-              <button
-                className="btn btn-success btn-sm"
-                onClick={handleConfirmPay}
-                disabled={isPending}
-              >
-                {isPending ? "جاري التنفيذ..." : "نعم، ادفع الآن"}
-              </button>
-              <button
-                className="btn btn-secondary btn-sm"
-                onClick={() => setShowPopup(false)}
-              >
-                إلغاء
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
+
+
+// import { useTranslation } from "react-i18next";
+// import useGetTransactions from "../hooks/profile/useGetTransactions";
+// import { useEffect, useState } from "react";
+// import useGetGeneratePayTransaction from "../hooks/profile/useGetGeneratePayTransaction";
+
+// export default function MyTransactions() {
+//   const { t } = useTranslation();
+
+//   const [openPopup, setOpenPopup] = useState(false);
+//   const [selectId, setSelectId] = useState(null);
+//   const [generatedUrl, setGeneratedUrl] = useState(null);
+
+//   const { data: transactions } = useGetTransactions();
+//   const { data: generatePayTransactionData, isLoading } =
+//     useGetGeneratePayTransaction(selectId, !!selectId);
+
+//   useEffect(() => {
+//     if (generatePayTransactionData?.url) {
+//       setGeneratedUrl(generatePayTransactionData.url);
+//       console.log(generatePayTransactionData);
+      
+//     }
+//   }, [generatePayTransactionData]);
+
+//   return (
+//     <>
+//       <div className="transactions_history position-relative">
+//         <div className="row">
+//           <div className="col-12 p-2">
+//             <h3 className="sec_title">{t("profile.transactionsTitle")}</h3>
+//             <p className="sec_desc">{t("profile.transactionsSubTitle")}</p>
+//           </div>
+
+//           <div className="col-12 p-2 mt-2">
+//             <div className="table_container">
+//               <table>
+//                 <thead>
+//                   <tr>
+//                     <th>{t("common.transactionId")}</th>
+//                     <th>{t("common.date")}</th>
+//                     <th>{t("common.amount")}</th>
+//                     <th>{t("common.desccription")}</th>
+//                     <th>{t("Action")}</th>
+//                   </tr>
+//                 </thead>
+
+//                 <tbody>
+//                   {transactions?.map((item) => (
+//                     <tr key={item.id}>
+//                       <td>{item.id}</td>
+//                       <td>{item.created_at || "12-01-2025"}</td>
+//                       <td>{item.amount}</td>
+//                       <td>{item.notes}</td>
+//                       <td>
+//                         {item.is_paid ? (
+//                           "paid"
+//                         ) : (
+//                           <button
+//                             onClick={() => {
+//                               setSelectId(item.id);
+//                               setOpenPopup(true);
+//                             }}
+//                             className="btn btn-primary btn-sm"
+//                           >
+//                             pay now
+//                           </button>
+//                         )}
+//                       </td>
+//                     </tr>
+//                   ))}
+//                 </tbody>
+//               </table>
+//             </div>
+//           </div>
+
+//           {/* ✅ Popup section */}
+//           {openPopup && (
+//             <div
+//               className="position-fixed top-0 start-0 end-0 bottom-0 bg-black bg-opacity-75 d-flex align-items-center justify-content-center z-50"
+//               style={{ zIndex: 9999 }}
+//             >
+//               <div
+//                 className="bg-white rounded shadow-lg position-relative"
+//                 style={{ width: "80%", height: "80%" }}
+//               >
+//                 {/* Close button */}
+//                 <button
+//                   onClick={() => {
+//                     setOpenPopup(false);
+//                     setGeneratedUrl(null);
+//                     setSelectId(null);
+//                   }}
+//                   className="btn btn-danger position-absolute top-0 end-0 m-2"
+//                 >
+//                   ✕
+//                 </button>
+
+//                 {/* Iframe or loading */}
+//                 {isLoading ? (
+//                   <div className="d-flex justify-content-center align-items-center h-100">
+//                     <p>جاري تحميل صفحة الدفع...</p>
+//                   </div>
+//                 ) : generatedUrl ? (
+//                   <iframe
+//                     src={generatedUrl}
+//                     title="Payment"
+//                     className="w-100 h-100 rounded"
+//                   />
+//                 ) : (
+//                   <div className="d-flex justify-content-center align-items-center h-100">
+//                     <p>تعذر تحميل الرابط</p>
+//                   </div>
+//                 )}
+//               </div>
+//             </div>
+//           )}
+//         </div>
+//       </div>
+//     </>
+//   );
+// }

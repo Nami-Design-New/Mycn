@@ -168,7 +168,7 @@
   },
   "addressFields": {
     "recipient": "Recipient Name",
-    "street": "Address Line 1",
+    "street": "Address",
     "district": "District",
     "city": "City",
     "province": "Province",
@@ -176,7 +176,8 @@
     "zipCode": "Zip Code",
     "phone": "Phone",
     "email": "Email",
-    "addressLine2": "Address Line 2"
+    "addressLine2": "Address Line 2",
+    "hint":"hint"
   },
   "common": {
     "copy": "Copy",
@@ -272,7 +273,7 @@
     "helpSupportText": "For help with a current product or service or refer to FAQs and developer tools.",
     "callUs": "Call Us",
     "callUsText": "Call us to speak to a member of our team.",
-    "chinaOffice": "China Office",
+    "chinaOffice": "Dubai Office",
     "findUs": "Find us in ",
     "title": "Contact Our Expert Team",
     "description": " Have questions or need guidance? Our experienced professionals are here to provide you with solutions.",

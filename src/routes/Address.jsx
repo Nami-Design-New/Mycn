@@ -7,10 +7,11 @@ export default function Address() {
   const { t } = useTranslation();
   const { data: settings } = useGetSettings();
   const [copiedField, setCopiedField] = useState(null);
+  const [hoveredHint, setHoveredHint] = useState(false);
 
-  const handleCopy = (value, index) => {
+  const handleCopy = (value, fieldName) => {
     navigator.clipboard.writeText(value).then(() => {
-      setCopiedField(index);
+      setCopiedField(fieldName);
       setTimeout(() => setCopiedField(null), 2000);
     });
   };
@@ -18,22 +19,25 @@ export default function Address() {
   const { client } = useSelector((state) => state.clientData);
   const clientName = client?.first_name + " " + client?.last_name;
 
-  const addressFields = [
+  // Special grouped row for street, address line 2, and hint
+  const streetRow = {
+    label: t("addressFields.street"),
+    values: [
+      { key: "shipping_address", value: settings?.shipping_address },
+      { key: "unique_id", value: client?.unique_id },
+      { key: "address_hint", value: settings?.address_hint, isHint: true },
+    ],
+  };
+
+  // Other address fields
+  const otherFields = [
     { label: t("addressFields.recipient"), value: clientName },
-    {
-      label: t("addressFields.street"),
-      value: settings?.address,
-    },
-    {
-      label: t("addressFields.addressLine2"),
-      value: client?.unique_id,
-    },
     { label: t("addressFields.district"), value: settings?.district },
     { label: t("addressFields.city"), value: settings?.city },
     { label: t("addressFields.province"), value: settings?.province },
     { label: t("addressFields.country"), value: settings?.country },
     { label: t("addressFields.zipCode"), value: settings?.zip_code },
-    { label: t("addressFields.phone"), value: settings?.phone },
+    { label: t("addressFields.phone"), value: settings?.shipping_phone },
     { label: t("addressFields.email"), value: settings?.email },
   ];
 
@@ -45,11 +49,9 @@ export default function Address() {
         <div className="col-lg-6 col-12 p-2">
           <div className="content">
             <h3>{t("profile.welcomeText")}</h3>
-
             {addressContent.sections.map((section, index) => (
               <p key={index}>{section}</p>
             ))}
-
             <div className="benefits-section">
               <h4>{addressContent.benefits.heading}</h4>
               <ul>
@@ -61,7 +63,6 @@ export default function Address() {
             </div>
           </div>
         </div>
-
         <div className="col-lg-6 col-12 p-2">
           <div className="address_card">
             <h4>
@@ -69,17 +70,74 @@ export default function Address() {
               <img src="/images/logo.svg" alt="MYCN Logo" />
             </h4>
             <ul>
-              {addressFields.map((field, index) => (
+              {/* Recipient Field */}
+              {otherFields.slice(0, 1).map((field, index) => (
                 <li key={index}>
-                  <span>{field.label}:</span>{" "}
+                  <span>{field.label}:</span>
                   <b
                     className="copy-wrapper"
-                    onClick={() => handleCopy(field.value, index)}
+                    onClick={() => handleCopy(field.value, `field-${index}`)}
                   >
                     {field.value}
                     <i className="fa-regular fa-copy copy-icon"></i>
                     <span className="tooltip">
-                      {copiedField === index
+                      {copiedField === `field-${index}`
+                        ? t("common.copied")
+                        : t("common.copy")}
+                    </span>
+                  </b>
+                </li>
+              ))}
+
+              {/* Street Row with 3 values */}
+              <li className="street-row">
+                <span>{streetRow.label}:</span>
+                <div className="street-values">
+                  {streetRow.values.map((item, idx) => (
+                    item.isHint ? (
+                      <div
+                        key={idx}
+                        className="hint-container"
+                        onMouseEnter={() => setHoveredHint(true)}
+                        onMouseLeave={() => setHoveredHint(false)}
+                      >
+                        <i className="fa-solid fa-circle-info hint-icon"></i>
+                        {hoveredHint && (
+                          <span className="hint-popup">{item.value}</span>
+                        )}
+                      </div>
+                    ) : (
+                      <div key={idx} className="value-item">
+                        <b
+                          className="copy-wrapper"
+                          onClick={() => handleCopy(item.value, item.key)}
+                        >
+                          {item.value}
+                          <i className="fa-regular fa-copy copy-icon"></i>
+                          <span className="tooltip">
+                            {copiedField === item.key
+                              ? t("common.copied")
+                              : t("common.copy")}
+                          </span>
+                        </b>
+                      </div>
+                    )
+                  ))}
+                </div>
+              </li>
+
+              {/* Other Fields */}
+              {otherFields.slice(1).map((field, index) => (
+                <li key={index}>
+                  <span>{field.label}:</span>
+                  <b
+                    className="copy-wrapper"
+                    onClick={() => handleCopy(field.value, `field-${index}`)}
+                  >
+                    {field.value}
+                    <i className="fa-regular fa-copy copy-icon"></i>
+                    <span className="tooltip">
+                      {copiedField === `field-${index}`
                         ? t("common.copied")
                         : t("common.copy")}
                     </span>
@@ -90,6 +148,8 @@ export default function Address() {
           </div>
         </div>
       </div>
+
+
     </div>
   );
 }

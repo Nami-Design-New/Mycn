@@ -3127,12 +3127,37 @@ body .sec_desc {
   color: #000;
   margin-bottom: 0;
 }
-body .table_container {
+body .transactions_history {
+  position: relative;
+}
+body .transactions_history .table_container {
   width: 100%;
   overflow-x: scroll;
 }
-body .table_container::-webkit-scrollbar {
+body .transactions_history .table_container::-webkit-scrollbar {
   height: 4px;
+}
+body .transactions_history .popup_overlay {
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+body .transactions_history .popup_box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+body .transactions_history .popup_actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
 }
 body table {
   margin-top: 16px;
@@ -3626,4 +3651,100 @@ body.en .shipping_calculator .content ul {
 }
 body.en .back_btn i {
   transform: scale(-1);
+}
+
+.street-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.street-row > span {
+  font-weight: 600;
+  min-width: 80px;
+  flex-shrink: 0;
+}
+
+.street-values {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.value-item {
+  flex: 1;
+  min-width: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.copy-wrapper {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  word-break: break-word;
+  position: relative;
+}
+
+.copy-icon {
+  opacity: 0.6;
+  transition: opacity 0.2s;
+  flex-shrink: 0;
+}
+
+.copy-wrapper:hover .copy-icon {
+  opacity: 1;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background-color: #333;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  margin-bottom: 8px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.hint-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.hint-icon {
+  font-size: 18px;
+  color: #cc0000;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.hint-icon:hover {
+  opacity: 1;
+}
+
+.hint-popup {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  max-width: 250px;
+  white-space: normal;
+  margin-bottom: 8px;
+  z-index: 10;
+  pointer-events: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }/*# sourceMappingURL=main.css.map */

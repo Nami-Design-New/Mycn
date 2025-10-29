@@ -20,7 +20,6 @@ export default function MyTransactions() {
       const res = await axiosInstance.get(
         `/profile/generatePayTransaction/${id}`
       );
-      // console.log("res", res);
 
       if (res.status === 200) {
         if (res.data?.url) {
@@ -40,9 +39,77 @@ export default function MyTransactions() {
             // console.log("event from payment popup:", event);
             if (event.data.status === "success") {
               queryClient.invalidateQueries(["transactions"]);
-              toast.success("Payment completed successfully");
+              toast.custom(
+                (t) => (
+                  <div
+                    className={` max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5`}
+                  >
+                    <div className="flex-1 w-0 p-4">
+                      <div className="flex items-start">
+                        <div className="flex-shrink-0 pt-0.5">
+                          <img
+                            className=" rounded-full"
+                            src="/public/icons/correct-icon.png"
+                            alt=""
+                            width={350}
+                            height={350}
+                          />
+                        </div>
+                        <div className="ml-3 mt-4 flex-1">
+                          <p className="fs-3 text-center font-bold text-success">
+                            Payment Successfully
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex border-l border-gray-200">
+                      <button
+                        onClick={() => toast.dismiss(t.id)}
+                        className="w-100 border border-transparent rounded-none rounded-r-lg p-4 flex items-center justify-center text-sm font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                ),
+                { position: "bottom-center" }
+              );
             } else if (event.data.status === "failed") {
-              toast.error("Payment failed. Please try again.");
+              toast.custom(
+                (t) => (
+                  <div
+                    className={` max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5`}
+                  >
+                    <div className="flex-1 w-0 p-4">
+                      <div className="flex items-start">
+                        <div className="flex-shrink-0 pt-0.5">
+                          <img
+                            className=" rounded-full"
+                            src="/public/icons/red-x-icon.png"
+                            alt=""
+                            width={350}
+                            height={350}
+                          />
+                        </div>
+                        <div className="ml-3 flex-1">
+                          <p className="fs-3 text-center font-bold text-danger">
+                            Payment failed. Please try again.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex border-l border-gray-200">
+                      <button
+                        onClick={() => toast.dismiss(t.id)}
+                        className="w-100 border border-transparent rounded-none rounded-r-lg p-4 flex items-center justify-center text-sm font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                ),
+                { position: "bottom-center" }
+              );
             }
 
             popup.close();

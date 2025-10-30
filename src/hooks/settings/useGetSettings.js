@@ -11,6 +11,8 @@ export default function useGetSettings() {
       try {
         const res = await axiosInstance.get("/home/setting");
         if (res.data.code === 200) {
+          console.log("use get setting ::" , res);
+          
           return res.data.data || {};
         }
       } catch (error) {

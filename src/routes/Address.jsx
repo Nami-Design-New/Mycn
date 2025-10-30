@@ -23,11 +23,12 @@ export default function Address() {
   const streetRow = {
     label: t("addressFields.street"),
     values: [
-      { key: "shipping_address", value: settings?.shipping_address },
-      { key: "unique_id", value: client?.unique_id },
+      { key: "shipping_address", value: `${settings?.shipping_address} ${client?.unique_id}` },
+      // { key: "unique_id", value: client?.unique_id },
       { key: "address_hint", value: settings?.address_hint, isHint: true },
     ],
   };
+console.log(settings);
 
   // Other address fields
   const otherFields = [

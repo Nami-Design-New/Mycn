@@ -2716,8 +2716,8 @@ body .profile_section .address_card .img img {
   width: 100%;
   border: 1px solid #f4f4f4;
   aspect-ratio: 1/1;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   border-radius: 8px;
 }
 body .profile_section .address_card h4 {

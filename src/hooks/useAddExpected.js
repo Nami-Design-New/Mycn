@@ -13,7 +13,7 @@ export default function useAddExpected(t, id, setShow) {
     source: yup.string().required(t("validation.required")),
     size: yup.string().required(t("validation.required")),
     weight: yup.string().required(t("validation.required")),
-    image: yup.mixed().required(t("validation.required")),
+    image: yup.mixed().nullable(),
   });
 
   const {
@@ -46,7 +46,9 @@ export default function useAddExpected(t, id, setShow) {
       request.append("source", formData.source);
       request.append("size", formData.size);
       request.append("weight", formData.weight);
-      request.append("image", formData.image);
+
+      if (formData?.image) request.append("image", formData.image);
+
 
       if (id) {
         request.append("_method", "PUT");

@@ -200,7 +200,7 @@
         width: 100%;
         border: 1px solid $input_stroke;
         aspect-ratio: 1 / 1;
-        object-fit: cover;
+        object-fit: contain;
         border-radius: 8px;
       }
     }

@@ -72,7 +72,23 @@ export default function ExpectedPackages() {
             </div>
 
             <div className="img">
-              <img src={expectedPackage?.image} alt={expectedPackage.source} />
+              {expectedPackage?.image ? (
+                <img
+                  src={expectedPackage?.image}
+                  alt={expectedPackage.source}
+                />
+              ) : (
+                <div
+                  style={{
+                    backgroundColor: "#00000055",
+                  }}
+                >
+                  <img
+                    src={"/public/images/logo.svg"}
+                    alt={expectedPackage.source}
+                  />
+                </div>
+              )}
             </div>
 
             <ul className="d-flex flex-wrap gap-3 flex-row">
